@@ -1,0 +1,68 @@
+% =====================================================================
+%  P. Ehrenfest, „Gleichförmige Rotation starrer Körper und Relativitätstheorie.“
+%  Physikalische Zeitschrift 10 (1909): 918.   ENGLISH TRANSLATION.
+%  Translated from transcription.tex (2026-10-20), which mirrors the print;
+%  conventions: TRANSLATION-PLAYBOOK.md, terms: GLOSSARY.md.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}\setstretch{1.25}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Uniform rotation of rigid bodies and the theory of relativity}, pdfauthor={P. Ehrenfest}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\textit{P. Ehrenfest: Uniform Rotation (1909)}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% The original's page number in the margin. Followed directly by `[`, write \opage{N}\relax[.
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+% Translator's notes, lettered so the printed notes keep their numbers.
+\newcounter{trnote}
+\newcommand{\trnote}[1]{\stepcounter{trnote}\begingroup\renewcommand{\thefootnote}{\alph{trnote}}%
+  \footnote[\value{trnote}]{[Tr.] #1}\endgroup}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small Physikalische Zeitschrift 10 (1909), p.~918}\\[1.5em]
+{\Large\bfseries Uniform Rotation of Rigid Bodies and the Theory of Relativity}\\[1em]
+{\large By \emph{P. Ehrenfest}}\\[1em]
+{\small Translated from the German}
+\end{center}
+\bigskip
+
+\opage{918}In attempting to generalize the kinematics of relatively rigid bodies from uniform rectilinear translation to arbitrary motions, one arrives, following \emph{Minkowski's} ideas, at the following assumption:
+
+\emph{A body behaves relatively rigidly} means: \emph{in an arbitrary motion it deforms continuously in such a way that each of its infinitesimal elements, at every moment, exhibits for an observer at rest exactly that Lorentz contraction (relative to the state of rest) which corresponds to the instantaneous velocity of the center of the element}.
+
+When, some time ago, I tried to picture to myself the consequences of this assumption, I came upon conclusions that seem to show that \emph{the above assumption leads to contradictions already for some very simple types of motion}.
+
+Now Mr.~\emph{Born}, in a recently published paper,\footnote[1]{\emph{M. Born}, Die Theorie des starren Elektrons in der Kinematik des Relativitäts-Prinzipes. Ann.\ d.\ Phys.\ \textbf{30}, 1, 1909. Cf.\ also this journal \textbf{10}, 814, 1909.} has given a definition of relative rigidity that covers all motions whatever. Mr.~\emph{Born} has based this definition---in keeping with the fundamental idea of the theory of relativity---not on the system of measurement of an observer \emph{at rest}, but on the (\emph{Minkowskian}) metric determinations, so to speak, of a continuum of infinitesimal observers who \emph{travel along with the points of the nonuniformly moving body: to each of them, in his own measure, his infinitesimal neighborhood is to appear permanently undeformed}.
+
+Both definitions of relative rigidity are, however---if I have understood correctly---equivalent.---I may therefore be permitted to point out briefly the simplest type of motion for which the first-mentioned definition already leads to contradictions: \emph{uniform rotation about a fixed axis}.
+
+Indeed: let there be given a relatively rigid cylinder of radius $R$ and height $H$. Let it gradually be set into a rotational motion about its axis that in the end remains constant. Let $R'$ be the radius that it exhibits in this motion for an observer at rest. Then $R'$ would have to satisfy two \emph{mutually contradictory} requirements:
+
+a) The periphery of the cylinder must show a contraction relative to the state of rest:
+\[ 2\pi R'<2\pi R, \]
+for each element of the periphery moves in its own direction with the instantaneous velocity $R'\omega$.
+
+b) If one considers any element of a radius, its instantaneous velocity is normal to its extension; hence the elements of a radius cannot exhibit any contraction whatever relative to the state of rest. It would have to be the case that:
+\[ R'=R. \]
+
+\emph{Remark}: If one wants the deformation of each element to depend not only on the instantaneous velocity of the center of the element but also on the instantaneous velocity of rotation of the element, then the deformation function must contain, besides the velocity of light $c$, a further universal dimensional constant, or else accelerations of the center of the element must also enter into it.
+
+St. Petersburg, Sept. 1909.
+
+\begin{flushright}\small (Received 29 September 1909.)\end{flushright}
+
+\end{document}

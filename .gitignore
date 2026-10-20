@@ -1,0 +1,52 @@
+# Adapted from ~/danish-texts/.gitignore (2026-10-20); see that file for the history
+# behind each rule.
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+*.bcf
+*.run.xml
+*.bbl
+*.blg
+
+# macOS, Python, editors
+.DS_Store
+__pycache__/
+*.pyc
+*~
+\#*\#
+.\#*
+
+# Source scans live in ~/bibliotek and are never committed (SCANS.tsv points to them by
+# sha256). fetch-scans.sh downloads issue PDFs into a temporary directory, not here.
+scan*.pdf
+texts/**/*-scan.pdf
+issue*.pdf
+
+# Page renders and agent scratch. Regenerable from the scans; never commit them.
+.render/
+.scratch-*/
+**/.parts/
+.tessdata/
+
+# ---------------------------------------------------------------------------
+# A PAPER DIRECTORY TRACKS THE EDITION, NOTHING ELSE: transcription.tex/.pdf,
+# translation.tex/.pdf, and figures/ (cleaned scan crops at 300 dpi, or TikZ).
+# Working files stay on disk untracked. The durable record (source, scan hash,
+# page map, misprints, how accuracy was established) goes in the comment header
+# of transcription.tex, where it travels with the edition.
+texts/**/RESUME-NOTES.md
+texts/**/BATCH-AGENT.md
+texts/**/*.py
+texts/**/*.sh
+texts/**/*.png
+!texts/**/figures/*.png
+texts/**/*.tmp
+texts/**/*.bak.*
+texts/**/.fuse_hidden*

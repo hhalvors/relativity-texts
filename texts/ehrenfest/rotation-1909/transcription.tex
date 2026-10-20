@@ -1,0 +1,83 @@
+% =====================================================================
+%  P. Ehrenfest, „Gleichförmige Rotation starrer Körper und Relativitätstheorie.“
+%  Physikalische Zeitschrift 10 (1909): 918.   TRANSCRIPTION.
+%  Source scan: ~/bibliotek/Ehrenfest, Paul/Ehrenfest 1909 - Gleichfoermige Rotation
+%    starrer Koerper und Relativitaetstheorie (Phys Z).pdf, sha256 58ca0328b42efaf8...
+%    (SCANS.tsv; one page, cut from archive.org
+%    per_physikalische-zeitschrift_physikalische-zeitschrift_1909-11-22_23, issue PDF p. 54).
+%  Page map: journal p. 918 = PDF p. 1.
+%  Draft: German Wikisource, Seite:Gleichförmige Rotation starrer Körper und
+%    Relativitätstheorie.djvu/1, proofread to quality level 4 (CC BY-SA 4.0),
+%    fetched 2026-10-20 with ?action=raw and converted by script.
+%  Accuracy (2026-10-20): (1) words diffed against the scan's IA text layer
+%    (ocrdiff.py): 6 candidates, 1 transcription error corrected, 5 the layer's
+%    fault, 0 unresolved; (2) the page read at the image (400 dpi crops) by an agent
+%    that did not make the text, against a copy with two planted control errors
+%    (one in the prose, one in a formula): both reported. The image reading found
+%    4 faults in the Wikisource text, all corrected: "sonder" for the print's
+%    "sondern"; "dimensionslose" for the print's "dimensionierte" (Konstante);
+%    emphasis on "Minkowski" only, where the print spaces "Minkowskischen";
+%    volume numbers in the footnote not bold. Dashes set as em-dashes (---),
+%    the print's long dash. Formulas checked symbol by symbol at the image.
+%    Open: whether the print's letterspacing of the definition begins at "Ein"
+%    or at "Körper" ("Ein" is too short to tell; kept as Wikisource has it).
+%  Conventions: TRANSCRIPTION-PLAYBOOK.md.
+%  Misprints kept as printed: none found.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage[german]{babel}            % 1901 orthography patterns; [english] in translation.tex
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}\setstretch{1.25}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Gleichförmige Rotation starrer Körper und Relativitätstheorie}, pdfauthor={P. Ehrenfest}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\textit{P. Ehrenfest: Gleichförmige Rotation (1909)}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% The original's page number in the margin. Followed directly by `[`, write \opage{N}\relax[.
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small Physikalische Zeitschrift 10 (1909), p.~918}\\[1.5em]
+{\Large\bfseries Gleichförmige Rotation starrer Körper und Relativitätstheorie.}\\[1em]
+{\large Von \emph{P. Ehrenfest}.}
+\end{center}
+\bigskip
+
+\opage{918}Bei dem Versuch, die Kinematik relativ-starrer Körper von der gleichförmigen, geradlinigen Translation auf beliebige Bewegungen zu verallgemeinern, gelangt man im Anschluß an \emph{Minkowskis} Ideen zu folgendem Ansatz:
+
+\emph{Ein Körper verhält sich relativ-starr}, heißt: \emph{er deformiert sich bei einer beliebigen Bewegung fortlaufend so, daß jedes seiner infinitesimalen Elemente in jedem Moment für einen ruhenden Beobachter gerade diejenige Lorentz-Kontraktion (gegenüber dem Ruhezustand) aufweist, welche der Momentan-Geschwindigkeit des Element-Mittelpunktes entspricht}.
+
+Als ich mir vor einiger Zeit die Konsequenzen dieses Ansatzes veranschaulichen wollte, stieß ich auf Folgerungen, die zu zeigen scheinen, daß \emph{obiger Ansatz schon für einige sehr einfache Bewegungstypen zu Widersprüchen führt}.
+
+Nun hat Herr \emph{Born} in einer kürzlich erschienenen Arbeit\footnote[1]{\emph{M. Born}, Die Theorie des starren Elektrons in der Kinematik des Relativitäts-Prinzipes. Ann. d. Phys. \textbf{30}, 1, 1909. Vergl. auch diese Zeitschr. \textbf{10}, 814, 1909.} eine Definition der Relativ-Starrheit gegeben, die alle überhaupt möglichen Bewegungen umfaßt. Herr \emph{Born} hat diese Definition --- dem Grundgedanken der Relativitätstheorie entsprechend --- nicht auf das Maßsystem eines \emph{ruhenden} Beobachters basiert, sondern auf die (\emph{Minkowskischen}) Maßbestimmungen sozusagen eines Kontinuums von infinitesimalen Beobachtern, die mit den Punkten des ungleichförmig bewegten Körpers \emph{mitwandern: jedem von ihnen soll in seinem Maß seine infinitesimale Umgebung dauernd undeformiert erscheinen}.
+
+Beide Definitionen der Relativ-Starrheit sind aber --- wenn ich richtig verstanden habe --- äquivalent. --- Es sei deshalb gestattet, kurz auf den einfachsten Typus einer Bewegung hinzuweisen, bei dem die erstangeführte Definition schon zu Widersprüchen führt: \emph{die gleichförmige Rotation um eine feste Achse}.
+
+In der Tat: Es sei gegeben ein relativ-starrer Zylinder vom Radius $R$ und der Höhe $H$. Es werde ihm allmählich eine schließlich konstant bleibende Drehbewegung um seine Achse erteilt. Sei $R'$ der Radius, den er bei dieser Bewegung für einen ruhenden Beobachter aufweist. Dann müßte $R'$ zwei \emph{einander widersprechende} Forderungen erfüllen:
+
+a) Die Peripherie des Zylinders muß gegenüber dem Ruhezustand eine Kontraktion zeigen:
+\[ 2\pi R'<2\pi R, \]
+denn jedes Element der Peripherie bewegt sich in seiner eigenen Richtung mit der Momentangeschwindigkeit $R'\omega$.
+
+b) Betrachtet man irgendein Element eines Radius, so steht seine Momentangeschwindigkeit normal zu seiner Erstreckung; also können die Elemente eines Radius gegenüber dem Ruhezustand keinerlei Kontraktion aufweisen. Es müßte sein:
+\[ R'=R. \]
+
+\emph{Bemerkung}: Will man die Deformation jedes Elementes nicht nur von der Momentangeschwindigkeit des Elementmittelpunktes abhängen lassen, sondern auch noch von der momentanen Rotationsgeschwindigkeit des Elementes, so muß die Deformationsfunktion außer der Lichtgeschwindigkeit $c$ noch eine universelle, dimensionierte Konstante enthalten oder es müssen in sie auch noch Beschleunigungen des Elementmittelpunktes eingehen.
+
+St. Petersburg, Sept. 1909.
+
+\begin{flushright}\small (Eingegangen 29. September 1909.)\end{flushright}
+
+\end{document}

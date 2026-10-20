@@ -1,0 +1,121 @@
+% =====================================================================
+%  M. Laue, „Zur Diskussion über den starren Körper in der Relativitätstheorie.“
+%  Physikalische Zeitschrift 12 (1911): 85–87.   ENGLISH TRANSLATION.
+%  Translated from transcription.tex (2026-10-20); conventions: TRANSLATION-PLAYBOOK.md,
+%  terms: GLOSSARY.md. Page markers, footnote numbers as in the transcription.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}\setstretch{1.25}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={On the discussion of the rigid body in the theory of relativity}, pdfauthor={M. Laue}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\textit{M. Laue: The Rigid Body (1911)}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% The original's page number in the margin. Followed directly by `[`, write \opage{N}\relax[.
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+% Translator's notes, lettered so the printed notes keep their numbers.
+\newcounter{trnote}
+\newcommand{\trnote}[1]{\stepcounter{trnote}\begingroup\renewcommand{\thefootnote}{\alph{trnote}}%
+  \footnote[\value{trnote}]{[Tr.] #1}\endgroup}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small Physikalische Zeitschrift 12 (1911), pp.~85--87}\\[1.5em]
+{\Large\bfseries On the Discussion of the Rigid Body in the Theory of Relativity}\\[1em]
+{\large By M. \emph{Laue}}\\[1em]
+{\small Translated from the German}
+\end{center}
+\bigskip
+
+\opage{85}
+Since the dynamics of the mass point has been adapted to the principle of relativity by \emph{Einstein} and \emph{Planck}, a number of authors have attempted the further step of reshaping the dynamics of the rigid body correspondingly.
+Since the old kinematic conditions of rigidity are not compatible with the \emph{Lorentz} transformation, the first task was to create a new definition of rigidity.
+It is the merit of M. \emph{Born}\footnote[1]{M. \emph{Born}, Ann.\ d.\ Phys.\ \textbf{30}, 1, 1909 and Göttinger Nachr.\ 1910, p.~161; also W. v. \emph{Ignatowski}, Ann.\ d.\ Phys.\ \textbf{33}, 607, 1910.} to have been the first to come forward with one, and thereby to have opened up the problem.
+After \emph{Ehrenfest},\footnote[2]{P. \emph{Ehrenfest}, this journal \textbf{10}, 918, 1909; \textbf{11}, 1127, 1910.} \emph{Herglotz},\footnote[3]{G. \emph{Herglotz}, Ann.\ d.\ Phys.\ \textbf{31}, 393, 1910.} and \emph{Noether}\footnote[4]{F. \emph{Noether}, Ann.\ d.\ Phys.\ \textbf{31}, 919, 1910.} had shown that this first definition leaves only 3 degrees of freedom for the motion, he published a second, which admits 6 of them.
+Further, in connection with his critique of \emph{Born's} definition, \emph{Noether} proposes to define the rigid body as a configuration with nine kinematic degrees of freedom.
+And in \emph{Minkowski's} representation of the world this idea also suggests itself with particular force.
+For a three-dimensional geometrical configuration that always remains congruent with itself has $4 + 3 + 2 + 1 = 10$ degrees of freedom in four-dimensional space; but of the associated space-time variables one is to be subtracted, as an arbitrary parameter that distinguishes the position, so that 9 now remain.
+All three proposals have in common the (entirely commendable) idea that a rigid body, in contrast to the infinitely many degrees of freedom of the deformable body, can possess only a finite number of them (the body being of course thought of as a continuum).
+We shall now show that the principle of relativity excludes this possibility on dynamical grounds, and that every attempt at it is therefore hopeless from the outset.
+But to forestall misunderstanding, let it be expressly remarked that \emph{under certain circumstances} a body can of course move without change of its form as referred to the co-moving system at each instant; the uniformly accelerated (hyperbolic) motion already proves this.
+In classical hydrodynamics, too, a fluid particle can on occasion move as if it were rigid.
+Only, for
+\opage{86}
+no body is this the most general possible motion; rather, we shall likewise show by an example that for \emph{every} body processes can be conceived in which the number of kinematic degrees of freedom is infinitely large.
+
+We start from a proposition that \emph{Einstein}\footnote[1]{A. \emph{Einstein}, Ann.\ d.\ Phys.\ \textbf{17}, 891, 1905.} already stated, in the form that for all physical actions a propagation at more than the velocity of light is excluded.
+We base our consideration on \emph{Minkowski's} four-dimensional world ($u = ct$ as the fourth coordinate), in which every world point represents an event as to place and time, and we assert: all events that can be effects of the occurrence represented by the world point $O$ are represented by world points of the after-cone or by those beyond $O$; all events that can come into question as causes of the event $O$ are represented by world points of the fore-cone or by those lying on this side of it. \emph{Points of the intermediate region of $O$, on the other hand, cannot stand in causal connection with $O$.} The proof runs:
+A point $P$ of the intermediate region is earlier or later than $O$, according to the choice of the reference system.
+A law of nature that was to connect $O$ and $P$ would therefore have to give, in one part of the admissible systems, $O$ as cause and $P$ as effect, and in another part, $P$ as cause and $O$ as effect.
+This is contradicted by the principle of relativity, according to which the laws of nature are to have the same form in all admissible systems.
+
+Now let a body at first be at rest in a system $K^0$, so that the world lines of its points are mutually parallel straight lines.
+Only from the world point $O$ onward, let the world line leading to $O$ deviate gradually from its previous direction.
+This disturbance will result in corresponding disturbances in the course of all the other world lines, but at the earliest when these enter the after-cone of $O$.
+Until then, namely, they lie in the intermediate region or even on this side of $O$, and so cannot be influenced by the disturbance at $O$.
+
+Now let such disturbances occur not only at one point $O$, but at $n$ points $O_i$, all of which lie in a plane space $u^0 = U$.
+There is then always a space $u^0 = U + \varDelta U$ ($\varDelta U > O$),\trnote{Printed with a capital $O$; zero is meant.} in which its $n$ intersections with the after-cones of the points $O_i$ do not yet overlap, but completely exclude one another.
+The motion of the body at the instant $t^0 = \frac{U + \varDelta U}{c}$ then certainly has $n$ degrees of freedom.
+For a part of it that does not yet belong to any of these intersections is still at rest in $K^0$, while in each of the parts represented by the intersections there prevails a motion independent of the other disturbances, which of course has \emph{at least} one degree of freedom.
+But the number $n$ of points of disturbance can be increased at will; the number of kinematic degrees of freedom of a body therefore has no upper limit.
+
+Now, it is true, there is in \emph{Newtonian} mechanics yet another definition of rigidity, even better adapted to the physical facts than the kinematic one: there the rigid body is regarded as the limiting case of a deformable one with very large coefficients of elasticity.
+This passage to the limit can at any rate be carried out in the theory of relativity as well, and would lead, not indeed to the rigid body, but to the body that is as little deformable as possible, which perhaps also has especially simple properties.
+In any case the problem---and with this we come to the conclusion already drawn by \emph{Planck}\footnote[1]{M. \emph{Planck}, this journal \textbf{11}, 294, 1910.}---can be solved only from the side of the theory of elasticity (which is to be adapted to the theory of relativity).
+
+The necessity of admitting, for every body, whatever its constitution, the possibility of changes of shape is also illustrated in a very vivid way by an example that \emph{Einstein} gave in conversation and that \emph{Sommerfeld} communicated in a discussion at the Königsberg meeting of natural scientists.\footnote[2]{This journal \textbf{11}, 975, 1910.
+I should not leave unmentioned that I have had several opportunities to talk about these matters with Prof.\ \emph{Sommerfeld}.}
+Throughout, we use one and the same reference system.
+In it a ruler is at rest, while another, which forms the angle $\alpha$ with the first, advances perpendicular to its own direction with the velocity $q$.
+The point of intersection of the two rulers then travels along the first with the velocity $V = \frac{q}{\sin\alpha}$, and even if $q$ has quite moderate values (say 1 cm/sec), one can bring it about, by choosing a sufficiently small value for $\alpha$, that $V$ becomes greater than the velocity of light $c$.
+No physical theory can of course change anything in this purely geometrical inference.
+Does this state of affairs, then, contradict \emph{Einstein's} proposition that physical actions cannot propagate with a velocity greater than that of light?
+
+\opage{87}
+It is of course an easy matter to attach, at various points of the ruler at rest, devices that set off some physical event or other at the moment when the point of intersection sweeps over them.
+But this involves no contradiction of the proposition in question.
+For these events do not stand to one another in the relation of cause and effect; they are, rather, all effects of the causes that bring about the uniform motion of the second ruler.
+If, for example, one again removes as many of these devices as one likes, the remaining ones will accordingly function exactly as before.
+
+It would be otherwise if the following case could be realized:
+We again attach one of the devices mentioned at a point $B$ of the ruler at rest.
+At first the second ruler is also at rest; let the point of intersection of the two coincide, at this stage, with the point $A$ of the first.
+But then some occurrence takes place at $A$ which becomes the cause of the second ruler's being set into motion, practically instantaneously and along its whole length, with the velocity $q$ defined above.
+The point of intersection then runs along the ruler at rest as a signal of the event at $A$, and the event set off at $B$ is an effect of the cause that took place at $A$; the transmission from $A$ to $B$ takes place with the velocity $V$, greater than that of light.
+
+Why, then, can this process not be realized?
+Well, the mechanism of transmission necessarily fails here.
+The second ruler, which is supposed to be set into motion instantaneously by an impulse proceeding from $A$, does not remain straight, but bulges out at $A$.
+The velocity with which the disturbance of the initial state proceeding from $A$ communicates itself to the other points of the ruler is itself at most equal to that of light; the distant parts at first remain at rest, and only after a certain time does the disturbance seize them too.
+The above inference, $V > c$, holds, however, only for motions in which the ruler is straight; about the process just discussed it says nothing at all.
+Its theory could rather be worked out mathematically only on the basis of the theory of elasticity.
+
+There is here a far-reaching analogy with the case, already brought in by \emph{Sommerfeld} (l.\,c.), of the propagation of light.
+Purely periodic, hence temporally unbounded, wave trains cannot serve as a signal for the occurrence of an event.
+Accordingly it is no contradiction of the theory of relativity that under certain circumstances (in dispersive bodies and for anomalous spectral regions) the \emph{phase} velocity of regular sine waves is greater than $c$.
+But a wave train broken off (on one side or on both)---more generally, any interruption in the regularity\trnote{The print has a stray italic $c$ after „Regelmäßigkeit“.} of the oscillations---can indeed constitute a signal.
+In all such cases, however, the front of the disturbance propagates exactly with the velocity $c$, and the disturbance is at first so small that its noticeable main part usually arrives considerably later.
+
+To the unbounded periodic wave train there corresponds, in our mechanical example, the uniform, hence also temporally unbounded, motion of the ruler; to the interruption of the regular periodicity of the oscillations there corresponds the acceleration from rest (or more generally: a change of velocity).
+The former two processes are equally unsuited to serve as signals; the other two can indeed serve for them, but even in the best case they transmit them only with the velocity of light.
+
+\emph{Munich}, Institute for Theoretical Physics.\\
+January 1911.
+
+\begin{flushright}\small (Received 21~January 1911.)\end{flushright}
+
+\end{document}

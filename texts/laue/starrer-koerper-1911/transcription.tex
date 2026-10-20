@@ -1,0 +1,141 @@
+% =====================================================================
+%  M. Laue, „Zur Diskussion über den starren Körper in der Relativitätstheorie.“
+%  Physikalische Zeitschrift 12 (1911): 85–87.   TRANSCRIPTION.
+%  Source scan: ~/bibliotek/Laue, Max von/Laue 1911 - Zur Diskussion ueber den starren
+%    Koerper in der Relativitaetstheorie (Phys Z).pdf, sha256 1294d916960c2070...
+%    (SCANS.tsv; three pages, cut from archive.org
+%    per_physikalische-zeitschrift_physikalische-zeitschrift_1911-02-01_3, issue PDF pp. 5–7).
+%  Page map: journal p. = PDF p. + 84. The pages also carry other articles (p. 85 the end
+%    of a meteorological paper with its Fig. 3; p. 87 the beginning of Silberstein's
+%    paper); only Laue's text is transcribed. Laue's article has no figure.
+%  Running head on pp. 86–87 as printed: „Laue, Der starre Körper in der Relativitätstheorie.“
+%  Draft: the scan's IA text layer by script; OCR faults corrected at the image; every
+%    formula set from the image.
+%  Accuracy (2026-10-20): (1) draft prose from the IA layer by script, 65 OCR faults
+%    corrected at the image by the drafting agent, which also set all 56 inline formulas
+%    from the image (there are no displayed or numbered equations); (2) a second agent
+%    read all three pages at the image (400–700 dpi crops) against a copy with two planted
+%    control errors: the formula control (sin -> cos) was reported at once; the prose
+%    control (a one-letter case ending, "eines" -> "einer") only on a second pass, after
+%    being told one had been missed. Its readings confirmed every word, mark, emphasis
+%    span, footnote and page marker of the draft; every formula checked symbol by symbol;
+%    (3) words diffed against the IA layer (ocrdiff.py): 14 candidates, 0 transcription
+%    errors, 14 the layer's fault, 0 unresolved (32 single formula letters suppressed).
+%  Conventions: TRANSCRIPTION-PLAYBOOK.md.
+%  Misprints kept as printed (each marked % sic at the site): p. 85 „klässischen“ (for
+%    klassischen); p. 86 an upright roman P where every other P is italic; p. 86
+%    „(ΔU > O)“ with an italic capital O for the zero; p. 87 a stray italic c in
+%    „Regelmäßigkeit c der Schwingungen“.
+%  Footnotes: numbered as printed; on p. 86 the left column's note is 1) (Einstein) and the
+%    right column's are 1) (Planck) and 2) (Sommerfeld), so two notes there are numbered 1.
+% =====================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage[german]{babel}            % 1901 orthography patterns; [english] in translation.tex
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}\setstretch{1.25}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Zur Diskussion über den starren Körper in der Relativitätstheorie}, pdfauthor={M. Laue}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\textit{M. Laue: Der starre Körper (1911)}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% The original's page number in the margin. Followed directly by `[`, write \opage{N}\relax[.
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small Physikalische Zeitschrift 12 (1911), pp.~85--87}\\[1.5em]
+{\Large\bfseries Zur Diskussion über den starren Körper in der Relativitätstheorie.}\\[1em]
+{\large Von M. \emph{Laue}.}
+\end{center}
+\bigskip
+
+\opage{85}
+Seit die Dynamik des Massenpunktes durch \emph{Einstein} und \emph{Planck} dem Relativitätsprinzip angepaßt ist, haben eine Reihe von Autoren den weiteren Schritt versucht, die Dynamik des starren Körpers entsprechend umzuformen.
+Da sich die alten kinematischen Bedingungen der Starrheit nicht mit der \emph{Lorentz}-Transformation vertragen, so kam es dabei zunächst darauf an, eine neue Definition dafür zu schaffen.
+Es ist das Verdienst von M. \emph{Born}\footnote[1]{M. \emph{Born}, Ann.\ d.\ Phys.\ \textbf{30}, 1, 1909 und Göttinger Nachr.\ 1910, S.~161; ferner W. v. \emph{Ignatowski}, Ann.\ d.\ Phys.\ \textbf{33}, 607, 1910.} zuerst mit einer solchen hervorgetreten zu sein und damit das Problem aufgerollt zu haben.
+Nachdem \emph{Ehrenfest}\footnote[2]{P. \emph{Ehrenfest}, diese Zeitschr.\ \textbf{10}, 918, 1909; \textbf{11}, 1127, 1910.}, \emph{Herglotz}\footnote[3]{G. \emph{Herglotz}, Ann.\ d.\ Phys.\ \textbf{31}, 393, 1910.}, \emph{Noether}\footnote[4]{F. \emph{Noether}, Ann.\ d.\ Phys.\ \textbf{31}, 919, 1910.} nachgewiesen haben, daß jene erste Definition nur 3 Freiheitsgrade für die Bewegung läßt, hat er noch eine zweite veröffentlicht, die deren 6 zugibt.
+Ferner macht im Anschluß an seine Kritik der \emph{Born}schen Definition \emph{Noether} den Vorschlag, den starren Körper als ein Gebilde mit neun kinematischen Freiheitsgraden zu definieren.
+Und dieser Gedanke liegt bei der \emph{Minkowski}schen Weltdarstellung auch besonders nahe.
+Hat doch ein sich stets kongruent bleibendes dreidimensionales geometrisches Gebilde im vierdimensionalen Raum $4 + 3 + 2 + 1 = 10$ Freiheitsgrade; von den zugehörigen Raum-Zeit-Variablen kommt aber eine als willkürlicher, die Lage unterscheidender Parameter in Abzug, so daß nun 9 übrig bleiben.
+Alle drei Vorschläge haben den (durchaus zu billigenden) Gedanken gemein, daß ein starrer Körper im Gegensatz zu den unendlich vielen Freiheitsgraden des deformierbaren deren nur eine endliche Zahl besitzen kann (dabei ist selbstverständlich der Körper als Kontinuum gedacht).
+Wir wollen nun zeigen, daß das Relativitätsprinzip diese Möglichkeit aus dynamischen Gründen ausschließt, daß daher jeder Versuch dazu von vornherein aussichtslos ist.
+Um aber Mißdeutungen vorzubeugen, sei ausdrücklich bemerkt, daß sich natürlich \emph{unter gewissen Umständen} ein Körper ohne Änderung der auf das jeweils mitbewegte System bezogenen Form bewegen kann; das beweist ja schon die gleichmäßig beschleunigte (Hyperbel-)Bewegung.
+Kann sich doch auch in der klässischen Hydrodynamik ein Flüssigkeitsteilchen gelegentlich so bewegen, als wäre es starr. % sic: klässischen; klassischen
+Nur ist dies bei
+\opage{86}
+keinem Körper die allgemeinste mögliche Bewegung; vielmehr wollen wir ebenfalls an einem Beispiel zeigen, daß sich bei \emph{jedem} Körper Vorgänge denken lassen, bei denen die Zahl der kinematischen Freiheitsgrade unendlich groß ist.
+
+Wir gehen dabei von einem Satz aus, welchen schon \emph{Einstein}\footnote[1]{A. \emph{Einstein}, Ann.\ d.\ Phys.\ \textbf{17}, 891, 1905.} in der Form ausgesprochen hat, daß für alle physikalischen Wirkungen eine Ausbreitung mit mehr als Lichtgeschwindigkeit ausgeschlossen ist.
+Wir legen der Betrachtung \emph{Minkowskis} vierdimensionale Welt zugrunde ($u = ct$ als vierte Koordinate), in welcher jeder Weltpunkt ein Ereignis nach Ort und Zeit repräsentiert und behaupten: alle Ereignisse, welche Wirkungen des durch den Weltpunkt $O$ dargestellten Geschehnisses sein können, werden durch Weltpunkte des Nachkegels oder solche jenseits von $O$ repräsentiert; alle Ereignisse, welche als Ursachen des Ereignisses $O$ in Betracht kommen können, werden durch Weltpunkte des Vorkegels oder durch diesseits liegende dargestellt. \emph{Punkte des Zwischengebietes von $O$ dagegen können mit $O$ nicht in kausalem Zusammenhange stehen.} Der Beweis lautet:
+Ein Punkt $P$ des Zwischengebietes ist je nach Wahl des Bezugssystems früher oder später als $O$.
+Ein Naturgesetz, welches $O$ und $P$ verknüpfen sollte, müßte also in einem Teil der berechtigten Systeme $O$ als Ursache und $P$ als Wirkung, in einem anderen Teile P als Ursache und $O$ als Wirkung angeben. % sic: P set upright (roman), italic $P$ elsewhere
+Dem widerspricht das Relativitätsprinzip, demzufolge die Naturgesetze in allen berechtigten Systemen die gleiche Form haben sollen.
+
+Nun ruhe ein Körper zunächst in einem System $K^0$, so daß die Weltlinien seiner Punkte zueinander parallele Gerade sind.
+Nur von dem Weltpunkt $O$ an weiche die nach $O$ führende Weltlinie allmählich von ihrer bisherigen Richtung ab.
+Diese Störung wird entsprechende Störungen im Verlaufe aller anderen Weltlinien zur Folge haben, aber frühestens dann, wenn diese in den Nachkegel von $O$ eintreten.
+Bis dahin liegen sie nämlich im Zwischengebiet oder gar diesseits von $O$, können also von der Störung in $O$ nicht beeinflußt werden.
+
+Derartige Störungen mögen nun nicht nur in einem Punkte $O$ eintreten, sondern in $n$ Punkten $O_i$, welche alle in einem ebenen Raume $u^0 = U$ liegen.
+Es gibt dann stets einen Raum $u^0 = U + \varDelta U$ ($\varDelta U > O$), in welchem seine $n$ Schnitte mit den Nachkegeln der Punkte $O_i$ sich noch nicht überdecken, sondern sich vollständig ausschließen. % sic: $\varDelta U > O$ (italic capital O); $\varDelta U > 0$
+Die Bewegung des Körpers in dem Zeitpunkt $t^0 = \frac{U + \varDelta U}{c}$ hat dann sicherlich $n$-Freiheitsgrade.
+Ein Teil von ihm, welcher noch keinem dieser Schnitte angehört, ruht nämlich nach wie vor in $K^0$, während in den durch die Schnitte dargestellten Teilen je eine von den anderen Störungen unabhängige Bewegung herrscht, die natürlich \emph{mindestens} einen Freiheitsgrad hat.
+Die Zahl $n$ der Störungspunkte läßt sich aber beliebig vergrößern; die Zahl der kinematischen Freiheitsgrade eines Körpers hat somit keine obere Grenze.
+
+Nun gibt es freilich in der \emph{Newton}schen Mechanik noch eine andere, dem physikalischen Sachverhalt sogar besser als die kinematische angepaßte Definition der Starrheit; man betrachtet den starren Körper dabei als Grenzfall eines deformierbaren mit sehr großen Elastizitätskoeffizienten.
+Dieser Grenzübergang läßt sich jedenfalls auch in der Relativitätstheorie durchführen und würde zwar nicht zum starren, wohl aber zu dem so wenig wie möglich deformierbaren Körper führen, welcher vielleicht auch besonders einfache Eigenschaften hat.
+Jedenfalls ist das Problem --- damit kommen wir zu der schon von \emph{Planck}\footnote[1]{M. \emph{Planck}, diese Zeitschr.\ \textbf{11}, 294, 1910.} gezogenen Schlußfolgerung --- nur von seiten der (der Relativitätstheorie anzupassenden) Elastizitätslehre zu lösen.
+
+Die Notwendigkeit, bei jedem Körper, gleichviel welcher Beschaffenheit, die Möglichkeit von Formänderungen zuzugeben, wird auch in sehr sinnfälliger Weise erläutert durch ein Beispiel, das von \emph{Einstein} gesprächsweise angegeben und von \emph{Sommerfeld} in einer Diskussion auf der Königsberger Naturforscherversammlung mitgeteilt worden ist\footnote[2]{Diese Zeitschr.\ \textbf{11}, 975, 1910.
+Ich möchte nicht unerwähnt lassen, daß ich mehrfach Gelegenheit hatte, mit Hrn.\ Prof.\ \emph{Sommerfeld} über diese Dinge zu sprechen.}.
+Wir benutzen dabei immer ein und dasselbe Bezugssystem.
+In diesem ruht ein Lineal, während ein anderes, das mit dem ersten den Winkel $\alpha$ bildet, mit der Geschwindigkeit $q$ senkrecht zu seiner Richtung fortschreitet.
+Der Schnittpunkt beider Lineale wandert dann auf dem ersten mit der Geschwindigkeit $V = \frac{q}{\sin\alpha}$, und auch wenn $q$ durchaus mäßige Werte hat (etwa 1 cm/sec), so kann man es durch Wahl eines hinreichend kleinen Wertes für $\alpha$ erreichen, daß $V$ größer wird, als die Lichtgeschwindigkeit $c$.
+An diesem rein geometrischen Schluß kann selbstverständlich keine physikalische Theorie etwas ändern.
+Widerspricht dieser Sachverhalt nun dem \emph{Einstein}schen Satz, daß sich physikalische Wirkungen nicht mit Überlichtgeschwindigkeit ausbreiten können?
+
+\opage{87}
+Es ist natürlich ein leichtes, in verschiedenen Punkten des ruhenden Lineals Vorrichtungen anzubringen, welche im Augenblick, da der Schnittpunkt über sie hinwegstreicht, irgendwelche physikalischen Ereignisse auslösen.
+Darin liegt aber kein Widerspruch gegen den fraglichen Satz.
+Denn diese Ereignisse stehen untereinander nicht in dem Zusammenhange wie Ursache und Wirkung, sondern sie sind alle Wirkungen der Ursachen, welche die gleichförmige Bewegung des zweiten Lineals veranlassen.
+Entfernt man z.\,B. wieder beliebig viele von den genannten Vorrichtungen, so werden die übrigbleibenden demnach genau so funktionieren, wie vorher.
+
+Anders verhielte es sich, wenn sich der folgende Fall realisieren ließe:
+Wir bringen in einem Punkte $B$ des ruhenden Lineals wieder eine der genannten Einrichtungen an.
+Anfänglich ruht auch das zweite Lineal; der Schnittpunkt beider möge in diesem Stadium mit dem Punkt $A$ des ersten zusammenfallen.
+Dann aber ereignet sich irgendein Geschehnis in $A$, welches die Ursache dafür wird, daß das zweite Lineal sich so gut wie momentan in seiner ganzen Länge mit der oben definierten Geschwindigkeit $q$ in Bewegung setzt.
+Der Schnittpunkt durchläuft dann das ruhende Lineal als Signal des Ereignisses in $A$ und das in $B$ ausgelöste Ereignis ist eine Wirkung der Ursache, die sich in $A$ zugetragen hat; die Übertragung von $A$ nach $B$ erfolgt mit der Überlichtgeschwindigkeit $V$.
+
+Warum läßt sich nun dieser Vorgang nicht verwirklichen?
+Nun, der Übertragungsmechanismus versagt dabei notwendigerweise.
+Das zweite Lineal, das durch einen von $A$ ausgehenden Impuls momentan in Bewegung gebracht werden soll, bleibt nicht gerade, sondern baucht sich in $A$ aus.
+Die Geschwindigkeit, mit der die von $A$ ausgehende Störung des Anfangszustandes sich den anderen Punkten des Lineals mitteilt, ist selbst höchstens gleich der des Lichtes, die entfernten Teile bleiben zunächst noch in Ruhe, erst nach einer gewissen Zeit ergreift auch sie die Störung.
+Der obige Schluß, $V > c$, gilt aber nur für Bewegungen, bei denen das Lineal gerade ist; über den zuletzt besprochenen Vorgang sagt er gar nichts aus.
+Dessen Theorie ließe sich vielmehr erst auf Grund der Elastizitätslehre mathematisch ausarbeiten.
+
+Es besteht hier eine weitgehende Analogie zu dem von \emph{Sommerfeld} (l.\,c.) bereits herangezogenen Fall der Fortpflanzung des Lichts.
+Rein periodische, also zeitlich unbegrenzte Wellenzüge können nicht als Signal für das Eintreten eines Ereignisses dienen.
+Dementsprechend bedeutet es keinen Widerspruch gegen die Relativitätstheorie, daß unter Umständen (in dispergierenden Körpern und für anomale Spektralbereiche) die \emph{Phasen}geschwindigkeit regelmäßiger Sinuswellen größer ist als $c$.
+Wohl aber kann ein (einseitig oder beiderseitig) abgebrochener Wellenzug --- allgemeiner gesagt irgendeine Unterbrechung in der Regelmäßigkeit $c$ der Schwingungen --- ein Signal darstellen. % sic: stray italic $c$ after Regelmäßigkeit; no letter meant
+In allen derartigen Fällen pflanzt sich aber die Front der Störung genau mit der Geschwindigkeit $c$ fort, und die Störung ist anfangs so klein, daß ihr bemerkbarer Hauptteil meist erheblich später kommt.
+
+Dem unbegrenzten periodischen Wellenzuge entspricht in unserem mechanischen Beispiel die gleichförmige, also auch zeitlich unbegrenzte Bewegung des Lineals, der Unterbrechung regelmäßiger Periodizität der Schwingungen entspricht die Beschleunigung von der Ruhe (oder allgemeiner: eine Geschwindigkeitsänderung).
+Die ersteren Vorgänge sind beide gleich ungeeignet zu Signalen, die beiden anderen können wohl dazu dienen, übermitteln sie aber auch im besten Falle nur mit Lichtgeschwindigkeit.
+
+\emph{München}, Institut für theoretische Physik.\\
+Januar 1911.
+
+\begin{flushright}\small (Eingegangen 21.~Januar 1911.)\end{flushright}
+
+\end{document}

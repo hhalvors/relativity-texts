@@ -1,0 +1,51 @@
+% =====================================================================
+%  <Author>, „<Title>.“  <Journal> <vol> (<year>): <pp>.
+%  TRANSCRIPTION | ENGLISH TRANSLATION.
+%  Source scan: ~/bibliotek/<file>, sha256 <...> (SCANS.tsv; `python3 scans.py path <author/slug>`).
+%  Page map: journal p. = PDF p. + <offset>; \opage{N} marks where journal page N begins.
+%  Accuracy: <how established; TRANSCRIPTION-PLAYBOOK.md §4>.
+%  Conventions: TRANSCRIPTION-PLAYBOOK.md / TRANSLATION-PLAYBOOK.md.
+%  Misprints: transcribed as printed, each marked `% sic:` at the site, listed here.
+% =====================================================================
+%  Copy this file to texts/<author>/<slug>/transcription.tex (or translation.tex).
+%  In translation.tex: babel [english]; keep the credit line; same \opage, \tag and
+%  footnote numbers as the transcription.
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage[german]{babel}            % 1901 orthography patterns; [english] in translation.tex
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}\setstretch{1.25}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={<Title>}, pdfauthor={<Author>}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\textit{<Author>: <Short title> (<year>)}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+% The original's page number in the margin. Followed directly by `[`, write \opage{N}\relax[.
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+% translation.tex only: translator's notes, lettered so the printed notes keep their numbers.
+\newcounter{trnote}
+\newcommand{\trnote}[1]{\stepcounter{trnote}\begingroup\renewcommand{\thefootnote}{\alph{trnote}}%
+  \footnote[\value{trnote}]{[Tr.] #1}\endgroup}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small <Journal> <vol> (<year>), pp.~<pp>}\\[1.5em]
+{\Large\bfseries <Title>}\\[1em]
+{\large <Author>}\\[1em]
+{\small Translated from the German}   % translation.tex only (Hans: no translator's name)
+\end{center}
+\bigskip
+
+\opage{<first page>}...
+
+\end{document}
