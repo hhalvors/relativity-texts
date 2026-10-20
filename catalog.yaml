@@ -193,6 +193,8 @@ topics:
         source: "Physikalische Zeitschrift 11 (1910): 1127–1129"
         status: to-do
         links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1910-12-01_24/page/n30"
           - label: "Wikisource"
             url: "https://de.wikisource.org/wiki/Zu_Herrn_v._Ignatowskys_Behandlung_der_Bornschen_Starrheitsdefinition"
         publish: true
@@ -206,6 +208,8 @@ topics:
         source: "Physikalische Zeitschrift 12 (1911): 169–170"
         status: to-do
         links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1911-03-01_5/page/n8"
           - label: "Wikisource"
             url: "https://de.wikisource.org/wiki/Zum_Ehrenfestschen_Paradoxon"
         publish: true
@@ -219,6 +223,8 @@ topics:
         source: "Physikalische Zeitschrift 12 (1911): 412–413"
         status: to-do
         links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1911-05-15_10/page/n43"
           - label: "Wikisource"
             url: "https://de.wikisource.org/wiki/Zu_Herrn_v._Ignatowskys_Behandlung_der_Bornschen_Starrheitsdefinition_II"
         publish: true
@@ -232,6 +238,8 @@ topics:
         source: "Physikalische Zeitschrift 12 (1911): 414"
         status: to-do
         links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1911-05-15_10/page/n45"
           - label: "Wikisource"
             url: "https://de.wikisource.org/wiki/Zum_Ehrenfestschen_Paradoxon_(Ignatowski)"
         publish: true
