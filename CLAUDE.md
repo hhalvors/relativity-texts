@@ -34,14 +34,16 @@ only what differs. (Set up 2026-10-20 from
 |---|---|
 | A scan turned into `transcription.tex` | **TRANSCRIPTION-PLAYBOOK.md**, then danish-texts' §00 and §3 |
 | A finished transcription turned into English | **TRANSLATION-PLAYBOOK.md** and **GLOSSARY.md** |
-| To continue a paper already under way | `texts/<author>/<slug>/RESUME-NOTES.md` |
-| The scan a paper was made from | `python3 scans.py path <author>/<slug>`; SCANS.tsv |
+| To continue a paper already under way | `texts/<topic>/<paper>/RESUME-NOTES.md` |
+| The scan a paper was made from | `python3 scans.py path <topic>/<paper>`; SCANS.tsv |
 | A lost scan regenerated | `fetch-scans.sh` (not run by default) |
 | The catalog edited | `catalog.yaml`, then `python3 validate-catalog.py` |
 
-Papers, in order of work: `ehrenfest/rotation-1909` (1 p.),
-`laue/starrer-koerper-1911` (3 pp.), `herglotz/starr-1910` (23 pp.),
-`noether-fritz/kinematik-1910` (26 pp.), `born/starres-elektron-1909` (56 pp.).
+The repo is organized by **topic**, not by author (Hans, 2026-10-20):
+`texts/<topic>/<author>-<year>/`. The first topic is `extended-bodies`
+("No-go theorems for extended bodies"). Papers, in order of work: `extended-bodies/ehrenfest-1909` (1 p.),
+`extended-bodies/laue-1911` (3 pp.), `extended-bodies/herglotz-1910` (23 pp.),
+`extended-bodies/noether-1910` (26 pp.), `extended-bodies/born-1909` (56 pp.).
 One paper per session after the two pilots. Second-phase papers are listed in
 `catalog.yaml` with `phase: 2`; do not start one without Hans.
 
@@ -61,7 +63,7 @@ One paper per session after the two pilots. Second-phase papers are listed in
 Transcribing a paper means transcribing it *and* establishing that it is
 accurate. Every page is read at the image by an agent that did not produce the
 text, with two planted control errors per reader; the prose is diffed against
-the scan's text layer (`python3 ocrdiff.py <author>/<slug>`) and the result
+the scan's text layer (`python3 ocrdiff.py <topic>/<paper>`) and the result
 recorded as an `OCRDIFF:` line; every formula is checked symbol by symbol at
 the image (the layer cannot witness formulas). The `transcription.tex` header
 states how accuracy was established. A clean compile is not evidence of accuracy.
@@ -83,8 +85,14 @@ states how accuracy was established. A clean compile is not evidence of accuracy
 - **`publish: false`** in catalog.yaml must be mirrored in `PRIVATE` in the
   Makefile; a publish script uses `make public`. (All five first-phase papers
   are `publish: true`, Hans 2026-10-20.)
-- Web publication (a `RelativityTexts.hs` generator, `publish-relativity.sh`)
-  is a later session; ask Hans first. Plan: RELATIVITY-TEXTS-START.md §7.
+- **Web publication** (wired 2026-10-20): `catalog.yaml` is symlinked as
+  `~/hhalvors.github.io/data/relativity-texts.yaml` and rendered at
+  https://hanshalvorson.com/relativity/ by `RelativityTexts.hs` there. The PDFs
+  are served by this repo's GitHub Pages (hhalvors.github.io/relativity-texts/,
+  which redirects to hanshalvorson.com/relativity-texts/). Hans publishes with
+  `~/hhalvors.github.io/publish-relativity.sh "message"` (make, make check,
+  site build, commit and push both repos). When a paper is finished, set its
+  `status: complete` in the catalog and give it Transcription/Translation links.
 
 ## Editorial stance
 

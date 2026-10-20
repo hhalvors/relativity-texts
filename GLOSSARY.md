@@ -1,7 +1,9 @@
 # Glossary (German → English)
 
-**Status: DRAFT, 2026-10-20 — awaiting Hans's approval before Herglotz is
-translated.** One rendering per term across all papers. Add a term, with the
+**Status, 2026-10-20:** the five title translations, and the renderings used in
+the Ehrenfest and Laue translations (incl. "Ansatz" → "assumption"), accepted by
+Hans with those translations. The rest is a DRAFT awaiting his approval before
+Herglotz is translated. One rendering per term across all papers. Add a term, with the
 page where it first occurs, when it is first met; flag new terms to Hans.
 
 ## Core terms

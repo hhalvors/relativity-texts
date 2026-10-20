@@ -6,7 +6,7 @@ German Antiqua with mathematics, and what the pilots taught.
 
 ## 1. Per paper, before anything else
 
-1. `python3 scans.py path <author>/<slug>` — the verified scan.
+1. `python3 scans.py path <topic>/<paper>` — the verified scan.
 2. Read the paper's `RESUME-NOTES.md` (page map, edition check, resume point).
 3. **Edition check.** Look for an existing transcription of the same printing
    (German Wikisource first: `Seite:<title>.djvu/<n>` pages, fetched with
@@ -28,7 +28,7 @@ German Antiqua with mathematics, and what the pilots taught.
   A reader whose controls are not both reported reads again.
 - **Formulas are read twice**, symbol by symbol, by two agents; one of them may
   be the agent that set them, the other must not be.
-- `python3 ocrdiff.py <author>/<slug>` (or `--frag` per batch) before
+- `python3 ocrdiff.py <topic>/<paper>` (or `--frag` per batch) before
   splicing; record `OCRDIFF: <witness> | <n> candidates | <n> corrected | <n>
   witness's fault | <n> unresolved` in RESUME-NOTES. ocrdiff strips the
   mathematics before comparing, so it witnesses prose only.

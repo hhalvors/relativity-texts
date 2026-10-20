@@ -1,16 +1,17 @@
 # Relativity Texts
 
 Transcriptions and English translations of early papers on the theory of
-relativity, beginning with the debate over rigid bodies in special relativity
-(1909–1911):
+relativity, arranged by topic. The first topic, **no-go theorems for extended
+bodies** (`texts/extended-bodies/`), is the debate of 1909–1911 over rigid
+bodies in special relativity:
 
 | Paper | Source |
 |---|---|
+| M. Born, „Die Theorie des starren Elektrons in der Kinematik des Relativitätsprinzips“ | *Ann. Phys.* 335 (1909): 1–56 |
 | P. Ehrenfest, „Gleichförmige Rotation starrer Körper und Relativitätstheorie“ | *Phys. Z.* 10 (1909): 918 |
-| M. Laue, „Zur Diskussion über den starren Körper in der Relativitätstheorie“ | *Phys. Z.* 12 (1911): 85–87 |
 | G. Herglotz, „Über den vom Standpunkt des Relativitätsprinzips aus als ‚starr‘ zu bezeichnenden Körper“ | *Ann. Phys.* 336 (1910): 393–415 |
 | F. Noether, „Zur Kinematik des starren Körpers in der Relativtheorie“ | *Ann. Phys.* 336 (1910): 919–944 |
-| M. Born, „Die Theorie des starren Elektrons in der Kinematik des Relativitätsprinzips“ | *Ann. Phys.* 335 (1909): 1–56 |
+| M. Laue, „Zur Diskussion über den starren Körper in der Relativitätstheorie“ | *Phys. Z.* 12 (1911): 85–87 |
 
 Each transcription follows the printed text, with the journal's page numbers in
 the margin, the printed equation numbers, and the printer's errors kept and
@@ -19,11 +20,11 @@ marked. The translations mirror the transcriptions page for page.
 ## Structure
 
 ```
-texts/<author>/<slug>/
+texts/<topic>/<paper>/
     transcription.tex / .pdf   the German, as printed
     translation.tex / .pdf     the English
     figures/                   redrawn or cropped figures, where a paper has them
-catalog.yaml                   one record per paper (status, citation, publish flag)
+catalog.yaml                   topics, each with its papers (status, citation, links, publish flag)
 SCANS.tsv, scans.py            which scan each transcription was made from, by sha256
 fetch-scans.sh                 how each scan was cut from the Internet Archive's issue scans
 ocrdiff.py                     compares a transcription's words with the scan's text layer

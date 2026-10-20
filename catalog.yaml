@@ -1,212 +1,182 @@
 # Relativity Texts — Catalog
 #
 # Transcriptions and English translations of early papers on relativity theory,
-# beginning with the rigid-body papers of 1909–1911. One record per paper.
+# arranged by TOPIC, not by author (Hans, 2026-10-20). One record per paper,
+# listed under its topic in the order the page shows them (chronological).
 #
-# The schema is the danish-texts one (~/danish-texts/catalog.yaml, checked against
-# ~/hhalvors.github.io/DanishTexts.hs), so a trimmed copy of that generator can read it.
-# Required keys:  Author: id, name, dates, bio, works
-#                 Work:   id, title, year, sections      (venue, note optional)
-#                 Section: title, status, links (use `links: []` when empty)
-# Extra keys for this repo (unknown keys are ignored by the danish-texts parser):
-#   title_en   English title (sentence case in reference lists)
-#   source     full citation of the printing transcribed
-#   publish    true | false. false keeps the work's PDFs off GitHub Pages and the site:
-#              list its texts/<author>/<slug> in PRIVATE in the Makefile as well.
-#              (Hans, 2026-10-20: all five first-phase papers are published.)
-#   phase      1 = the first-phase corpus; 2 = listed for later, not started.
-# Status values: complete | in-progress | to-do
-# A `note` describes the work (what it argues, its place in the debate), never our method.
-# Run `python3 validate-catalog.py` before handing this file back.
+# This file drives the /relativity/ page of hanshalvorson.com: it is symlinked as
+# ~/hhalvors.github.io/data/relativity-texts.yaml and rendered by RelativityTexts.hs
+# there. Publish with ~/hhalvors.github.io/publish-relativity.sh "message".
+#
+# Topic:  id (= the directory texts/<id>/), title, note (optional), papers
+# Paper:  id          the directory texts/<topic>/<id>/, <author>-<year>
+#         author      the author's name as it should appear
+#         dates       the author's dates (optional)
+#         title       the original title, as printed
+#         title-en    English title, sentence case (optional; required for phase 1)
+#         year
+#         source      full citation of the printing transcribed
+#         note        two or three sentences on the paper itself (optional; never our method)
+#         status      complete | in-progress | to-do
+#         links       [{label, url}]; use `links: []` when empty
+#         publish     true | false. false leaves the paper off the site page; also list
+#                     texts/<topic>/<id> in PRIVATE in the Makefile, which keeps its PDFs
+#                     out of `make public`. (Hans, 2026-10-20: all published.)
+#         phase       1 = being edited now; 2 = listed for later (shown under "Planned")
+# When a paper is finished: status complete, and Transcription/Translation links
+#   https://hhalvors.github.io/relativity-texts/texts/<topic>/<id>/<file>.pdf
+# Run `python3 validate-catalog.py` (or `make check`) before handing this file back.
 
-authors:
+topics:
 
-  - id: ehrenfest
-    name: "Paul Ehrenfest"
-    dates: "1880–1933"
-    bio: >
-      Austrian-Dutch theoretical physicist. He wrote these papers in
-      St. Petersburg, before succeeding Lorentz at Leiden in 1912.
-    works:
-      - id: rotation-1909
-        title: "Gleichförmige Rotation starrer Körper und Relativitätstheorie"
-        title_en: "Uniform rotation of rigid bodies and the theory of relativity"
-        year: "1909"
-        venue: "Physikalische Zeitschrift 10"
-        source: "Physikalische Zeitschrift 10 (1909): 918"
-        publish: true
-        phase: 1
-        note: >
-          A one-page note arguing that relativistic rigidity cannot be
-          maintained for a cylinder set into uniform rotation: its periphery
-          should contract while its radius should not. The origin of what
-          became known as the Ehrenfest paradox.
-        sections:
-          - title: "Complete article (p. 918)"
-            status: in-progress
-            links: []
-      - id: ignatowsky-1910
-        title: "Zu Herrn v. Ignatowskys Behandlung der Bornschen Starrheitsdefinition"
-        year: "1910"
-        venue: "Physikalische Zeitschrift 11"
-        source: "Physikalische Zeitschrift 11 (1910): 1127–1129"
-        publish: true
-        phase: 2
-        sections:
-          - title: "Complete article (pp. 1127–1129)"
-            status: to-do
-            links: []
-      - id: ignatowsky-1911
-        title: "Zu Herrn v. Ignatowskys Behandlung der Bornschen Starrheitsdefinition II"
-        year: "1911"
-        venue: "Physikalische Zeitschrift 12"
-        source: "Physikalische Zeitschrift 12 (1911): 412–413"
-        publish: true
-        phase: 2
-        sections:
-          - title: "Complete article (pp. 412–413)"
-            status: to-do
-            links: []
+  - id: extended-bodies
+    title: "No-go theorems for extended bodies"
+    note: >
+      Born (1909) proposed a definition of the rigid body suited to the theory of
+      relativity. Ehrenfest (1909) showed that a body rigid in this sense cannot be
+      set into uniform rotation; Herglotz and Noether (1910) showed that the
+      definition leaves a body only three degrees of freedom; and Laue (1911) argued
+      that, since no action propagates faster than light, no body can have a finite
+      number of degrees of freedom.
+    papers:
 
-  - id: laue
-    name: "Max von Laue"
-    dates: "1879–1960"
-    bio: >
-      German physicist, Nobel laureate in 1914 for the diffraction of X-rays
-      by crystals, and author of the first textbook of the special theory of
-      relativity, »Das Relativitätsprinzip« (1911).
-    works:
-      - id: starrer-koerper-1911
-        title: "Zur Diskussion über den starren Körper in der Relativitätstheorie"
-        title_en: "On the discussion of the rigid body in the theory of relativity"
-        year: "1911"
-        venue: "Physikalische Zeitschrift 12"
-        source: "Physikalische Zeitschrift 12 (1911): 85–87"
-        publish: true
-        phase: 1
-        sections:
-          - title: "Complete article (pp. 85–87)"
-            status: in-progress
-            links: []
-
-  - id: herglotz
-    name: "Gustav Herglotz"
-    dates: "1881–1953"
-    bio: >
-      German mathematician, professor at Leipzig and later at Göttingen.
-    works:
-      - id: starr-1910
-        title: "Über den vom Standpunkt des Relativitätsprinzips aus als „starr“ zu bezeichnenden Körper"
-        title_en: "On the body to be described as “rigid” from the standpoint of the principle of relativity"
-        year: "1910"
-        venue: "Annalen der Physik 336 [4. Folge 31]"
-        source: "Annalen der Physik 336 [4. Folge 31] (1910): 393–415"
-        publish: true
-        phase: 1
-        sections:
-          - title: "Complete article (pp. 393–415)"
-            status: to-do
-            links: []
-
-  - id: noether-fritz
-    name: "Fritz Noether"
-    dates: "1884–1941"
-    bio: >
-      German mathematician, brother of Emmy Noether.
-    works:
-      - id: kinematik-1910
-        title: "Zur Kinematik des starren Körpers in der Relativtheorie"
-        title_en: "On the kinematics of the rigid body in the theory of relativity"
-        year: "1910"
-        venue: "Annalen der Physik 336 [4. Folge 31]"
-        source: "Annalen der Physik 336 [4. Folge 31] (1910): 919–944"
-        publish: true
-        phase: 1
-        sections:
-          - title: "Complete article (pp. 919–944)"
-            status: to-do
-            links: []
-
-  - id: born
-    name: "Max Born"
-    dates: "1882–1970"
-    bio: >
-      German-British theoretical physicist, Nobel laureate in 1954.
-    works:
-      - id: starres-elektron-1909
+      - id: born-1909
+        author: "Max Born"
+        dates: "1882–1970"
         title: "Die Theorie des starren Elektrons in der Kinematik des Relativitätsprinzips"
-        title_en: "The theory of the rigid electron in the kinematics of the principle of relativity"
+        title-en: "The theory of the rigid electron in the kinematics of the principle of relativity"
         year: "1909"
-        venue: "Annalen der Physik 335 [4. Folge 30]"
         source: "Annalen der Physik 335 [4. Folge 30] (1909): 1–56"
+        status: to-do
+        links: []
         publish: true
         phase: 1
-        sections:
-          - title: "Complete article (pp. 1–56)"
-            status: to-do
-            links: []
-      - id: kinematik-starr-1910
-        title: "Zur Kinematik des starren Körpers im System des Relativitätsprinzips"
+
+      - id: ehrenfest-1909
+        author: "Paul Ehrenfest"
+        dates: "1880–1933"
+        title: "Gleichförmige Rotation starrer Körper und Relativitätstheorie"
+        title-en: "Uniform rotation of rigid bodies and the theory of relativity"
+        year: "1909"
+        source: "Physikalische Zeitschrift 10 (1909): 918"
+        note: >
+          A one-page note arguing that relativistic rigidity cannot be maintained
+          for a cylinder set into uniform rotation: its periphery should contract
+          while its radius should not. The origin of what became known as the
+          Ehrenfest paradox.
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/ehrenfest-1909/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/ehrenfest-1909/translation.pdf"
+        publish: true
+        phase: 1
+
+      - id: herglotz-1910
+        author: "Gustav Herglotz"
+        dates: "1881–1953"
+        title: "Über den vom Standpunkt des Relativitätsprinzips aus als „starr“ zu bezeichnenden Körper"
+        title-en: "On the body to be described as “rigid” from the standpoint of the principle of relativity"
         year: "1910"
-        venue: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Math.-phys. Klasse"
-        source: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Math.-phys. Klasse (1910): 161 ff."
+        source: "Annalen der Physik 336 [4. Folge 31] (1910): 393–415"
+        status: to-do
+        links: []
         publish: true
-        phase: 2
-        sections:
-          - title: "Complete article"
-            status: to-do
-            links: []
+        phase: 1
 
-  - id: ignatowski
-    name: "Wladimir Sergejewitsch Ignatowski"
-    dates: "1875–1942"
-    bio: >
-      Russian physicist.
-    works:
-      - id: ehrenfest-paradoxon-1911
-        title: "Zum Ehrenfestschen Paradoxon"
+      - id: noether-1910
+        author: "Fritz Noether"
+        dates: "1884–1941"
+        title: "Zur Kinematik des starren Körpers in der Relativtheorie"
+        title-en: "On the kinematics of the rigid body in the theory of relativity"
+        year: "1910"
+        source: "Annalen der Physik 336 [4. Folge 31] (1910): 919–944"
+        status: to-do
+        links: []
+        publish: true
+        phase: 1
+
+      - id: laue-1911
+        author: "Max von Laue"
+        dates: "1879–1960"
+        title: "Zur Diskussion über den starren Körper in der Relativitätstheorie"
+        title-en: "On the discussion of the rigid body in the theory of relativity"
         year: "1911"
-        venue: "Physikalische Zeitschrift 12"
-        source: "Physikalische Zeitschrift 12 (1911): 414"
+        source: "Physikalische Zeitschrift 12 (1911): 85–87"
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/laue-1911/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/laue-1911/translation.pdf"
         publish: true
-        phase: 2
-        sections:
-          - title: "Complete article (p. 414)"
-            status: to-do
-            links: []
+        phase: 1
 
-  - id: varicak
-    name: "Vladimir Varićak"
-    dates: "1865–1942"
-    bio: >
-      Croatian mathematician.
-    works:
-      - id: ehrenfest-paradoxon-1911
-        title: "Zum Ehrenfestschen Paradoxon"
-        year: "1911"
-        venue: "Physikalische Zeitschrift 12"
-        source: "Physikalische Zeitschrift 12 (1911): 169–170"
-        publish: true
-        phase: 2
-        sections:
-          - title: "Complete article (pp. 169–170)"
-            status: to-do
-            links: []
+      # Planned (phase 2): not started; do not start one without Hans.
 
-  - id: poincare
-    name: "Henri Poincaré"
-    dates: "1854–1912"
-    bio: >
-      French mathematician and physicist.
-    works:
-      - id: dynamique-electron-1906
+      - id: poincare-1906
+        author: "Henri Poincaré"
+        dates: "1854–1912"
         title: "Sur la dynamique de l'électron"
         year: "1906"
-        venue: "Rendiconti del Circolo Matematico di Palermo 21"
         source: "Rendiconti del Circolo Matematico di Palermo 21 (1906): 129–175"
+        status: to-do
+        links: []
         publish: true
         phase: 2
-        sections:
-          - title: "Complete article (pp. 129–175)"
-            status: to-do
-            links: []
+
+      - id: born-1910
+        author: "Max Born"
+        dates: "1882–1970"
+        title: "Zur Kinematik des starren Körpers im System des Relativitätsprinzips"
+        year: "1910"
+        source: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Math.-phys. Klasse (1910): 161 ff."
+        status: to-do
+        links: []
+        publish: true
+        phase: 2
+
+      - id: ehrenfest-1910
+        author: "Paul Ehrenfest"
+        dates: "1880–1933"
+        title: "Zu Herrn v. Ignatowskys Behandlung der Bornschen Starrheitsdefinition"
+        year: "1910"
+        source: "Physikalische Zeitschrift 11 (1910): 1127–1129"
+        status: to-do
+        links: []
+        publish: true
+        phase: 2
+
+      - id: varicak-1911
+        author: "Vladimir Varićak"
+        dates: "1865–1942"
+        title: "Zum Ehrenfestschen Paradoxon"
+        year: "1911"
+        source: "Physikalische Zeitschrift 12 (1911): 169–170"
+        status: to-do
+        links: []
+        publish: true
+        phase: 2
+
+      - id: ehrenfest-1911
+        author: "Paul Ehrenfest"
+        dates: "1880–1933"
+        title: "Zu Herrn v. Ignatowskys Behandlung der Bornschen Starrheitsdefinition II"
+        year: "1911"
+        source: "Physikalische Zeitschrift 12 (1911): 412–413"
+        status: to-do
+        links: []
+        publish: true
+        phase: 2
+
+      - id: ignatowski-1911
+        author: "Wladimir Sergejewitsch Ignatowski"
+        dates: "1875–1942"
+        title: "Zum Ehrenfestschen Paradoxon"
+        year: "1911"
+        source: "Physikalische Zeitschrift 12 (1911): 414"
+        status: to-do
+        links: []
+        publish: true
+        phase: 2

@@ -18,8 +18,8 @@ Differences from the danish-texts version:
     checked symbol by symbol at the image, never by this tool;
   * German letters (ä ö ü ß) count as word characters.
 
-  python3 ocrdiff.py ehrenfest/rotation-1909             whole paper
-  python3 ocrdiff.py --frag texts/herglotz/starr-1910/.parts/pp393-399.texfrag
+  python3 ocrdiff.py extended-bodies/ehrenfest-1909             whole paper
+  python3 ocrdiff.py --frag texts/extended-bodies/herglotz-1910/.parts/pp393-399.texfrag
   python3 ocrdiff.py --frag F --ocr witness.txt          external witness, pages split by form feed
 
 The output is a candidate list, not a verdict. Settle each at the image.
@@ -187,7 +187,7 @@ def paper_of(path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("paper", nargs="?", help="author/slug, e.g. laue/starrer-koerper-1911")
+    ap.add_argument("paper", nargs="?", help="topic/paper, e.g. extended-bodies/laue-1911")
     ap.add_argument("--frag", help="a .texfrag to check before splicing")
     ap.add_argument("--ocr", help="external witness: text file, one page per form feed, "
                                   "pages in the order of the fragment's \\opage markers")
@@ -203,7 +203,7 @@ def main():
         text = open(os.path.join(d, "transcription.tex"), encoding="utf-8").read()
         text = text.partition("\\begin{document}")[2] or text
     else:
-        ap.error("give a paper (author/slug) or --frag")
+        ap.error("give a paper (topic/paper) or --frag")
 
     spans = spans_of(text)
     if not spans:

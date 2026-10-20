@@ -41,4 +41,4 @@ git push -u origin main
 echo ""
 echo "Done. Now enable GitHub Pages in the repo settings:"
 echo "  Settings -> Pages -> Source: Deploy from branch -> main / (root)"
-echo "  The PDFs will appear under https://hhalvors.github.io/relativity-texts/texts/<author>/<slug>/"
+echo "  The PDFs will appear under https://hhalvors.github.io/relativity-texts/texts/<topic>/<paper>/"
