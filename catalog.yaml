@@ -17,13 +17,17 @@
 #         year
 #         source      full citation of the printing transcribed
 #         note        two or three sentences on the paper itself (optional; never our method)
-#         status      complete | in-progress | to-do
+#         status      complete | in-progress | to-do | in-copyright (listed with a link
+#                     to an online copy, never transcribed; no title-en needed)
 #         links       [{label, url}]; use `links: []` when empty
 #         publish     true | false. false leaves the paper off the site page; also list
 #                     texts/<topic>/<id> in PRIVATE in the Makefile, which keeps its PDFs
 #                     out of `make public`. (Hans, 2026-10-20: all published.)
 #         phase       1 = being edited now; 2 = listed for later (shown under "Planned")
-# When a paper is finished: status complete, and Transcription/Translation links
+# Links: the original wherever it is online (Hans, 2026-10-20) -- the journal's DOI
+#   ("Journal (Wiley)"), the Internet Archive scan opened at the paper's first page
+#   (page/n<PDF page - 1> of the issue scan; checked against IA's scandata), Wikisource.
+# When a paper is finished: status complete, and Transcription/Translation links first:
 #   https://hhalvors.github.io/relativity-texts/texts/<topic>/<id>/<file>.pdf
 # Run `python3 validate-catalog.py` (or `make check`) before handing this file back.
 
@@ -48,7 +52,11 @@ topics:
         year: "1909"
         source: "Annalen der Physik 335 [4. Folge 30] (1909): 1–56"
         status: to-do
-        links: []
+        links:
+          - label: "Journal (Wiley)"
+            url: "https://doi.org/10.1002/andp.19093351102"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/sim_annalen-der-physik_1909_30_11/page/n8"
         publish: true
         phase: 1
 
@@ -70,6 +78,10 @@ topics:
             url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/ehrenfest-1909/transcription.pdf"
           - label: "Translation"
             url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/ehrenfest-1909/translation.pdf"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1909-11-22_23/page/n53"
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Gleichf%C3%B6rmige_Rotation_starrer_K%C3%B6rper_und_Relativit%C3%A4tstheorie"
         publish: true
         phase: 1
 
@@ -81,7 +93,11 @@ topics:
         year: "1910"
         source: "Annalen der Physik 336 [4. Folge 31] (1910): 393–415"
         status: to-do
-        links: []
+        links:
+          - label: "Journal (Wiley)"
+            url: "https://doi.org/10.1002/andp.19103360208"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/sim_annalen-der-physik_1910_31_2/page/n164"
         publish: true
         phase: 1
 
@@ -93,7 +109,11 @@ topics:
         year: "1910"
         source: "Annalen der Physik 336 [4. Folge 31] (1910): 919–944"
         status: to-do
-        links: []
+        links:
+          - label: "Journal (Wiley)"
+            url: "https://doi.org/10.1002/andp.19103360504"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/sim_annalen-der-physik_1910_31_5/page/n74"
         publish: true
         phase: 1
 
@@ -110,6 +130,28 @@ topics:
             url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/laue-1911/transcription.pdf"
           - label: "Translation"
             url: "https://hhalvors.github.io/relativity-texts/texts/extended-bodies/laue-1911/translation.pdf"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/per_physikalische-zeitschrift_physikalische-zeitschrift_1911-02-01_3/page/n4"
+        publish: true
+        phase: 1
+
+      # In copyright: listed with a link to an online copy, never transcribed here
+      # (Møller died 1980). Hans, 2026-10-20.
+      - id: moller-1949
+        author: "Christian Møller"
+        dates: "1904–1980"
+        title: "On the definition of the centre of gravity of an arbitrary closed system in the theory of relativity"
+        year: "1949"
+        source: "Communications of the Dublin Institute for Advanced Studies, Series A, No. 5 (1949)"
+        note: >
+          Shows that the centre of mass of a spinning body depends on the frame of
+          reference: the centres for all frames fill a disc of radius S/Mc about the
+          centre in the rest frame. A body with positive energy density cannot be
+          smaller than this disc.
+        status: in-copyright
+        links:
+          - label: "Online (DIAS)"
+            url: "https://dair.dias.ie/id/eprint/20/"
         publish: true
         phase: 1
 
@@ -122,7 +164,11 @@ topics:
         year: "1906"
         source: "Rendiconti del Circolo Matematico di Palermo 21 (1906): 129–175"
         status: to-do
-        links: []
+        links:
+          - label: "Journal (Springer)"
+            url: "https://doi.org/10.1007/BF03013466"
+          - label: "Wikisource"
+            url: "https://fr.wikisource.org/wiki/Sur_la_dynamique_de_l%E2%80%99%C3%A9lectron"
         publish: true
         phase: 2
 
@@ -131,9 +177,11 @@ topics:
         dates: "1882–1970"
         title: "Zur Kinematik des starren Körpers im System des Relativitätsprinzips"
         year: "1910"
-        source: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Math.-phys. Klasse (1910): 161 ff."
+        source: "Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Math.-phys. Klasse (1910): 161–179"
         status: to-do
-        links: []
+        links:
+          - label: "Scan (GDZ)"
+            url: "https://gdz.sub.uni-goettingen.de/id/PPN252457811_1910?tify=%7B%22pages%22%3A%5B172%5D%7D"
         publish: true
         phase: 2
 
@@ -144,7 +192,9 @@ topics:
         year: "1910"
         source: "Physikalische Zeitschrift 11 (1910): 1127–1129"
         status: to-do
-        links: []
+        links:
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Zu_Herrn_v._Ignatowskys_Behandlung_der_Bornschen_Starrheitsdefinition"
         publish: true
         phase: 2
 
@@ -155,7 +205,9 @@ topics:
         year: "1911"
         source: "Physikalische Zeitschrift 12 (1911): 169–170"
         status: to-do
-        links: []
+        links:
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Zum_Ehrenfestschen_Paradoxon"
         publish: true
         phase: 2
 
@@ -166,7 +218,9 @@ topics:
         year: "1911"
         source: "Physikalische Zeitschrift 12 (1911): 412–413"
         status: to-do
-        links: []
+        links:
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Zu_Herrn_v._Ignatowskys_Behandlung_der_Bornschen_Starrheitsdefinition_II"
         publish: true
         phase: 2
 
@@ -177,6 +231,8 @@ topics:
         year: "1911"
         source: "Physikalische Zeitschrift 12 (1911): 414"
         status: to-do
-        links: []
+        links:
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Zum_Ehrenfestschen_Paradoxon_(Ignatowski)"
         publish: true
         phase: 2

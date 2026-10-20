@@ -6,8 +6,8 @@ data/relativity-texts.yaml). Aeson ignores unknown keys, so a misspelled key
 reads as a missing one; a missing required key fails the site build. Checks:
   * Topic: id, title, papers; texts/<topic>/ exists once any paper is started.
   * Paper: id, author, title, year, status, links, publish (true/false), phase;
-    status one of complete | in-progress | to-do; phase-1 papers also need
-    title-en and source; a paper that is not to-do has transcription.tex in
+    status one of complete | in-progress | to-do | in-copyright; phase-1 papers
+    also need title-en and source (except in-copyright ones, which need a link); a paper that is not to-do has transcription.tex in
     texts/<topic>/<id>/; a complete paper has links.
   * Ids are unique within a topic.
   * The papers with publish: false are exactly those in PRIVATE in the Makefile
@@ -18,7 +18,7 @@ import os, re, sys, yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOPIC  = ["id", "title", "papers"]
 PAPER  = ["id", "author", "title", "year", "status", "links", "publish", "phase"]
-STATUS = {"complete", "in-progress", "to-do"}
+STATUS = {"complete", "in-progress", "to-do", "in-copyright"}
 problems = []
 
 path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "catalog.yaml")
@@ -45,7 +45,9 @@ for ti, t in enumerate(doc.get("topics") or []):
         if not isinstance(p.get("publish"), bool): problems.append(f"{pw}: publish must be true or false")
         elif p["publish"] is False: private_cat.add(f"{t['id']}/{p['id']}")
         if not isinstance(p.get("phase"), int): problems.append(f"{pw}: phase must be 1 or 2")
-        if p.get("phase") == 1:
+        if p.get("status") == "in-copyright" and not p.get("links"):
+            problems.append(f"{pw}: in-copyright but has no link to an online copy")
+        if p.get("phase") == 1 and p.get("status") != "in-copyright":
             for k in ("title-en", "source"):
                 if k not in p: problems.append(f"{pw}: phase-1 paper lacks '{k}'")
         if p.get("status") in ("in-progress", "complete"):

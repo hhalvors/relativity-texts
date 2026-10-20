@@ -44,7 +44,9 @@ The repo is organized by **topic**, not by author (Hans, 2026-10-20):
 ("No-go theorems for extended bodies"). Papers, in order of work: `extended-bodies/ehrenfest-1909` (1 p.),
 `extended-bodies/laue-1911` (3 pp.), `extended-bodies/herglotz-1910` (23 pp.),
 `extended-bodies/noether-1910` (26 pp.), `extended-bodies/born-1909` (56 pp.).
-One paper per session after the two pilots. Second-phase papers are listed in
+One paper per session after the two pilots. Papers still in copyright (Møller 1949)
+are listed in the catalog with `status: in-copyright` and a link to an online
+copy, and are never transcribed or translated here. Second-phase papers are listed in
 `catalog.yaml` with `phase: 2`; do not start one without Hans.
 
 ## The rules that save money
