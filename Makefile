@@ -11,6 +11,7 @@
 #    make list         list every .tex source and its PDF status
 #    make public       list the PDFs that may be published (see PRIVATE below)
 #    make check        validate catalog.yaml and verify every scan's sha256
+#    make mirror       copy the editions listed in MIRROR.tsv from ~/danish-texts
 #    make help         show this message
 #    make -j4          parallel build with 4 jobs
 # ============================================================
@@ -30,7 +31,7 @@ PUBLIC  := $(filter-out $(addsuffix /%,$(addprefix texts/,$(PRIVATE))),$(PDFFILE
 
 LATEXMK := latexmk -pdf -interaction=nonstopmode -halt-on-error
 
-.PHONY: all clean cleanall list public check help
+.PHONY: all clean cleanall list public check help mirror
 
 all: $(PDFFILES)
 
@@ -57,9 +58,15 @@ list:
 public:
 	@for p in $(PUBLIC); do echo $$p; done
 
+# Papers whose edition lives in ~/danish-texts (MIRROR.tsv): copy them in.
+# Not part of `all`, so a plain `make` never reaches outside this repo;
+# publish-relativity.sh runs `make mirror` first.
+mirror:
+	bash mirror.sh
+
 check:
 	python3 validate-catalog.py
 	python3 scans.py verify
 
 help:
-	@sed -n '2,16p' Makefile
+	@sed -n '2,17p' Makefile

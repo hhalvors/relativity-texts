@@ -1,0 +1,15 @@
+# MIRROR.tsv — papers whose edition lives in ~/danish-texts and is mirrored here.
+#
+# danish-texts is the SOURCE. `make mirror` (mirror.sh) copies each listed
+# <name>.tex and <name>.pdf from the source directory into the destination,
+# keeping their timestamps, so a correction made in danish-texts reaches this
+# repo on the next `make mirror` (publish-relativity.sh runs it). Never edit the
+# copies here: the next mirror overwrites them.
+#
+# source (under ~/danish-texts/texts/)	destination (under texts/)	files
+kroman/relativitetsprincipet	danish-debate/kroman-1915	transcription translation
+kroman/holst-tidsproblemet	danish-debate/holst-1916	transcription translation
+kroman/walsoe-videnskabens-graense	danish-debate/walsoe-1916	transcription translation
+kroman/hansen-svar	danish-debate/hansen-1916	transcription
+kroman/holst-relativitetsprincipet	danish-debate/holst-1917	transcription translation
+kroman/yderligere-bemaerkninger	danish-debate/kroman-1917	transcription translation

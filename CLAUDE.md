@@ -46,7 +46,17 @@ The repo is organized by **topic**, not by author (Hans, 2026-10-20):
 `extended-bodies/noether-1910` (26 pp.), `extended-bodies/born-1909` (56 pp.).
 One paper per session after the two pilots. Papers still in copyright (Møller 1949)
 are listed in the catalog with `status: in-copyright` and a link to an online
-copy, and are never transcribed or translated here. Second-phase papers are listed in
+copy, and are never transcribed or translated here.
+
+The second topic, `danish-debate` ("The Danish relativity debate, 1912–1917":
+Hansen, Kroman, Holst, Walsøe), is **mirrored from ~/danish-texts**, where those
+editions are made and corrected (`texts/kroman/`). `MIRROR.tsv` lists them and
+`make mirror` (mirror.sh) copies the .tex and .pdf in; publish-relativity.sh runs
+it. **Never edit `texts/danish-debate/` here**: fix the source in danish-texts and
+re-mirror. To add a mirrored paper, add a row to MIRROR.tsv and a catalog entry.
+Hansen's 1916 reply is published here although danish-texts holds it back until
+2027-01-01 (Hans, 2026-10-21: US public domain, as for Laue and Born). Hansen
+1912 is not yet transcribed (danish-texts has only a skeleton; no scan online). Second-phase papers are listed in
 `catalog.yaml` with `phase: 2`; do not start one without Hans.
 
 ## The rules that save money

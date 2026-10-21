@@ -244,3 +244,178 @@ topics:
             url: "https://de.wikisource.org/wiki/Zum_Ehrenfestschen_Paradoxon_(Ignatowski)"
         publish: true
         phase: 2
+
+  - id: danish-debate
+    title: "The Danish relativity debate, 1912–1917"
+    note: >
+      H. M. Hansen introduced the special theory of relativity to Danish
+      physicists and mathematicians in a lecture of 1912. In 1915 the philosopher
+      Kristian Kroman attacked the theory in Fysisk Tidsskrift: if each of two
+      observers correctly measures the other's rod as the shorter, there are two
+      truths, and »Sandheden er ikke dobbelt«. Helge Holst, C. E. Walsøe and
+      Hansen replied in 1916, Holst again in 1917, and Kroman closed the debate
+      the same year. The texts are also part of the Danish Texts collection.
+    # The editions are made in ~/danish-texts and MIRRORED here by `make mirror`
+    # (MIRROR.tsv); never edit texts/danish-debate/ directly.
+    papers:
+
+      - id: hansen-1912
+        author: "H. M. Hansen"
+        dates: "1886–1956"
+        title: "Relativitetsprincipet"
+        title-en: "The principle of relativity"
+        year: "1912"
+        source: "Fysisk Tidsskrift 10 (1911–12): 251–281"
+        note: >
+          A lecture to a joint meeting of Fysisk Forening and Mathematisk Forening,
+          11 April 1912: the first real introduction of special relativity to a
+          Danish audience, and the lecture that provoked Kroman three years later.
+          Hansen was Niels Bohr's collaborator.
+        status: to-do
+        links:
+          - label: "KB (offprint, not digitized)"
+            url: "https://soeg.kb.dk/permalink/45KBDK_KGL/1tg7ia/alma99122809209105763"
+        publish: true
+        phase: 1
+
+      - id: kroman-1915
+        author: "Kristian Kroman"
+        dates: "1846–1925"
+        title: "Relativitetsprincipet"
+        title-en: "The principle of relativity"
+        year: "1915"
+        source: "Fysisk Tidsskrift 14 (1915–16): 1–30"
+        note: >
+          Kroman's attack on special relativity. If two observers each correctly
+          measure the other's rod as the shorter, then there are two truths, and
+          »Sandheden er ikke dobbelt«: the theory contradicts the principle of
+          non-contradiction and must be rejected. Høffding answers the argument by
+          name in »Relation som Kategori« (1921).
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/kroman-1915/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/kroman-1915/translation.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-relativitetsprincipet"
+        publish: true
+        phase: 1
+
+      - id: holst-1916
+        author: "Helge Holst"
+        dates: "1871–1944"
+        title: "Tidsproblemet"
+        title-en: "The problem of time"
+        year: "1916"
+        source: "Fysisk Tidsskrift 15 (1916–17): 1–13"
+        note: >
+          Holst on the problem of time, answering Kroman. Holst was a physicist and
+          popular-science writer, better known as H. A. Kramers's co-author on
+          »Bohrs Atomteori« (1922).
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/holst-1916/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/holst-1916/translation.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-holst-tidsproblemet"
+        publish: true
+        phase: 1
+
+      - id: walsoe-1916
+        author: "Carl Emil Walsøe"
+        dates: "1870–1951"
+        title: "Omkring Videnskabens Grænse"
+        title-en: "Around the boundary of science"
+        year: "1916"
+        source: "Fysisk Tidsskrift 15 (1916–17): 13–17"
+        note: >
+          A mediating contribution between Holst's »Tidsproblemet« and Hansen's
+          reply, which Walsøe describes as »denne Antydning fra Trediemand af en
+          Mulighed for […] at udløse Spændingen og bilægge Striden mellem de to
+          Parter«. Walsøe was an engineer at Post- og Telegrafvæsenet.
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/walsoe-1916/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/walsoe-1916/translation.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-walsoe-videnskabens-graense"
+        publish: true
+        phase: 1
+
+      - id: hansen-1916
+        author: "H. M. Hansen"
+        dates: "1886–1956"
+        title: "Relativitetsprincipet"
+        title-en: "The principle of relativity"
+        year: "1916"
+        source: "Fysisk Tidsskrift 15 (1916–17): 18–29"
+        note: >
+          Hansen's answer to Kroman, and the third of the three treatises Kroman
+          replies to in 1917: »Med Forfatteren af den tredie Afhandling, Hr. Dr.
+          H. M. Hansen, er jeg derimod erkendelsesteoretisk set meget uenig«.
+        status: in-progress
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/hansen-1916/transcription.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-hansen-svar"
+        publish: true
+        phase: 1
+
+      - id: holst-1917
+        author: "Helge Holst"
+        dates: "1871–1944"
+        title: "Relativitetsprincipet"
+        title-en: "The principle of relativity"
+        year: "1917"
+        source: "Fysisk Tidsskrift 15 (1916–17): 165–168"
+        note: >
+          Holst's second contribution, later in the same volume than his
+          »Tidsproblemet« and shorter.
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/holst-1917/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/holst-1917/translation.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-holst-relativitetsprincipet"
+        publish: true
+        phase: 1
+
+      - id: kroman-1917
+        author: "Kristian Kroman"
+        dates: "1846–1925"
+        title: "Et Par yderligere Bemærkninger om »Relativitetsprincipet«"
+        title-en: "A few further remarks on “The principle of relativity”"
+        year: "1917"
+        source: "Fysisk Tidsskrift 15 (1916–17): 192–205"
+        note: >
+          Kroman's reply to H. M. Hansen and H. Holst, and the close of the debate.
+        status: complete
+        links:
+          - label: "Transcription"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/kroman-1917/transcription.pdf"
+          - label: "Translation"
+            url: "https://hhalvors.github.io/relativity-texts/texts/danish-debate/kroman-1917/translation.pdf"
+          - label: "Scan (Google Books, vols. 13–15)"
+            url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
+          - label: "Danish Texts"
+            url: "https://hanshalvorson.com/dansk/#kroman-yderligere-bemaerkninger"
+        publish: true
+        phase: 1

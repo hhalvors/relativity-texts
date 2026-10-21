@@ -1,0 +1,448 @@
+% ============================================================
+%  QUOTATION MARKS (corrected 2026-09-30): Fysisk Tidsskrift prints guillemets
+%    pointing inward, »…« (checked at 250--600 dpi, scan PDF pp. 331, 333). They
+%    are coded \guillemotright…\guillemotleft (LaTeX's \guillemotleft is «);
+%    until 2026-09-30 they were coded the other way round and printed «…».
+%    Open question: in the body text the marks may be SINGLE guillemets ›…‹
+%    (the binarised scan does not settle it); the title on p. 331 is double.
+%  C. E. Walsøe, »Omkring Videnskabens Grænse«
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), pp. 13-17.
+%
+%  DIPLOMATIC TRANSCRIPTION (Danish)
+%  Status: COMPLETE. Printed pp. 13-17, all 5 pages, transcribed 2026-09-04
+%  from the scan described below. No gaps, no duplicates; compiles with
+%  0 errors, 0 missing characters, 0 overfull boxes. Translation not begun.
+%
+%  The fourth item in the Kroman relativity debate, and one that no
+%  bibliography records: found in the scan 2026-09-04. Walsøe writes as a
+%  third party trying to mediate -- his p. 17 calls the piece »denne Antydning
+%  fra Trediemand af en Mulighed for [...] at udløse Spændingen og bilægge
+%  Striden mellem de to Parter«. The Redaktion evidently agreed it was an
+%  intrusion: the *) hanging on the title is their own disclaimer that the
+%  article »maa siges at falde uden for Tidsskriftets Ramme«.
+%  See ../relativitetsprincipet/note.md for the debate as a whole.
+%
+% ------------------------------------------------------------
+%  RIGHTS -- CLEAR. WHO WALSØE WAS.
+% ------------------------------------------------------------
+%  Established 2026-09-04, after the article itself proved a dead end: the
+%  byline is bare »Af / C. E. Walsøe.«, with no title, affiliation, town or
+%  dateline anywhere in the five pages.
+%
+%  CARL EMIL WALSØE, b. 25 May 1870 in Copenhagen, d. 1951.
+%  Cand. polyt. 1896; engineering assistant at the State Railways 1897;
+%  telegraph engineer at Telegrafvæsenet 1903; district engineer at Post- og
+%  Telegrafvæsenet 1926-40.
+%
+%  Sources, both Kraks Blå Bog and independent of each other:
+%    * Kraks Blå Bog 1949, s.v. WALSØE C E -- the birth date, the career, and
+%      the books listed under »Har skrevet«.
+%    * Kraks Blå Bog 1957, s.v. WALSØE Sven (his son, the architect), which
+%      gives »søn af distriktsingeniør C E Walsøe (død 1951, se Kraks Blå Bog
+%      1950)«.
+%
+%  The identification rests on more than the initials. The 1949 entry lists
+%  among his writings »Den ny Naturvidenskab og vor gamle Kristentro. Et
+%  Forsøg paa en principiel Orientering« (1938) and »De tre Planer. Legeme,
+%  Sjæl, Aand.« (1947) -- a polytechnically trained engineer who writes on the
+%  boundary between the new physics and religious conviction is exactly the
+%  author of a 1916 piece called »Omkring Videnskabens Grænse«, and exactly
+%  the contributor a physics journal's editors would disclaim.
+%
+%  Danish copyright is life + 70, so the term ran out on 31 December 2021 and
+%  this text has been PUBLIC DOMAIN SINCE 1 JANUARY 2022. It was held under
+%  the repo's EMBARGOED TEXTS .gitignore block until the dates were found;
+%  that line has been removed. (The two H. M. Hansen articles remain held
+%  until 1 January 2027.)
+%
+% ------------------------------------------------------------
+%  THE WITNESS
+% ------------------------------------------------------------
+%  Google Books `Tr4ZAAAAIAAJ` -- Fysisk tidsskrift, VOLUMES 13-15, the
+%  University of California copy, digitised 17 January 2007. Kept as
+%  texts/kroman/scan-ft-13-15.pdf, untracked; shared with the siblings.
+%  Every one of the five pages was inspected as an image, doubtful readings
+%  at up to 900 dpi.
+%
+%  CAUTION: this scan's JBIG2 compression drops hairlines. It does not bite
+%  here -- there is no mathematics beyond one Greek beta -- but it cost work
+%  on Holst's p. 8.
+%
+% ------------------------------------------------------------
+%  PAGE MAP -- VERIFIED 2026-09-04
+% ------------------------------------------------------------
+%      printed 13-17  =  PDF + 602   (PDF 615-619).
+%
+%  CORRECTED from pp. 14-17, which is what the running heads suggest. Holst's
+%  »Tidsproblemet« ends in the TOP THIRD of p. 13, and Walsøe's title block,
+%  byline, eight lines of body and TWO footnotes fill the rest of that page --
+%  which is why p. 14 already carries his running head. Offset 602 is the same
+%  as Holst's and is confirmed at both ends: PDF 620 = printed 18 opens
+%  Hansen's article with its own title block. NOTE the offset is NOT constant
+%  across vol. 15 -- it is 622 by p. 192 -- because unpaginated advertisement
+%  leaves are bound in.
+%
+% ------------------------------------------------------------
+%  CONVENTIONS -- SETTLED AGAINST THE IMAGES
+% ------------------------------------------------------------
+%  * Diplomatic. 1916 orthography exactly as printed; the pre-1948 aa kept,
+%    nouns capitalised, nothing modernised.
+%  * QUOTATION MARKS: guillemets »...«, \guillemotleft / \guillemotright.
+%  * EMPHASIS is LETTERSPACING, set \emph{}, 30 runs. The compositor is
+%    INCONSISTENT with proper names here -- Michelsons, Einstein and Wiechert
+%    are spaced on pp. 13 and 15, while Einsteins (p. 14) and »Mennesket
+%    Einstein« and Michelsons (p. 16) are not. Set as printed in each case.
+%    Two doubtful runs were settled by measuring the gaps at 600 dpi
+%    (letterspace c. 26 px against a word space of c. 52 px): the preceding
+%    »i« falls OUTSIDE the run in both »i det paagældende Omraade« and
+%    »i hele«. No true italic anywhere.
+%  * FOOTNOTES: *) and **), RESTARTING on each printed page -- p. 13 and p. 15
+%    each carry two. \thefootnote therefore takes the \ifcase form, with
+%    \setcounter{footnote} resets at the page starts; a fixed *) is wrong here
+%    and, inherited when this preamble was cloned from ../holst-tidsproblemet,
+%    silently overrode the \ifcase and made every mark print *). Removed.
+%    Verified in the built PDF: p. 13 gives *) and **), p. 15 gives *) and **).
+%    The first *) is the Redaktion's note ON THE TITLE and is set on \title{}.
+%  * STRUCTURE: three unnumbered, untitled section breaks, marked in the
+%    printing by extra leading only (pp. 15, 16, 17); set \bigskip.
+%  * MATHEMATICS: none. No displays, no equation numbers, no fractions, no
+%    tables and no figures. The single mathematical sign is the italic Greek
+%    beta of »β-Straalerne« (p. 16).
+%
+% ------------------------------------------------------------
+%  PRINTER'S DEFECTS -- transcribed AS PRINTED, logged at the site
+% ------------------------------------------------------------
+%    p. 13  the closing guillemet of »Relativitetsprincip is NEVER SET
+%    p. 13  the ")" of the first footnote mark is broken/near-invisible
+%    p. 15  fn **) »14. Aarg S. 17 og 28.« -- no full stop after »Aarg«, where
+%           fn *) on the same page sets »10. Aarg. S. 266.«
+%    p. 16  »(Kroman)..« -- a doubled full stop
+%  Also recorded at the site as readings rather than defects: a speck in the
+%  left margin of p. 14 before »Bevægelse.« (offset ink, not a lost sort), and
+%  »uden for« as two words on p. 16 against »udenfor« on p. 17.
+%
+%  GUILLEMET BALANCE IS +1 ON PURPOSE: 10 left, 9 right. The drift is the
+%  unclosed p. 13 quotation above. check.py will report balance=1 for this
+%  article for ever; do not "fix" it.
+%
+% ------------------------------------------------------------
+%  HOW IT ENDS
+% ------------------------------------------------------------
+%  Stops on p. 17 at »...paa samme Maade.« No signature, no dateline, no rule.
+%  Hansen's »Relativitetsprincipet« begins at the head of p. 18.
+%
+% ------------------------------------------------------------
+%  BUILD
+% ------------------------------------------------------------
+%  pdflatex path. Sandbox compile-test per TRANSCRIPTION-PLAYBOOK.md §5.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}   % Greek in text, typed directly
+\usepackage{amsmath}     % this debate has real formulas; see CONVENTIONS
+
+% FOOTNOTES. The printing marks them *) and **), restarting on each printed
+% page. A fixed mark will not do here, so the counter is reset at the page
+% starts that need it (the resets are in the body, at the page markers).
+\renewcommand{\thefootnote}{\ifcase\value{footnote}\or *)\or **)\else \arabic{footnote})\fi}
+\usepackage{tikz}        % for the redrawn Fizeau diagram, printed p. 8
+\usetikzlibrary{arrows.meta}
+
+% (A fixed \thefootnote{*)} was inherited here when this preamble was cloned
+% from ../holst-tidsproblemet, where it is correct. It is WRONG for Walsøe --
+% p. 13 and p. 15 each carry two notes -- and it silently overrode the \ifcase
+% form above, so every mark printed *). Removed 2026-09-04.)
+\usepackage[danish]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={Omkring Videnskabens Graense},
+  pdfauthor={C. E. Walsoe},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Omkring Videnskabens Grænse}}
+\fancyhead[LO]{\textit{C.\,E.\ Walsøe}}
+
+\setstretch{1.3}
+
+% The *) on p. 13 is a footnote TO THE TITLE -- the Redaktion's disclaimer
+% that the article falls outside the journal's scope. It is set here, on the
+% title, because that is where the printing hangs it.
+\title{\textbf{Omkring Videnskabens Grænse\footnote{Redaktionen har ikke villet nægte denne Artikel Optagelse, skønt den maa siges at falde uden for Tidsskriftets Ramme, men forbeholder sig sin Stilling til eventuelle yderligere Indlæg om de deri rejste Spørgsmaal.}}}
+\author{C.\,E.\ Walsøe}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~13--17}
+
+% ---- original-page markers (paginate.py) ----
+\usepackage{marginnote}
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\newcommand{\apage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\maketitle
+
+% ============================================================
+%  BATCH pp. 14-17  --  but see the first finding below.
+%
+%  *** THE ARTICLE DOES NOT BEGIN ON p. 14. IT BEGINS ON p. 13. ***
+%  Holst's »Tidsproblemet« ends at the top third of printed p. 13; Walsøe's
+%  title block (»Omkring Videnskabens Grænse*).« / »Af« / »C. E. Walsøe.«)
+%  is set below it on the SAME page, followed by eight lines of body and two
+%  footnotes. The running head on p. 14 is therefore already »C. E. Walsøe :«,
+%  which is what made p. 13 look like Holst's alone. The article runs
+%  printed pp. 13-17, PDF 615-619 (offset 602 unchanged).
+%  This fragment accordingly opens with a `% --- p. 13 ---` marker and the
+%  Walsøe portion of p. 13. pagemap.py, the header PAGE MAP and the article's
+%  stated extent all need widening from 14-17 to 13-17 before splicing.
+%
+%  FOOTNOTES -- the preamble needs a \thefootnote that can give BOTH marks,
+%  because p. 13 and p. 15 each carry TWO notes (*) and **)). A fixed *)
+%  as in ../relativitetsprincipet is WRONG here. Add to the preamble:
+%      \renewcommand{\thefootnote}{%
+%        \ifcase\value{footnote}\or *)\or **)\or ***)\else
+%        \arabic{footnote})\fi}
+%  and keep the \setcounter{footnote} calls below, which reset the sequence
+%  at each printed page as the printing does.
+%
+%  The *) on p. 13 is a footnote TO THE TITLE (the Redaktion's disclaimer).
+%  It properly belongs on \title{} in the preamble as
+%      \title{\textbf{Omkring Videnskabens Grænse\footnote{...}}}
+%  DONE 2026-09-04: moved to \title{} in the preamble.
+% ------------------------------------------------------------
+%  PRINTER'S DEFECTS on these pages -- transcribed AS PRINTED, logged at site:
+%    p. 13  the closing guillemet of »Relativitetsprincip is never set
+%    p. 13  the ")" of the first footnote mark *) is broken/near-invisible
+%    p. 15  fn **) »14. Aarg S. 17 og 28.« -- no full stop after »Aarg«,
+%           where fn *) on the same page sets »10. Aarg. S. 266.«
+%    p. 16  »(Kroman)..« -- a doubled full stop
+%  GUILLEMET BALANCE: 10 left / 9 right. The drift of +1 is the unclosed
+%  p. 13 quotation and is deliberate; do not "fix" it.
+%  MATHEMATICS: none. No displays, no equation numbers, no fractions, no
+%  tables and no figures anywhere in the article. The single mathematical
+%  sign is the italic Greek beta of »β-Straalerne« (p. 16), set $\beta$.
+% ============================================================
+
+% --- p. 13 ---
+\opage{13} % Holst's article ends above; Walsøe's title block sits mid-page. The title
+% block is already in the preamble via \maketitle and is NOT repeated here.
+% The Redaktion's note *) hangs on the title; see the header comment.
+\setcounter{footnote}{1}%
+% The Redaktion's note *) that hung here has been moved to \title{} in the
+% preamble, as the transcriber directed -- the printing hangs it on the title.
+
+Det negative Resultat af \emph{Michelsons} Forsøg paa ved Hjælp af
+Interferensstribernes Forskydning at paavise Jordens Translation førte
+\emph{Einstein} til --- 1905 --- at opstille sit
+% The closing guillemet after »princip« is not set; see the defect log.
+\guillemotright\emph{Relativitetsprincip}\footnote{Omtalt i Fysisk
+Tidsskrift 10. Aarg. S. 251 fg. og 14. Aarg. S. 1 fg.}:
+
+Den Hastighed, hvormed elektromagnetiske Svingninger udbreder sig i
+Rummet, iagttages \emph{ens} af to Iagttagere, af hvilke den ene har en
+jævn Bevægelse i ret Linie i Forhold til den anden --- en Forudsætning,
+som føjedes til den sædvanlige: Svingningerne forplan\-%
+% --- p. 14 ---
+\opage{14}tes med \emph{samme} Hastighed i alle Retninger uafhængig af Kildens
+Bevægelse.
+% A small speck sits in the left MARGIN before »Bevægelse.«, outside the
+% type block: offset ink, not the missing closing guillemet.
+
+Men denne Einsteins Paastand har delt Fysikerne i to Lejre, der stadig
+ligger i Strid.
+
+Modstanderne hævder, at de to Forudsætninger staar i indbyrdes
+Modsigelse, og at Paastanden derfor er falsk, medens Tilhængerne søger at
+vise, at Modsigelsen kun er tilsyneladende, og derfor gør Fordring paa,
+at Paastanden antages som videnskabelig Hypotese.
+
+Hensigten med nærværende Artikel er at erindre om, at det ikke paa
+\emph{Forhaand} er udelukket, at begge Parter har Ret i det
+\emph{væsentlige}. Det er muligt, at Modstanderne har Ret i, at de to
+Forudsætninger virkelig er modsigende (uden at Paastanden derfor behøver
+at være falsk), og at Tilhængerne har Ret i, at Paastanden er en vel
+begrundet Hypotese (uden at denne derfor behøver at være videnskabelig).
+
+Det maa ikke glemmes, at vi ikke tør paastaa, at Tilværelsen er
+\guillemotright begribelig eller forstaaelig, maalelig for vor
+Tanke\guillemotleft{} (Høffding). Vi kan ikke paa Forhaand vide, om der
+ikke --- trods alt --- skulde findes Modsigelser i Tingenes Verden.
+
+Betingelsen for, at vi kan anvende Logiken paa Virkeligheden, er, at
+denne i al Fald i \emph{det paagældende Omraade} ikke rummer Modsigelser.
+Men det er stadig kun en \emph{Hypotese}, at der i \emph{hele}
+Tilværelsen, taget under ét, ingen Modsigelser findes --- en Hypotese,
+som det iøvrigt synes vanskeligt at opretholde sammen med Hypotesen om
+Verdensæteren.
+
+Naar vi lever i en Verden, hvor Tilstanden er vanvittig usandsynlig
+(Bjerrum), er det næppe helt usandsynligt, at Tilværelsen taget under ét
+virkelig er ulogisk, irrationel, hvor smerteligt det end maatte falde os
+at anerkende Muligheden af, at det for den menneskelige Bevidsthed
+uforenelige i Tilværelsen dog findes forenet og omvendt. Men alligevel
+kan vor Realerkendelse meget vel \emph{stykkevis} være fuldt ud rigtig.
+
+Atom-, Elektron-, Kvante- og Mutationsteorien samt de pludselige
+Nydannelser, der kan opstaa paa det psykiske Omraade, lærer om en
+Udelelighed og Diskontinuerthed i Tilværelsen, som for Tanken er ganske
+gaadefuld. Det er muligt, at vor Realerkendelse --- ligesom Virkeligheden
+selv --- vil vise sig \guillemotright diskontinuert\guillemotleft{}, at
+vi kun \emph{springvis} kan erkende Tilværelsen, at vi maa \emph{springe}
+fra det ene Omraade
+% --- p. 15 ---
+\opage{15} \setcounter{footnote}{0}%
+til det andet, fordi der ikke gives noget Overgangspunkt. En af
+Relativitetsprincipets Konsekvenser er, at to Iagttagere under visse
+Forhold kan dømme modsigende om samme Fænomen og dog begge have Ret hver
+fra sit Synspunkt\footnote{10. Aarg. S. 266.}. Det er muligt, at et
+Fænomen særlig fra Grænseegnen mellem to Erkendelsesomraader paa lignende
+Maade bedømmes modsigende fra de respektive Synspunkter, og at der ikke
+for de to Omraader gives noget \emph{fælles} Punkt, hvorfra Fænomenet kan
+ses; men ingen kan paa \emph{samme} Tid indtage begge Synspunkterne,
+ligesom ingen samtidig kan være baade i Hvile og Bevægelse.
+
+Selv om Tilværelsen saaledes kun skulde kunne erkendes stykkevis, følger
+dog ikke deraf, at saadanne \guillemotright
+Modsigelser\guillemotleft{} ikke er forligelige for en Intelligens af
+højere og anden Art, og det betyder paa den anden Side heller ikke, at
+der er en Grænse for, hvor langt Videnskaben kan trænge frem i stykkevis
+Erkendelse (om end store Omraader sandsynligvis overhovedet ikke er
+erkendelige for os).
+
+I Følge sin Natur kan Videnskaben jo aldrig give tabt overfor nogen
+Opgave, end ikke hvis den skulde støde paa en, som den aldrig vilde kunne
+naa frem til nogen Løsning af, med mindre Uløseligheden var
+videnskabeligt bevist.
+
+Men maaske det er en saadan uløselig Opgave at forlige
+Relativitetsprincipets to Forudsætninger. Maaske de elektromagnetiske
+Svingninger er Fænomener paa Grænsen mellem to forskellige Omraader
+mellem den sanselige Natur og den usanselige Æter.
+
+Forudsætningen (Hypotesen) om Hastighedens Konstans er man i saa Fald
+kommen til med Æteren som Udgangspunkt, medens Udgangspunktet for den
+anden Forudsætning (selve Relativitetshypotesen) er i den sanselige
+Natur. (Som \emph{Wiechert} har paavist, udelukker Relativitetsprincipet
+ikke Æterhypotesen; tværtimod tvinger Principet til dennes
+Opretholdelse).
+
+Altsaa: Det er muligt, at de to Forudsætninger virkelig er modsigende,
+\emph{uden} at den ene af dem derfor behøver at være falsk.
+
+% The printing sets extra leading here -- an unnumbered, untitled section
+% break. Three of them occur (pp. 15, 16, 17); set \bigskip.
+\bigskip
+
+Det synes tilstrækkeligt godtgjort, at Hypotesen er ulogisk og medfører
+et \guillemotright aarsagsløst Fænomen\guillemotleft\footnote{14. Aarg
+S. 17 og 28.}% »Aarg« without its full stop, as printed; see defect log.
+, men derved fældes den kun som \emph{videnskabelig} Hypotese,
+\guillemotright derimod vil sikkert ethvert
+% --- p. 16 ---
+\opage{16} \guillemotright tænkende Væsen\guillemotleft{} indse, at fordi det
+aarsagsløse er uerkendeligt, derfor er det ikke givet, at der intet
+aarsagsløst er\guillemotleft{} (Kroman)..% doubled full stop, as printed
+
+Videnskaben er kun én af de Tjenere, der er givet Mennesket som Hjælp til
+at leve Livet. \guillemotright Videnskab og Filosofi er ikke nok for en
+personlig Livsanskuelse\guillemotleft{} (Høffding). \guillemotright Ogsaa
+ad rent individuel Vej, gennem Følelse og personlig Livserfaring, faar vi
+Overbevisning om mangen en Paastands Sandhed\guillemotleft{} (Kroman).
+Den videnskabelige Erkendelsesmaade giver os desuden kun en
+\emph{relativ}, ingen absolut Erkendelse, idet den bestaar i en Analyse,
+hvis Resultat afhænger af det valgte Synspunkt og de benyttede Symboler
+(Bergson). Men ogsaa ved de andre Erkendelsesmaader gøres der Brug af
+Aarsagssætningen og den logiske Tænken \emph{indenfor} de paagældende
+Omraader, kun er Iagttagelserne ofte af en anden Natur end Videnskabens,
+ligesom Udgangspunktet ikke altid alene er i det objektive. Og
+Videnskaben som saadan kan ikke indtage de paagældende Synspunkter, de
+ligger \emph{uden for} dens Grænse.
+% »uden for« is set as TWO letterspaced words here, against the one-word
+% »udenfor« of p. 17 and the unspaced »udenfor« later on this page.
+
+Da Mennesket nu en Gang kun er \emph{partielt} identisk med
+Videnskabsmanden, kan Mennesket som saadant ikke \emph{nøjes} med at
+anlægge Videnskabens Synspunkt. Der er saaledes en Mulighed for, at det
+er \emph{Mennesket} Einstein og ikke Videnskabsmanden i ham, der
+intuitivt har skønnet et Fingerpeg i Videnskabens Resultater og ledet
+deraf ubevidst har opstillet Relativitetshypotesen udenfor Videnskabens
+Grænse. Og Michelsons Resultat saavel som Elektronmassens Afhængighed af
+Hastigheden i $\beta$-Straalerne er unægtelig vægtige Indiciebeviser for
+dens Rigtighed.
+
+Altsaa: Det er muligt, at Hypotesen virkelig er vel begrundet,
+\emph{uden} at den derfor behøver at være en \emph{videnskabelig}
+Hypotese.
+
+\bigskip
+
+Skulde det virkelig være Tilfældet, at vi her har en uvidenskabelig
+ulogisk Hypotese med Sandsynlighed for ikke desto mindre at være sand og
+gyldig for visse Naturfænomener, begaar Relativisterne altsaa den Fejl at
+forsøge det umulige: at presse Hypotesen indenfor Videnskabens Ramme,
+medens Modstanderne paa deres Side gør sig skyldige i den Fejl at erklære
+Hypotesen for falsk. Og der opstaar Forvirring med idelige
+Misforstaaelser og ørkesløs Strid, naar Parterne ikke indser dette og
+giver hinanden Ret i, at Hypotesen er ulogisk, henholdsvis at den dog kan
+være sand.
+
+% --- p. 17 ---
+\opage{17} Men det er næppe at vente, at denne Antydning fra Trediemand af en
+Mulighed for ved en saadan Betragtning at udløse Spændingen og bilægge
+Striden mellem de to Parter vil finde Forstaaelse hos nogen af dem.
+Maaske vil man bestride Muligheden ved at indvende, at det er
+meningsløst at tale om logiske Konsekvenser af en ulogisk Hypotese.
+Videnskaben kan overhovedet ikke operere med en saadan.
+
+Denne Indvending vilde dog være forhastet, thi ligesom det er
+Videnskabens egne Resultater, der har ført til Hypotesen, saaledes vil
+det ogsaa være muligt at prøve den og dens Konsekvenser paa \emph{andre}
+af Videnskabens Resultater og søge flere Indiciebeviser for dens
+Gyldighed.
+
+Og lykkes det at gøre ny Iagttagelser, som stemmer med den, tyder dette
+vel paa, at de paagældende Fænomener ogsaa henhører til Grænseegnen
+mellem den sanselige Natur og den usanselige Æter.
+
+\bigskip
+
+Ogsaa \emph{udenfor} Naturvidenskaben, for Fænomener paa Grænsen mellem
+det subjektive og det objektive, har Relativitetsprincipet Gyldighed.
+Saaledes gælder det for Problemet om Viljens \guillemotright
+Frihed\guillemotleft. Med Udgangspunkt i det objektive kommer man med
+logisk Nødvendighed til Determinismen, men med Udgangspunkt i det
+subjektive kommer man ligesaa uomgængeligt til Indeterminismen; m. a. O.
+Viljesfænomenet bedømmes modsigende for en objektiv og en subjektiv
+Betragtning.
+
+Determinismen har Ret, men Indeterminismen har ogsaa Ret. Dette kan
+Mennesket som saadant indrømme, men Videnskabsmanden er inkonsekvent,
+hvis han --- hvad somme gør --- anser Problemet for videnskabeligt
+uløseligt, thi den objektive Videnskab bygger ikke paa subjektive
+Erfaringer.
+
+Problemet har \emph{to} Løsninger, men Videnskaben kan ifølge sin
+Forudsætning kun komme til den \emph{ene}: Determinismen.
+
+Paa lignende Maade gælder Relativitetsprincipet for Forholdet mellem den
+videnskabelige Verdensanskuelse og den intuitive (Bergson).
+
+Trods virkelige Modsigelser kan begge Anskuelser være rigtige.
+
+Og den gamle Strid om det religiøse Problem kan tildels forklares paa
+samme Maade.
+% The article ENDS here, foot of p. 17, with no signature, no dateline and
+% no place-name -- only the printer's direction line »Fysisk Tidsskrift. XV.«
+% and the sheet signature »2«. Hansen's reply opens p. 18.
+
+\end{document}

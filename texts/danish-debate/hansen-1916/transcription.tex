@@ -1,0 +1,745 @@
+% ============================================================
+%  QUOTATION MARKS (corrected 2026-09-30): Fysisk Tidsskrift prints guillemets
+%    pointing inward, »…« (checked at 250--600 dpi, scan PDF pp. 331, 333). They
+%    are coded \guillemotright…\guillemotleft (LaTeX's \guillemotleft is «);
+%    until 2026-09-30 they were coded the other way round and printed «…».
+%    Open question: in the body text the marks may be SINGLE guillemets ›…‹
+%    (the binarised scan does not settle it); the title on p. 331 is double.
+%  H. M. Hansen, reply to Kroman  [TITLE NOT YET VERIFIED]
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), c. pp. 14-22.
+%
+%  DIPLOMATIC TRANSCRIPTION (Danish)
+%  Status: COMPLETE. Printed pp. 18-29, all 12 pages, transcribed 2026-09-04
+%  from the scan described below. No gaps, no duplicates; braces and guillemets
+%  balanced (7/7); compiles with 0 errors, 0 missing characters, 0 overfull and
+%  0 underfull boxes. English translation not begun.
+%
+%  The physicists' main answer to Kroman, and the fifth item in the debate --
+%  the »tredie Afhandling« Kroman singles out in 1917: »Med Forfatteren af den
+%  tredie Afhandling, Hr. Dr. H. M. Hansen, er jeg derimod erkendelsesteoretisk
+%  set meget uenig.« Hansen's opening registers the pile-up of contributions:
+%  »Den Interesse for Relativitetsspørgsmaalet, som flere Artikler i Fysisk
+%  Tidsskrift i den senere Tid har givet Vidnesbyrd om...«
+%  Hans Marius Hansen (1886-1956) was Niels Bohr's collaborator; Bohr had also
+%  sat Kroman's filosofikum. See ../relativitetsprincipet/note.md.
+%
+% ------------------------------------------------------------
+%  *** RIGHTS -- IN COPYRIGHT UNTIL 31 DECEMBER 2026 ***
+% ------------------------------------------------------------
+%  H. M. Hansen died 13 June 1956. Danish copyright is life + 70, so this text
+%  is PUBLIC DOMAIN FROM 1 JANUARY 2027 and not before. Transcribing it now is
+%  fine; publishing it is not.
+%
+%  Two things hold it back, and BOTH must be undone on release day:
+%    1. \embargotrue in the preamble, which prints the notice on the first page.
+%    2. this article's line in the repo's .gitignore, under EMBARGOED TEXTS.
+%  Note that .gitignore does not cover files already tracked -- this file and
+%  its PDF were, and had to be `git rm --cached`ed on 2026-09-04 before the
+%  exclusion could bite.
+%
+% ------------------------------------------------------------
+%  THE WITNESS
+% ------------------------------------------------------------
+%  Google Books `Tr4ZAAAAIAAJ` -- Fysisk tidsskrift, VOLUMES 13-15, the
+%  University of California copy, digitised 17 January 2007, 886 pages, full
+%  view. Kept as texts/kroman/scan-ft-13-15.pdf, untracked; shared with the
+%  sibling articles. All twelve pages were inspected as images.
+%
+%  THIS SCAN LOSES HAIRLINES to its JBIG2 compression, and that matters more
+%  here than anywhere else in the debate, because this is the one article by a
+%  working physicist. Three losses were identified and are NOT transcribed as
+%  defects, because they are the scan's and not the printing's:
+%    p. 18  the rule of the fraction (v/c)^2 is simply gone at native 600 ppi.
+%           Confirmed real by calibrating against the surviving rule in the
+%           p. 20 footnote and the 1/2 rules on p. 27; set with \dfrac.
+%    p. 19  the second d of »uladede«
+%    p. 21  the ø slash throughout the footnote -- which is why »føre« there is
+%           NOT logged as a printer's error
+%  Check every thin rule at a second resolution before believing it absent.
+%
+% ------------------------------------------------------------
+%  PAGE MAP -- VERIFIED 2026-09-04
+% ------------------------------------------------------------
+%      printed 18-29  =  PDF + 602   (PDF 620-631), uniform.
+%
+%  The same offset as Holst's »Tidsproblemet« at the front of the volume, and
+%  confirmed at both ends: PDF 620 = printed 18 opens with the title block
+%  »Relativitetsprincipet. / Af / H. M. Hansen.«, and printed p. 30 begins
+%  »Fysik i Skolen«. NOTE the offset is NOT constant across vol. 15 -- it is
+%  618 by p. 165 and 622 by p. 192 -- because unpaginated advertisement leaves
+%  are bound in. Measure it per article; never carry one across.
+%
+%  Unlike three of its neighbours, this article does NOT begin partway down the
+%  previous article's last page: it starts at the head of p. 18.
+%
+% ------------------------------------------------------------
+%  CONVENTIONS -- SETTLED AGAINST THE IMAGES
+% ------------------------------------------------------------
+%  * Diplomatic. 1916 orthography exactly as printed; the pre-1948 aa kept,
+%    nouns capitalised, nothing modernised.
+%  * QUOTATION MARKS: guillemets »...«, 7 pairs, balanced.
+%  * EMPHASIS is LETTERSPACING, set \emph{}; no true italic anywhere. Hansen's
+%    compositor has his own rule, different again from Kroman's and Holst's:
+%    he spaces a proper name ON FIRST SIGNIFICANT MENTION and leaves it plain
+%    thereafter -- Kroman, Helge Holst, Lorentz-Fitzgerald, Poincaré, Rayleigh,
+%    Brace, Trouton, Noble, Rankine, Einstein, Ritz, Wiechert, Schaefer,
+%    Neumann, Kaufmann, Guye, Lavanchy, Ehrenfest. pp. 20, 22, 24 and 25 carry
+%    no spaced names at all. Four ordinary words are spaced for stress: kan
+%    (pp. 21, 28), sit (p. 26), Nøjagtighed (p. 28). Suffixes fall OUTSIDE the
+%    run (\emph{Lorentz}', \emph{Kroman}'s) with one exception, \emph{Einsteins},
+%    which is spaced whole.
+%  * FOOTNOTES: *) and **), RESTARTING on each printed page -- ten notes, on
+%    pp. 18 (two), 19, 20 (two), 21, 22, 23 and 27 (two). \thefootnote takes the
+%    \ifcase form and \setcounter{footnote}{0} is issued at each page start that
+%    needs it. A fixed *) is wrong here.
+%  * MATHEMATICS: inline throughout. NO displays, and therefore no equation
+%    numbers anywhere. Variables italic as printed; \dfrac for the two built-up
+%    fractions, \tfrac for the case fractions of pp. 27-28; \gamma for the
+%    acceleration; $43''$ for the Mercury perihelion arcseconds. A and B are
+%    italic in the body but ROMAN in the p. 21 footnote, and are set as printed.
+%  * The old Danish id-est sign ɔ: (p. 18) is built from a reflected c; see the
+%    preamble.
+%
+% ------------------------------------------------------------
+%  PRINTER'S DEFECTS -- transcribed AS PRINTED, logged at the site
+% ------------------------------------------------------------
+%    p. 28  »midlertid« for »imidlertid«
+%    p. 28  »adskillgt« for »adskilligt«
+%    p. 23, and the first note of p. 27: the footnote mark prints a bare * with
+%           no closing parenthesis, against *) everywhere else
+%  Recorded as readings rather than defects: the running head of p. 28 reads
+%  »H. M Hansen:« with the point after the M dropped, and p. 19 carries the
+%  gathering signature »2*«.
+%
+% ------------------------------------------------------------
+%  HOW IT ENDS
+% ------------------------------------------------------------
+%  On p. 29, after a \medskip-sized break before the final two paragraphs. No
+%  closing rule, no signature, no dateline; the rest of the page is blank.
+%  There are no figures or tables anywhere in the article.
+%
+% ------------------------------------------------------------
+%  BUILD
+% ------------------------------------------------------------
+%  pdflatex path (libertinus + libertinust1math), so the Makefile's default
+%  pattern rule builds it. Sandbox compile-test per TRANSCRIPTION-PLAYBOOK.md §5.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}   % Greek in text, typed directly
+\usepackage{amsmath}     % this debate has real formulas; see CONVENTIONS
+
+\usepackage{graphicx}    % for \reflectbox, below
+% The old Danish id-est sign »ɔ:« (p. 18). T1 has no OPEN O, so it is built
+% from a reflected c, as texts/brochner/det-religioese does.
+\DeclareUnicodeCharacter{0254}{\reflectbox{c}}
+
+% FOOTNOTES. The printing marks them *) and **), restarting on each printed
+% page. A fixed mark will not do here, so the counter is reset at the page
+% starts that need it (the resets are in the body, at the page markers).
+\renewcommand{\thefootnote}{\ifcase\value{footnote}\or *)\or **)\else \arabic{footnote})\fi}
+\usepackage[danish]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={H. M. Hansens svar til Kroman},
+  pdfauthor={H. M. Hansen},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Svar til Professor Kroman}}
+\fancyhead[LO]{\textit{H. M. Hansen}}
+
+\setstretch{1.3}
+
+
+% ------------------------------------------------------------
+%  EMBARGO SWITCH.  In copyright until 31 December 2026.
+%  On 1 JANUARY 2027 change \embargotrue to \embargofalse below, delete this
+%  article's two lines from the repo's .gitignore, and it publishes normally.
+%  Nothing else needs changing.
+% ------------------------------------------------------------
+\newif\ifembargo
+\embargotrue
+
+\title{\textbf{\guillemotright Relativitetsprincipet\guillemotleft}}
+\author{H.\ M.\ Hansen}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~18--29}
+
+% ---- original-page markers (paginate.py) ----
+\usepackage{marginnote}
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\newcommand{\apage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\maketitle
+\ifembargo
+\begin{center}\fbox{\parbox{0.86\textwidth}{\small\centering
+\textbf{READING COPY --- NOT FOR CIRCULATION.}\\[2pt]
+In copyright in Denmark until 31 December 2026 (H.\,M.\ Hansen died
+13 June 1956; the term is life\,+\,70). Public domain from 1 January 2027.
+Made for private study; please do not post or forward.}}\end{center}
+\bigskip
+\fi
+
+% --- p. 18 ---
+\opage{18} % The article begins at the HEAD of p. 18, under the title block
+% »Relativitetsprincipet.« / Af / H. M. Hansen. -- which is set by \maketitle
+% and is NOT repeated here. No epigraph, no section number before the first
+% paragraph; the numbered sections 1.--8. run inline at paragraph openings.
+%
+% FOOTNOTES on this page: two, printed *) and **).
+\setcounter{footnote}{0}%
+Den Interesse for Relativitetsspørgsmaalet, som flere Artikler i
+Fysisk Tidsskrift i den senere Tid har givet Vidnesbyrd om, tilskynder
+mig til at knytte nogle Bemærkninger til disse Artikler. Det forekommer
+mig nemlig, at baade Professor \emph{Kroman}'s\footnote{Fys. Tidsskr.
+XIV, 1, 1915--16.} og Redaktør \emph{Helge Holst}'s Kritik i nogen Grad
+bygger paa Misforstaaelser især af Lorentz' Opfattelse.
+
+1.\ Da man havde forsøgt at forklare det negative Resultat af
+Michelson's Interferensforsøg ved den \emph{Lorentz\,-\,Fitzgerald}ske
+% The spaced run breaks over the line as »L o r e n t z - F i t z g e r a l d-«
+% / »ske«: the hyphen is inside the letterspacing, the suffix -ske is not.
+Sammentrækningshypotese (1892), indvendte \emph{Poincaré} (1900),
+% There is a speck after »Hypotese« that the Google text layer reads as a
+% comma. It sits above the baseline and is detached; read as dirt, not a comma.
+at en saadan ad hoc fremsat Hypotese var en utilfredsstillende
+Forklaring: det kunde jo blive nødvendigt at indføre nye Hypoteser,
+hver Gang der fremkom nye Kendsgerninger. Dette skete nu meget snart.
+Lord \emph{Rayleigh} sluttede i 1902, at dersom den Lorentzske
+Sammentrækning fandt Sted, maatte Jordens Bevægelse gøre et
+gennemsigtigt Legeme dobbeltbrydende. En saadan Dobbeltbrydning søgte
+han forgæves at paavise, og senere har \emph{Brace} gentaget Forsøget
+med en overordentlig følsom Kompensator, men ligeledes forgæves.
+\emph{Trouton} og \emph{Noble} søgte i 1903 at paavise et
+Drejningsmoment, som efter Elektronteorien maa virke paa en ladet
+Pladekondensator, naar Pladerne danner en Vinkel med Jordens
+Translationsretning: Kondensatoren var anbragt paa en tilstrækkelig
+følsom Snovægt: den skulde altsaa dreje sig, naar den blev opladet, men
+Resultatet var ogsaa negativt. Alle de her omtalte Virkninger skulde
+ligesom Stribeforskydningen i Michelsonforsøget være Virkninger af
+2.~Orden, proportionale med Kvadrat ɔ: $\left(\dfrac{v}{c}\right)^{2}$
+% SCAN DEFECT, not a printing defect: the rule of this fraction is GONE from
+% the scan -- absent at native 600 ppi in the 1-bit JBIG2 mask, so no amount of
+% rendering recovers it. Calibrated against the same fraction in the second
+% footnote of p. 20, where the rule and the radical's vinculum both survive,
+% and against the built-up ½ fractions of p. 27, whose rules survive. The
+% printing had the rule; the compression dropped it. Set with \dfrac.
+paa Forholdet mellem Jordens Translationshastighed og
+Lyshastigheden\footnote{En Ændring af Lysteorien for at forklare
+Michelson-Forsøget, som foreslaaet af Prof. Kroman (S.~7), vilde ogsaa
+rammes af Poincaré's Indvending, da den jo næppe vilde klare
+Trouton-Noble-Forsøget.}.
+
+% --- p. 19 ---
+\opage{19} % FOOTNOTES on this page: one, printed *).
+% Bottom right of the page carries the gathering signature »2*«; not text.
+\setcounter{footnote}{0}%
+2.\ Disse negative Resultater\footnote{Hertil er senere (1908) kommen et
+forgæves Forsøg af \emph{Trouton} og \emph{Rankine} paa at paavise en
+Indflydelse af Jordens Translation paa en Leders Ledningsevne, nemlig en
+Forskel i Ledningsevnen i Retning af og tværs paa Translationen. En
+saadan Forskel kunde ventes under Antagelse af Kontraktionshypotesen,
+saa dette Forsøg er nær beslægtet med Rayleigh-Braces.} foranledigede
+(1904) \emph{Lorentz} til at søge at ændre Grundlaget for
+Elektronteorien saaledes, at den blev i Stand til at forklare i størst
+mulig Almindelighed, at elektromagnetiske Fænomener i et vilkaarligt
+System foregaar uafhængigt af Systemets Bevægelse (naar denne er uden
+Acceleration). For at naa dette Resultat maatte i det væsentlige gøres
+følgende nye Antagelser: 1) Selve Elektronerne, der som hvilende (i
+Forhold til Æteren) antages kugleformede, trækker sig ved jævn
+Bevægelse sammen i Bevægelsesretningen i det Forhold, som den gamle
+Lorentz-Fitzgeraldske Hypotese forlangte. 2) Alle Kræfter mellem
+uladede Partikler indbyrdes (altsaa f.~Eks. ogsaa elastiske Kræfter)
+% »uladede«: the second d has failed almost completely in the scan -- two
+% specks at the baseline where the sort should be. The rest of the word is
+% clean and the sense is not in doubt; read as printed, no defect logged.
+eller mellem ladede og uladede Partikler forandres ved en Translation
+paa samme Maade som elektriske Kræfter i et elektrostatisk System.
+
+Disse Antagelser viste sig i Stand til at forklare, at det ikke er
+muligt at paavise en jævn Translation i Forhold til Æteren. Men det er,
+som vi skal se, rigtignok en ganske anderledes vidtgaaende Hypotese end
+den oprindelige Kontraktionshypotese, og det er en Misforstaaelse at
+tro, at Antagelsen af denne sidste alene er Lorentz' Standpunkt, eller
+at den alene skulde være i Stand til at forklare alle de ovenfor
+omtalte Forsøg, der volder Vanskelighederne.
+
+3.\ \emph{Einstein} greb i 1905 uden at kende Lorentz' Arbejde Sagen an
+paa en anden Maade. Han var ligesom Lorentz kommen til den Opfattelse,
+at det ikke var tilfældigt, at netop de hidtil anstillede Forsøg paa at
+paavise Jordens Translation havde givet negative Resultater, men at det
+var det rimeligste at antage, at hvad Aarsagen dertil end var, var den
+af en saadan Art, at alle Forsøg i den Retning maatte strande. Han
+opstillede da --- vi kan maaske sige foreløbig --- dette som Princip
+for at drage Konsekvenserne deraf; dette Relativitetsprincip kan
+f.~Eks. formuleres saaledes: Naturlovene er uafhængige af Iagttagerens
+Bevægelsestilstand, naar denne er uden Acceleration. Der kan altsaa
+ikke eksistere noget fra de andre udmærket Koordinatsystem, hvorved man
+kan definere ab\-%
+% --- p. 20 ---
+\opage{20}% FOOTNOTES on this page: two, printed *) and **).
+\setcounter{footnote}{0}%
+solut Bevægelse, men alle Systemer, der bevæger sig i Forhold til
+hverandre med jævn Hastighed, er nøjagtig lige gode til Beskrivelse af
+et hvilket som helst Naturfænomen.
+
+Hertil føjer Einstein nu det saakaldte Dogme om Lyshastighedens
+Konstans. Dermed kan det siges at forholde sig paa følgende
+Maade\footnote{Fys. Tidsskr. X, 262, 1911--12.}: Ved Fastsættelse af,
+ved hvilke Transformationsligninger man under Antagelse af
+Relativitetsprincipets Gyldighed gaar over fra et af disse
+ligeberettigede Systemer til et andet, d.~v.~s. fra de Erfaringer, som
+en Iagttager i det ene System gør, slutter til dem, en Iagttager i det
+andet System vil gøre angaaende det samme Fænomen, maa vi gaa ud fra et
+eller andet bekendt Fænomen. Hvilket, maa efter Relativitetsprincipet
+være ligegyldigt; var det ikke det, d.~v.~s. fik man forskellige
+Transformationsligninger ved at gaa ud fra forskellige Fænomener, var
+jo netop Relativitetsprincipet ikke gyldigt. Men det Fænomen, vi
+vælger, maa være tilstrækkelig simpelt og kendt med tilstrækkelig stor
+Nøjagtighed, og derfor bliver der i Virkeligheden kun Tale om eet
+Fænomen, Lysets Forplantning i det tomme Rum (eller Luft). Om den ved
+vi netop fra Michelsons Forsøg med en overordentlig stor Nøjagtighed,
+at den for os, der følger med, finder Sted med samme Hastighed $c$ i
+alle Retninger. Relativitetsprincipet maa da forlange, at enhver
+Iagttager i ethvert af de berettigede Systemer skal gøre den samme
+Erfaring, at Lysets Hastighed i Vakuum ogsaa for ham er ens i alle
+Retninger og lig $c$\footnote{Det er yderst faa fysiske Fænomener, vi
+kender med en tilsvarende Nøjagtighed. Derfor kan der ikke hentes nogen
+Indvending mod Relativitetsprincipet af den Omstændighed (Kroman
+S.~22--23), at f.~Eks. Aberrationen eller Dopplers Princip faar Udtryk,
+der afviger fra de sædvanlige med en Faktor
+$\sqrt{1-\left(\dfrac{v}{c}\right)^{2}}$, da vi ikke tør paastaa, at
+vore sædvanlige Udtryk er rigtige, og den eksperimentelle Prøve af
+disse Fænomener ikke kan afgøre Tilstedeværelsen af en Faktor, hvis
+Værdi ligger saa nær ved 1.}.
+
+4.\ Hvad angaar Udledelsen af Transformationsligningerne paa det
+saaledes skabte Grundlag kan jeg nøjes med at henvise til Professor
+Kromans elegante Fremstilling. Transformationsligningerne er identiske
+med dem, Lorentz Aaret før havde opstillet; alle Konsekvenserne
+(specielt alle iagttagelige Konsekvenser) bliver derfor ogsaa
+identiske, det er kun Fortolkningen der bliver forskellig i Over\-%
+% --- p. 21 ---
+\opage{21}% FOOTNOTES on this page: one, printed *). Note that A and B are set ROMAN in
+% the footnote and ITALIC in the body; both followed as printed.
+\setcounter{footnote}{0}%
+ensstemmelse med de ovenfor omtalte forskellige Udgangspunkter.
+(Adskillige af Konsekvenserne var imidlertid ikke bleven opdagede af
+Lorentz, men kom først frem ved Einsteins Arbejde.)
+
+\emph{Lorentz}' Fortolkning er følgende: Vi kan benytte Æteren til deri
+at fastlægge et Koordinatsystem og saaledes definere absolut Hvile og
+absolut Bevægelse i Forhold til dette Koordinatsystem. Vi kan maaske
+ogsaa definere absolut Samtidighed for Begivenheder paa forskellige
+Steder og ordne Tidspunkter i Tidsfølge paa entydig Maade, idet vi i
+det mindste kan forestille os vilkaarlig store Hastigheder (altsaa paa
+lignende Maade som i Redaktør Helge Holsts Artikel). Men de i
+2.~omtalte Grundhypoteser fører til, at naar man meddeler et System en
+jævn Translation i Forhold til Æteren, forkortes alle Længder i
+Bevægelsesretningen, og alle Ure giver sig til at gaa langsommere (de
+elastiske Kræfter i f.~Eks. Uroen forandrer sig jo ogsaa), saa at
+ethvert System efter Lorentz faar sin \guillemotright effektive
+Tid\guillemotleft . Disse Ændringer, der jo er udtrykt ved de
+Lorentz-Einsteinske Transformationsformler, tilfredsstiller derfor
+ogsaa den af Einstein først paapegede Reciprocitet: Dersom $A$ og $B$
+bevæger sig i Forhold til hinanden med en vis relativ Hastighed, saa at
+de bevæger sig med forskellig Hastighed i Forhold til Æteren, eller at
+en af dem maaske er i Hvile i Forhold til denne, maa $A$ mene nøjagtig
+det samme om $B$ (d.~v.~s. $B$'s Maalestokke og Ure), som $B$ mener om
+$A$. Det er derfor udelukket, at nogen af dem eller nogen anden
+\emph{kan} fastslaa, hvem af dem der muligvis hviler i Forhold til
+Æteren, eller hvem der rigtigt kan afgøre, hvorvidt to Begivenheder paa
+to forskellige Steder er samtidige eller ej\footnote{Lorentz' ogsaa af
+Professor Kroman omtalte Diskussion mellem A og B (Das
+Relativitätsprinzip, S.~22--23) skal kun oplyse dette Forhold. Hvis der
+efter Lorentz bliver mindre heftig Strid mellem A og B end efter
+Einstein, ligger det kun deri, at hvis de er Lorentztilhængere, kan de
+enes om en fælles ideal Definition af Hvile og Samtidighed; de kan
+aldrig afgøre, hvis Opfattelse der er den ideale, eller om nogen er
+det. Men da A og B er Fysikere, vil de være for fornuftige til at føre
+% The slash of ø is invisible here (»fore«), but it is equally invisible in
+% »Afgørelse« three lines below and in »gøre« -- the scan drops that hairline
+% throughout the footnote type. Absence of the slash is therefore not
+% evidence; read »føre«, no defect logged.
+denne Strid; der er jo egentlig intet at strides om og i hvert Fald
+ingen Mulighed for en Afgørelse, hverken efter Lorentz' eller Einsteins
+Opfattelse.}. Begreberne absolut Hvile, absolut Bevægelse og absolut
+Samtidighed er efter Lorentz rent teoretiske eller ideale Begreber uden
+nogen praktisk Betydning.
+
+\emph{Einsteins} Standpunkt er simplere: Efter ham er der ingen Mening
+i at tale om absolut Hvile, absolut Bevægelse eller absolut
+% --- p. 22 ---
+\opage{22} % FOOTNOTES on this page: one, printed *).
+\setcounter{footnote}{0}%
+Samtidighed. At man ikke kan forbinde nogen Mening med de to første
+Begreber, naar man stiller sig paa et rent mekanisk Standpunkt og tror
+paa Newtons Mekanik, er kendt nok, og det har man forlængst vænnet sig
+til (Professor Kromans Bemærkninger herom (S.~18--19) omtales
+nedenfor). I hvert Fald i Mekaniken mangler vi det fra de andre
+udmærkede Koordinatsystemer, der kunde definere absolut Hvile og
+Bevægelse. Men Antagelsen af en Æter kunde synes at give os et saadant
+absolut Koordinatsystem, saa at man kunde vente gennem optiske og
+elektrodynamiske Forsøg at blive i Stand til at skelne mellem Hvile og
+Bevægelse; imidlertid har de ofte omtalte Forsøg vist os, at det heller
+ikke er Tilfældet. I Stedet for Mekanikens Relativitetsprincip har
+Einstein derfor maattet sætte sit eget, der paastaar, at hverken
+Mekaniken eller nogen anden Gren af Fysiken giver os et saadant absolut
+Koordinatsystem, og i saa Fald kan man efter hans Opfattelse
+overhovedet ikke forbinde nogen Mening med at tale om absolut Hvile og
+Bevægelse. Naar man drager Konsekvenserne af Relativitetsprincipet,
+viser det sig naturligvis ganske som hos Lorentz, at hvert af de
+ligeberettigede Systemer faar sin individuelle Opfattelse af
+Samtidighed for Begivenheder paa forskellige Steder. Følgen deraf maa
+for Einstein være, at man heller ikke kan forbinde Mening med at tale
+om en absolut Tid eller absolut Samtidighed.
+
+Enhver Iagttager kan ogsaa efter Einsteins Opfattelse direkte
+konstatere, at i Systemer, der bevæger sig i Forhold til ham, er
+Maalestokkene forkortede og gaar Urene langsommere og har Stedtid
+ganske som efter Lorentz' Opfattelse\footnote{Vi forudsætter
+naturligvis her som i det følgende, at Iagttagerne raader over
+tilstrækkelig fine Maaleinstrumenter, saa at Fænomenernes lille
+Størrelsesorden ingen Betydning faar. Det vil forhaabentlig ikke
+forstyrre, at jeg for ikke at gøre Artiklen unødvendig bred mange
+Steder har undladt at omtale forskellige tilsvarende
+Forudsætninger.}. Der er altsaa ikke Tale om Forkortninger o.~s.~v.
+blot som Formodninger i Iagttagerens Bevidsthed. Naar der efter
+Einstein ikke er Mening i at tale om virkelige Forkortninger o.~s.~v.,
+ligger det i, at der intet absolut System haves, hvori de
+\guillemotright oprindelige\guillemotleft{} Længder og Urgange kan
+fastslaas. Men det maa erindres, at ogsaa efter Lorentz' Opfattelse er
+de virkelige Forkortninger o.~s.~v. i et vist System ikke de samme som
+dem, en Iagttager, i Forhold til hvem Systemet bevæger sig,
+% --- p. 23 ---
+\opage{23} % FOOTNOTES on this page: one. Its mark is printed as a BARE ASTERISK: the
+% closing paren of *) is not present in the scan, where pp. 18, 20 and 22 all
+% carry it plainly. Same on the first note of p. 27. Set as *) like the rest.
+\setcounter{footnote}{0}%
+konstaterer, med mindre Iagttageren netop hviler i Forhold til Æteren.
+
+Da \emph{Ritz}' Standpunkt\footnote{Sml. P. \emph{Ehrenfest}:
+Æterhypotesens Krise. Fys. Tidsskr. XII, 242, 1913--14.} ikke kan
+fastholdes, haves for Tiden kun disse to Forsøg paa en Løsning af
+Vanskelighederne; \emph{Wiechert} har kaldt dem det betingede og det
+ubetingede Relativitetsprincip. Da de fører til identiske iagttagelige
+Resultater, maa det, som Lorentz mener, for en Fysiker blive en
+Smagssag, hvilken Opfattelse han foretrækker. Einsteins Synsmaade er
+fænomenologisk; dens store formelle Simpelhed har betinget, at først
+gennem den overskuede man alle Relativitetsopfattelsens Konsekvenser.
+Lorentz' Behandlingsmaade er af en mere atomistisk Natur; den søger at
+give os en Antydning af en Forstaaelse af de paagældende Fænomeners
+Mekanisme, fører os til i de negative Resultater af Michelson- og
+Trouton-Noble-Forsøget og i de negative Resultater, som vi ogsaa
+venter, at eventuelle nye tilsvarende Forsøg paa at paavise Jordens
+Translation vil give, at se en Kompensation af modsatte Virkninger.
+
+5.\ Her skal indskydes et Par Bemærkninger om, hvorvidt
+Lorentz-Einsteins Opfattelse bekræftes af Erfaringen eller har
+Mulighed for at blive det. En Afgørelse ad Erfaringens Vej af, hvilket
+af de to Standpunkter der er \guillemotright
+rigtigt\guillemotleft{}, er i Følge Sagens Natur udelukket.
+
+Det kommer da først i Betragtning, at Michelson- og
+Trouton-Noble-Forsøget hidtil ikke har kunnet forklares paa anden
+Maade. Videre har især Undersøgelser af Elektronmassens (den
+transversale Masses) Variation med Hastigheden faaet Betydning. Her har
+nye Forsøg af \emph{Schaefer} og \emph{Neumann} (1913) ført til en fra
+alle Sider anerkendt Bekræftelse af Relativitetsteoriens Fordringer; i
+det mindste har selv \emph{Kaufmann}, der anstillede de første Forsøg
+herover og længe mente, at hans Resultater var uforenelige med
+Relativitetsteoriens Fordringer, nu anerkendt det fuldtud (p.~1227 i
+hans nye Elektricitetslære, Müller-Pouillet, Bd.~IV). Endnu nyere
+Forsøg af \emph{Guye} og \emph{Lavanchy} (1915) har givet samme
+Resultat.
+
+I denne Forbindelse er det rimeligt at erindre om, at de Maxwellske
+Ligninger, som ansaas for et rigtigt Udtryk for vore Erfaringer
+angaaende elektrodynamiske Fænomener i Vakuum, tilfredsstiller
+Relativitetsprincipet; men paa den anden Side har jo rigtignok den
+% --- p. 24 ---
+\opage{24} % No footnotes on this page.
+Newtonske Mekanik, som ansaas for et rigtigt Udtryk for vore
+Erfaringer angaaende mekaniske Fænomener, maattet forandres.
+Imidlertid er selv den efter almindelig Opfattelse uhyre Nøjagtighed,
+hvormed den Newtonske Mekanik er bekræftet i Astronomien, dog ikke
+større, eller rettere den Forandring i Mekaniken, som
+Relativitetsprincipet forlanger, kvantitativt saa lille, at
+Overensstemmelsen med den nye Mekanik bliver lige saa god, ja i
+Virkeligheden bedre. Thi den gamle Mekanik formaaede som bekendt ikke
+at forklare et Beløb paa $43''$ pr. Aarhundrede i Merkurs
+Perihelbevægelse. Disse $43''$ kan, som nylig (1915) vist af Einstein,
+forklares ved hans udvidede Relativitetsteori, der ogsaa omfatter
+Gravitationen, men desværre kan der ikke gaas nærmere ind paa dette
+her.
+
+Det er vel endelig ikke overflødigt at erindre om, at der naturligvis
+intet Forsøg kendes, som strider mod Relativitetsprincipet; i saa Fald
+maatte dette jo, naar Forsøget var paalideligt gennemført, straks
+falde; det vilde altsaa tillige betyde, at ogsaa de Lorentzske
+Hypoteser maatte opgives eller ændres.
+
+Hvad Eksperimenterne i Øjeblikket kan sige angaaende
+Relativitetsprincipet, maa da sammenfattes derhen, at det foreløbigt
+opstillede Relativitetsprincip ikke endnu har ført til iagttagelige
+Konsekvenser, som strider mod Erfaringen, men at denne tværtimod i de
+ganske vist ret faa Tilfælde, hvor en eksperimentel Prøve hidtil har
+været mulig, har bekræftet det.
+
+6.\ Jeg skal derefter gaa over til nærmere at omtale enkelte
+Hovedpunkter af Professor Kromans interessante Arbejde. Hovedsagen er
+naturligvis Forsøget (S.~15) paa at paavise, at Einsteins Lære strider
+mod Logikens Modsigelsessætning.
+
+Der er Tale om to Iagttagere $A$ og $B$, hver hørende til sit af to
+Systemer, der bevæger sig i Forhold til hinanden med den konstante
+Hastighed $v$; $A$ og $B$ har hver i sit System ordnet sine Ures
+Visning under den Forudsætning, at Lysets Hastighed for hver af dem er
+$c$ i alle Retninger. Efter Einstein har hver af dem Ret i sin
+Fremfærd, da ingen af dem har Acceleration. Der indvendes nu: Her er
+altsaa to Sandheder, men dette strider mod Logikens
+Modsigelsessætning. Efter min Mening er det nu ikke uden videre
+indlysende, at dette er Tilfældet; de to Ting, der skulde være
+uforenelige, er to forskellige Iagttageres Fremgangsmaade over for to
+forskellige Opgaver, nemlig Indstillingen af hver Iagttagers Sæt Ure.
+Imidlertid skal Mod\-%
+% --- p. 25 ---
+\opage{25}% No footnotes on this page.
+sætningen komme tydeligt frem, naar man spørger, hvad $B$ skulde have
+gjort, hvis han ogsaa havde troet sit System bevæget (uden
+Acceleration). Men dette Spørgsmaal er meningsløst (stadig under
+Forudsætning af, at Erfaringen som hidtil vedblivende viser det umuligt
+at fastslaa en absolut Bevægelse i Forhold til en eventuel Æter). Hvis
+$B$ skulde have troet sig bevæget, maatte han for at kunne gøre noget
+ved de foreliggende Spørgsmaal have kendt sin Hastighed, hvilket han er
+ude af Stand til. Hans eneste mulige Standpunkt er at lade, som om hans
+System hviler, enten han saa med Einstein mener, at der overhovedet
+ikke er Mening i at tale om absolut Bevægelse, eller med Lorentz, at
+han blot er ude af Stand til at faa at vide, om han hviler i Forhold
+til Æteren eller ej. At $B$ skulde give $A$ Fortrin for sig selv og
+antage $A$ hvilende, kan der ingen Grund anføres for.
+
+\guillemotright $B$'s System er forkortet, siger $A$. Nej, siger
+$B$.\guillemotleft{} Mellem disse to Standpunkter forlanges det, at
+Fysikeren som Tredjemand skal skaffe Enhed. Men som foran berørt er der
+egentlig intet at strides om mellem $A$ og $B$. Det kan ikke gøre $B$
+noget, at $A$ mener om hans System, at Maalestokkene er forkortede og
+Urene gaar for langsomt og viser Stedtid. $B$ har ved at indrette sig,
+som han gjorde, faaet Enhed i sit System og det paa en saadan Maade, at
+han finder simple og overskuelige Naturlove. Og naar $A$ og $B$ er
+Fysikere (d.~v.~s. begge kender Resultatet af Michelson-Forsøget og de
+øvrige tilsvarende Forsøg), ved hver af dem jo, hvorfor den anden bærer
+sig ad som han gør.
+
+Imidlertid har, som vi har set, Lorentz været den Tredjemand, som kunde
+skaffe den søgte Enhed mellem $A$'s og $B$'s Standpunkt; de der
+forlanger denne Enhed, stiller sig følgelig blot paa Lorentz'
+Standpunkt. Kortere end det blev sammenfattet i 4., kan det maaske
+siges saaledes: Lorentz' Antagelser om Elektroner, Kræfter o.~s.~v. (se
+2.) fører til, at i Systemer der bevæger sig i Forhold til Æteren,
+trækker alle Længder sig sammen og forandrer alle Ure deres Gang paa en
+saadan Maade, at Iagttagere i to forskellige Systemer kommer til at
+dømme om hinanden, som Relativitetssætningerne fordrer.
+
+Det vil nu forstaas, at Lorentz og Einstein maa være enige om en Rejses
+foryngende Virkning (Kroman S.~28). Den rejsende Mand behøver efter
+Lorentz' Mening ikke at stille sit Ur til at gaa langsommere, det
+besørger Bevægelsen i Forhold til Æteren gennem den
+% --- p. 26 ---
+\opage{26} % No footnotes on this page.
+derved fremkaldte Forandring i Kræfterne af sig selv, og denne samme
+Forandring af Kræfterne maa ogsaa faa de organiske Processer til at
+forløbe langsommere. Einstein derimod giver i Overensstemmelse med sit
+fænomenologiske Standpunkt ingen Forklaring paa, hvordan det skal
+tænkes at \guillemotright gaa til\guillemotleft . Fænomenet er en
+Konsekvens af Forudsætningen, af Relativitetsprincipet, og i samme Grad
+som de af Relativitetsprincipets Konsekvenser, som kan prøves, viser
+sig at slaa til, i samme Grad nødes man til at tro ogsaa paa denne
+specielle Konsekvens, selv om denne i Øjeblikket vanskeligt kan tænkes
+prøvet. Tilfredsstiller et saadant fænomenologisk Standpunkt ikke, har
+man den Udvej at holde sig til Lorentz' Opfattelse eller gøre sig andre
+lignende Forestillinger om Fænomenets Mekanisme.
+
+S.~21 indvendes, at Tanken ikke kan fatte, at et Lyspunkt samtidig
+skulde kunne være paa to Steder. Denne Indvending forstaar jeg næppe
+helt. (At Transformationsligningerne, som er fundne ud fra den
+Forudsætning, at Lysets Hastighed i begge Systemer i alle Retninger er
+$c$, fører til det Resultat, at den er $c$, er jo ikke mærkeligt). Fra
+Lorentz' Standpunkt er Sagen imidlertid simpel nok: i Følge dette kan
+vi altid tænke os angivet entydigt, hvor i Æteren Lysblinket er naaet
+hen, dets absolutte Koordinater. Blot kan hverken $A$ eller $B$ maale
+andet end dets relative Koordinater, nemlig fastslaa, hvor Lysblinket
+befinder sig i deres Systemer. De finder derfor hver sit Udtryk for,
+hvor det er, men disse Udtryk betegner til samme absolutte Tid det
+samme Sted i Æteren, det samme absolutte Sted. Einstein kender intet
+Middel til at angive Lysblinkets absolutte Sted og kan som ofte nævnt
+ikke forbinde nogen Mening med at tale om dets absolutte Sted. Men naar
+Lysglimtet passerer $A$ (Koordinat $x$ i $A$'s System) i det Øjeblik,
+Klokken dér er $t$, saa tillader Formlerne entydigt at udregne, hvor
+$B$, som vi tænker os passere $A$ i samme Øjeblik, befinder sig i sit
+System (Koordinat $x'$), og hvad han mener, Klokken dér er ($t'$). Og
+han vil da mene, at Lysblinket netop til Tiden $t'$ er naaet til $x'$.
+
+7.\ Endnu skal kun knyttes nogle Bemærkninger til Professor Kromans
+Omtale (S.~17--19) af Relativitetsprincipet i Newtons Mekanik. Ingen
+Relativist vil benægte, at Einstein har udtalt noget nyt, som ikke
+findes hos Newton, men ingen Fysiker vil paa den anden Side benægte, at
+den Newtonske Mekanik ogsaa har \emph{sit} Relativitetsprincip. Stiller
+vi os paa et rent mekanisk Standpunkt, og tror vi
+% --- p. 27 ---
+\opage{27} % FOOTNOTES on this page: two, printed *) and **). The mark of the first is a
+% BARE ASTERISK in the scan -- no closing paren; cf. p. 23.
+\setcounter{footnote}{0}%
+paa Newtons Mekanik, saa kommer vi ikke uden om, at Hvile og jævn
+retlinet Bevægelse er ganske ligestillede Begreber, er \guillemotright
+fysisk ét og det samme\guillemotleft . Hvad der for én Iagttager er
+Hvile, er for en anden lige saa berettiget Iagttager en jævn retlinet
+Bevægelse. Derimellem kan aldrig træffes Afgørelse. At dette er
+rigtigt, ses let af det matematiske Udtryk for Newtons
+Mekanik\footnote{Sml. S.~252 i min tidligere Artikel (Fys. Tidsskr. X,
+251, 1911--12).}. Men her skal jeg nøjes med at omtale Eksemplet S.~19
+nærmere.
+
+Der er Tale om en Vogn af Massen $m$, der fra Tiden 0 til Tiden $t$
+trækkes med Accelerationen $\gamma$ uden Gnidning hen ad et Skibs Dæk.
+I 1.~Tilfælde hviler Skibet, i 2.~Tilfælde sejler det med konstant
+Hastighed $v$ i samme Retning, som Vognen trækkes. At der ikke er
+Identitet mellem de to Tilfælde, er givet nok, men det forlanger
+Mekanikens Relativitetsprincip rigtignok heller ikke. Det forlanger
+kun, at en medbevæget Iagttager, en Iagttager paa Skibet skal finde
+Identitet mellem, hvad der sker paa Skibet i de to Tilfælde, og dette
+er rigtigt. Hellere end at lade det være en flyvende Fugl, som trækker
+Vognen, vil vi foreløbig lade en Mand i Forstavnen af Skibet trække
+den. Han udfører (til alt Held for Sømændene) det samme Arbejde, enten
+Skibet ligger stille eller bevæger sig, nemlig Kraften $m\gamma$ Gange
+Vejen $\tfrac{1}{2}\gamma t^{2}$\footnote{At Vejen i begge Tilfælde er
+$\tfrac{1}{2}\gamma t^{2}$ ses lettest ved at huske paa, at saa meget
+maa Manden forkorte Snoren, hvori han trækker Vognen.}, og for ham og i
+det hele for Iagttagere paa Skibet, altsaa medbevægede Iagttagere, er
+Vognens kinetiske Energi ogsaa i begge Tilfælde
+$\tfrac{1}{2}m\gamma^{2}t^{2}$; et saa stort Arbejde kan Vognen i begge
+Tilfælde udføre, før den igen staar stille paa Skibet. Men for
+Iagttagere udefra er der som sagt ikke Identitet; vi kan udvide
+Eksemplet til at oplyse Forholdet helt ved at tænke os en Vogn til paa
+Skibet, ens med den omtalte og behandlet paa samme Maade, blot trækkes
+den af en Mand, der sidder paa Land, f.~Eks. paa et Bolværk, som Skibet
+netop glider forbi; lad ham hedde $L$, medens Sømanden, der trak den
+første Vogn, hedder $S$. Det Arbejde, $L$ maa udføre, er forskelligt i
+de to Tilfælde, paa det stilleliggende Skib naturligvis som før
+$\tfrac{1}{2}m\gamma^{2}t^{2}$ men paa det bevægede Skib
+$(\tfrac{1}{2}\gamma t^{2}+vt)\,m\gamma$, altsaa $m\gamma vt$ mere end
+før, stemmende med, at $L$ mener, at Vognens kinetiske Energi nu bliver
+$\tfrac{1}{2}m(\gamma t+v)^{2}=\tfrac{1}{2}m\gamma^{2}t^{2}+m\gamma
+vt+\tfrac{1}{2}mv^{2}$. Det sidste Led $\tfrac{1}{2}mv^{2}$ hidrører jo
+fra, at Vognen deltager i Skibets Bevægelse med Hastigheden $v$. $L$
+maa nu mene, at den anden Vogn har den
+% --- p. 28 ---
+\opage{28} % No footnotes on this page.
+% The running head here reads »H. M Hansen:« -- the point after M is dropped,
+% where pp. 20, 22, 24 and 26 all print »H. M. Hansen:«. Running heads are not
+% transcribed; recorded for the record only.
+samme kinetiske Energi; Spørgsmaalet er da for $L$, hvorfra
+Energimængden $m\gamma vt$ for denne Vogn stammer; den stammer fra
+Skibet, der har ført $S$ Vejen $vt$ frem mod Kraften $m\gamma$, som han
+trak i Snoren med, og som Snoren derfor ogsaa trak i ham med. Men
+omvendt forstaar $S$ maaske ikke, hvorfor $L$ har maattet slide
+$m\gamma vt$ mere med sin Vogn, da denne jo for $S$ ogsaa kun har
+Energien $\tfrac{1}{2}m\gamma^{2}t^{2}$. Det overskydende Arbejde er
+midlertid brugt til at flytte $L$ Vejen $vt$ tilbage, set fra eller i
+% PRINTER'S DEFECT, transcribed as printed: »er midlertid« for »er
+% imidlertid«. The initial i of imidlertid is not there -- clean white space
+% between »er« and »midlertid«, verified at 600 ppi against the same word set
+% correctly on pp. 21, 22, 23, 24 and 25.
+Forhold til Skibet, idet han under denne Bevægelse var paavirket af
+Kraften $m\gamma$. $L$'s og $S$'s Synsmaade er naturligvis lige
+berettigede, lige rigtige; sandsynligvis har ingen af dem hvilet
+absolut, eller rettere, vi mangler som før nævnt i hvert fald i
+Mekaniken det fra de andre udmærkede Koordinatsystem, der kunde
+definere absolut Hvile og Bevægelse.
+
+Fuglen i det oprindelige Eksempel svarer til $L$ eller $S$, alt
+eftersom man regner den hørende til Omverdenen eller til Skibet. Naar
+Eksemplet her er behandlet saa udførligt, er det ogsaa for at gøre
+opmærksom paa, at det, at man besidder Mekanikens
+Relativitetsprincip, godt kan forenes med, at man analyserer de
+enkelte Tilfælde nærmere og i Enkelthederne forfølger, hvorledes det
+hænger sammen med dette Relativitetsprincip; en lignende Bemærkning
+kunde gøres til Redaktør Helge Holst's Omtale af Fizeaus Forsøg.
+
+8.\ Endelig skal jeg ganske kort berøre Redaktør \emph{Helge Holst}'s
+Artikel, til hvilken jo ogsaa adskillgt af det foranstaaende har
+% PRINTER'S DEFECT, transcribed as printed: »adskillgt« for »adskilligt«.
+% The i is simply not set; the surrounding letters are clean at 600 ppi.
+Adresse. Den af Redaktør Holst hævdede Opfattelse af
+Samtidighedsbegrebets Indhold falder aabenbart sammen med den af
+Lorentz antydede, og der er ingen Tvivl om, at denne Opfattelse
+\emph{kan} fastholdes. Men det maa bemærkes, at det afgørende jo slet
+ikke er, at det at vi ikke raader over hurtigere Bud end Lysstraalen,
+faar Betydning over for den \emph{Nøjagtighed}, hvormed vi kan udføre
+Samtidighedsbestemmelser for Begivenheder paa forskellige Steder (H.
+H. S.~3). Vanskeligheden kommer, efter at Michelson-Forsøget i Strid
+med, hvad man vilde vente, har lært os, at Lysets Hastighed i alle
+Retninger her paa Jorden er $c$. Thi man kan jo ikke godt tænke sig,
+at Michelson-Forsøget vilde give andet Resultat f.~Eks. paa Mars end
+her paa Jorden; men dermed er vi inde i den principielle
+Uoverensstemmelse mellem vor og Marsmenneskernes Tidsopfattelse, igen
+inde i Diskussionen mellem $A$ og $B$. Hvorvidt man da vil tillægge den
+fremsatte Opfattelse af Samtidighedsbegrebets absolutte
+% --- p. 29 ---
+\opage{29} % Last page of the article. No footnotes. It ends with the closing paragraph
+% below -- no rule, no signature, no dateline, no »Sluttet«/date line; the
+% remainder of the page is blank, and printed p. 30 opens a new item,
+% »Fysik i Skolen«.
+Indhold Mening (eller Interesse), bliver for Fysikere som før nævnt en
+Smagssag.
+
+Den anden Fremgangsmaade, Anvendelsen af Ure, der tages om Bord i de
+bevægede Systemer, forandrer intet heri. Paa den Maade tilvejebringes
+en saadan Overensstemmelse mellem de forskellige Systemers Tidsenhed
+(resp. ved Maalestokoverføring Overensstemmelse i Længdeenheden), at
+dersom Systemerne bevæger sig med samme Hastighed, altsaa er i relativ
+Hvile, maaler de med samme Enhed. Men naar de faar relativ Hastighed,
+konstaterer alligevel en Iagttager i det ene System de kendte
+Uoverensstemmelser mellem hans og det andet Systems Længde- og
+Tidsenheder o.~s.~v., som er udtrykt ved
+Lorentz-Einstein-Transformationsformlerne. (Vi forudsætter selvfølgelig
+stadig, at Relativitetssætningerne gælder, d.~v.~s. at alle Forsøg af
+Michelson- og Trouton-Noble-Forsøgets Art giver negative Resultater).
+Den Aarsag til Forandringerne, som Lorentz søger i Ætervinden, søger
+Einstein --- i Overensstemmelse med sit fænomenologiske Standpunkt ---
+i Rummets og Tidens Natur, uden at han gør sig
+Mekanismeforestillinger.
+
+% The printing sets about one extra line of white here -- a break within the
+% section, without rule or ornament. Set as \medskip.
+\medskip
+
+Man maa med Interesse afvente yderligere Indlæg fra erkendelsesteoretisk
+Side i disse Spørgsmaal, bygget i samme Grad som de her omhandlede
+Arbejder paa en omfattende Viden om Spørgsmaalets fysiske Side.
+Samtidig maa Fysikernes Arbejde være rettet mod at finde nye
+Konsekvenser af Relativitetsprincipet, som egner sig til at prøves
+eksperimentelt, og prøve dem, for at fastslaa endnu bedre end hidtil
+sket, at vi ikke fysisk kan skelne mellem Hvile og Bevægelse, eller
+altsaa at Udgangspunktet, Relativitetsprincipet, er et rigtigt Udtryk
+for vor fysiske Viden om disse Spørgsmaal.
+
+Vi har her slet ikke kunnet gaa ind paa \emph{Einsteins} nyere
+almindeligere Relativitetsteori, hvor accelererede Bevægelser
+omhandles og Gravitationen ogsaa er indordnet, men dertil vil der
+antagelig blive Lejlighed i en senere Artikel.
+
+\end{document}

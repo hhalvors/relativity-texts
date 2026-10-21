@@ -17,6 +17,13 @@ Each transcription follows the printed text, with the journal's page numbers in
 the margin, the printed equation numbers, and the printer's errors kept and
 marked. The translations mirror the transcriptions page for page.
 
+The second topic, **the Danish relativity debate, 1912–1917**
+(`texts/danish-debate/`): H. M. Hansen's 1912 lecture, Kristian Kroman's attack of
+1915, the replies of Helge Holst, C. E. Walsøe and Hansen, and Kroman's last word
+(1917), all from *Fysisk Tidsskrift*. These editions are made in the
+[danish-texts](https://github.com/hhalvors/danish-texts) repository and mirrored
+here by `make mirror` (`MIRROR.tsv`); edit them there, not here.
+
 ## Structure
 
 ```
@@ -28,6 +35,7 @@ catalog.yaml                   topics, each with its papers (status, citation, l
 SCANS.tsv, scans.py            which scan each transcription was made from, by sha256
 fetch-scans.sh                 how each scan was cut from the Internet Archive's issue scans
 ocrdiff.py                     compares a transcription's words with the scan's text layer
+MIRROR.tsv, mirror.sh          the papers mirrored from ~/danish-texts (`make mirror`)
 templates/article.tex          the preamble every paper starts from
 ```
 

@@ -1,0 +1,302 @@
+% ============================================================
+%  C. E. Walsøe, "Around the Boundary of Science"
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), pp. 13-17.
+%
+%  ENGLISH TRANSLATION
+%  Status: COMPLETE. Translated from transcription.tex (the Danish diplomatic
+%  transcription, COMPLETE), never from the scan. Structure mirrors
+%  transcription.tex 1:1: same paragraphing, the three unnumbered \bigskip
+%  section breaks at the same places, the same page markers, the four
+%  footnotes at the same anchors with the same restarting marks.
+%
+%  The fourth item in the Kroman relativity debate, and one that no
+%  bibliography records. Walsøe writes as a third party trying to mediate;
+%  the *) hanging on the title is the Redaktion's own disclaimer.
+%  See ../relativitetsprincipet/note.md for the debate as a whole.
+%
+%  RIGHTS: clear. Carl Emil Walsøe, b. 25 May 1870 Copenhagen, d. 1951;
+%  Danish copyright (life+70) expired 31 December 2021, so the text has been
+%  public domain since 1 January 2022. The identification and its two
+%  independent Kraks Blå Bog sources are set out in transcription.tex.
+%
+% ------------------------------------------------------------
+%  TRANSLATION CONVENTIONS -- this article
+% ------------------------------------------------------------
+%  * Standing method: ../../../TRANSLATION-PLAYBOOK.md; the cluster's shared
+%    decisions are set out at length in
+%    ../relativitetsprincipet/translation.tex.
+%  * THE TITLE. »Omkring Videnskabens Grænse« is literally "around science's
+%    boundary" -- not "beyond" it and not "the limits of science". Walsøe's
+%    whole argument is that the interesting phenomena sit ON the frontier
+%    between domains, so the preposition is doing real work and is kept:
+%    "Around the Boundary of Science".
+%  * EMPHASIS. All 30 \emph{} runs carried over. This compositor is
+%    INCONSISTENT with proper names -- Michelsons, Einstein and Wiechert are
+%    letterspaced on pp. 13 and 15, while Einsteins (p. 14) and »Mennesket
+%    Einstein« and Michelsons (p. 16) are not. The English follows the
+%    printing case by case, so the same name carries \emph{} in one place and
+%    not in another; that is not an oversight.
+%  * QUOTATION MARKS. Danish guillemets -> English curly doubles. NOTE the
+%    unclosed quotation on p. 13: the printing never sets the closing
+%    guillemet after »Relativitetsprincip. Reproduced here -- the opening
+%    `` stands with no partner, exactly as the Danish stands with one
+%    guillemet. The transcription's guillemet balance is +1 for this reason
+%    and must not be "fixed"; the same goes for this file's quotation marks.
+%  * FOOTNOTES restart on each printed page (*), **)), so the \ifcase
+%    \thefootnote and the \setcounter resets of the Danish are kept exactly,
+%    at the same page joints. The first *) is the Redaktion's note ON THE
+%    TITLE and is set on \title{}.
+%  * WALSØE'S QUOTATIONS of Høffding, Kroman, Bjerrum and Bergson are given
+%    in Danish in his text and are translated here; they are his renderings,
+%    given without page references (except in the two footnotes), so the
+%    English should not be quoted back as those authors' own words.
+%  * PRINTER'S DEFECTS. p. 16's doubled full stop after "(Kroman)" is
+%    reproducible and is reproduced. p. 15's missing full stop after »Aarg«
+%    is reproduced in the note's English abbreviation. p. 13's broken ")" in
+%    the first footnote mark is a matter of the ink, not of the text.
+%
+%  BUILD: pdflatex (libertinus + libertinust1math), like the Danish.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}
+\usepackage{amsmath}
+
+% FOOTNOTES. The printing marks them *) and **), restarting on each printed
+% page; the resets are in the body, at the page markers, as in the Danish.
+\renewcommand{\thefootnote}{\ifcase\value{footnote}\or *)\or **)\else \arabic{footnote})\fi}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={Around the Boundary of Science},
+  pdfauthor={C. E. Walsoe},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Around the Boundary of Science}}
+\fancyhead[LO]{\textit{C.\,E.\ Walsøe}}
+
+\setstretch{1.3}
+
+% The *) on p. 13 is a footnote TO THE TITLE -- the Redaktion's disclaimer
+% that the article falls outside the journal's scope. Set here, on the title,
+% because that is where the printing hangs it.
+\title{\textbf{Around the Boundary of Science\footnote{The Editors have not wished to refuse this article admission, although it must be said to fall outside the journal's frame, but reserve their position with regard to any further contributions on the questions raised in it.}}}
+\author{C.\,E.\ Walsøe}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~13--17\\[2pt]
+\small Translated from the Danish}
+
+\begin{document}
+\maketitle
+
+% --- p. 13 ---
+% Holst's article ends above; Walsøe's title block sits mid-page. The title
+% block is in the preamble via \maketitle and is NOT repeated here.
+\setcounter{footnote}{1}%
+
+The negative result of \emph{Michelson}'s attempt to demonstrate the earth's
+translation by the aid of the displacement of the interference fringes led
+\emph{Einstein} --- in 1905 --- to set up his
+% The closing quotation mark is NEVER SET in the printing; see the defect log.
+% Reproduced: the opening `` below has no partner.
+``\emph{Principle of Relativity}\footnote{Discussed in Fysisk Tidsskrift,
+vol.\ 10, p.\ 251 ff.\ and vol.\ 14, p.\ 1 ff.}:
+
+The velocity with which electromagnetic vibrations propagate themselves in
+space is observed as \emph{the same} by two observers, of whom the one has a
+uniform motion in a straight line in relation to the other --- a presupposition
+which was added to the usual one: the vibrations are propa\-%
+% --- p. 14 ---
+gated with \emph{the same} velocity in all directions, independently of the
+source's motion.
+
+But this assertion of Einstein's has divided the physicists into two camps,
+which are constantly at strife.
+
+The opponents maintain that the two presuppositions stand in mutual
+contradiction, and that the assertion is therefore false, while the adherents
+seek to show that the contradiction is only apparent, and therefore claim that
+the assertion be accepted as a scientific hypothesis.
+
+The purpose of the present article is to recall that it is not excluded
+\emph{in advance} that both parties are right in the \emph{essential} matter.
+It is possible that the opponents are right that the two presuppositions
+really are contradictory (without the assertion therefore needing to be
+false), and that the adherents are right that the assertion is a well-founded
+hypothesis (without this therefore needing to be scientific).
+
+It must not be forgotten that we dare not assert that existence is
+``comprehensible or intelligible, measurable for our thought'' (Høffding). We
+cannot know in advance whether there may not --- in spite of everything ---
+be found contradictions in the world of things.
+
+The condition for our being able to apply logic to reality is that the latter,
+at all events within \emph{the domain in question}, contains no
+contradictions. But it is still only a \emph{hypothesis} that in \emph{the
+whole} of existence, taken as one, no contradictions are to be found --- a
+hypothesis which, moreover, seems difficult to maintain together with the
+hypothesis of the world-ether.
+
+When we live in a world where the state of things is insanely improbable
+(Bjerrum), it is hardly quite improbable that existence taken as one really is
+illogical, irrational, however painful it might be for us to acknowledge the
+possibility that what is irreconcilable for human consciousness is
+nevertheless found reconciled in existence, and conversely. But our knowledge
+of the real may all the same very well be \emph{piecewise} entirely correct.
+
+The atomic, electron, quantum and mutation theories, together with the sudden
+new formations which can arise in the psychic domain, teach an indivisibility
+and discontinuity in existence which for thought is quite enigmatic. It is
+possible that our knowledge of the real --- like reality itself --- will show
+itself ``discontinuous'', that we can know existence only \emph{by leaps},
+that we must \emph{leap} from the one domain
+% --- p. 15 ---
+\setcounter{footnote}{0}%
+to the other, because there is no point of transition. One of the consequences
+of the principle of relativity is that two observers can under certain
+conditions judge contradictorily about the same phenomenon and yet both be
+right, each from his own point of view\footnote{Vol.\ 10, p.\ 266.}. It is
+possible that a phenomenon, particularly one from the border region between
+two domains of knowledge, is judged contradictorily in a similar way from the
+respective points of view, and that there is for the two domains no
+\emph{common} point from which the phenomenon can be seen; but no one can at
+the \emph{same} time occupy both points of view, just as no one can
+simultaneously be both at rest and in motion.
+
+Even if existence should thus be knowable only piecewise, it does not follow
+from this that such ``contradictions'' are not reconcilable for an
+intelligence of a higher and different kind, nor does it on the other hand
+mean that there is a limit to how far science can press forward in piecewise
+knowledge (even though large domains are probably not knowable by us at all).
+
+By its very nature science can never give up before any task, not even if it
+should meet with one of which it would never be able to reach any solution,
+unless the insolubility were scientifically proved.
+
+But perhaps it is such an insoluble task to reconcile the two presuppositions
+of the principle of relativity. Perhaps the electromagnetic vibrations are
+phenomena on the boundary between two different domains, between sensible
+nature and the insensible ether.
+
+The presupposition (hypothesis) of the constancy of the velocity has in that
+case been arrived at with the ether as starting point, while the starting
+point for the other presupposition (the relativity hypothesis itself) is in
+sensible nature. (As \emph{Wiechert} has shown, the principle of relativity
+does not exclude the ether hypothesis; on the contrary, the principle compels
+its maintenance).
+
+Thus: it is possible that the two presuppositions really are contradictory
+\emph{without} the one of them therefore needing to be false.
+
+% The printing sets extra leading here -- an unnumbered, untitled section
+% break. Three of them occur (pp. 15, 16, 17); \bigskip, as in the Danish.
+\bigskip
+
+It seems sufficiently established that the hypothesis is illogical and entails
+a ``causeless phenomenon''\footnote{Vol.\ 14, p\ 17 and 28.}% no full stop after the abbreviation, as printed; see defect log
+, but thereby it is condemned only as a \emph{scientific} hypothesis,
+``whereas surely every
+% --- p. 16 ---
+``thinking being'' will perceive that because the causeless is unknowable, it
+is not therefore given that there is nothing causeless'' (Kroman)..% doubled full stop, as printed
+
+Science is only one of the servants given to man as a help towards living
+life. ``Science and philosophy are not enough for a personal view of life''
+(Høffding). ``By a purely individual route too, through feeling and personal
+experience of life, we obtain conviction of the truth of many an assertion''
+(Kroman). The scientific mode of knowledge moreover gives us only a
+\emph{relative}, no absolute knowledge, since it consists in an analysis whose
+result depends on the point of view chosen and the symbols used (Bergson). But
+in the other modes of knowledge too, use is made of the principle of causality
+and of logical thinking \emph{within} the domains in question; only the
+observations are often of another nature than science's, just as the starting
+point does not always lie in the objective alone. And science as such cannot
+occupy the points of view in question; they lie \emph{out side} its boundary.
+% »uden for« is set as TWO letterspaced words here, against the one-word
+% »udenfor« of p. 17 and the unspaced »udenfor« later on this page. The
+% English keeps the split inside the run so the distinction survives.
+
+Since man is after all only \emph{partially} identical with the man of
+science, man as such cannot \emph{content himself} with taking science's point
+of view. There is thus a possibility that it is \emph{the man} Einstein, and
+not the man of science in him, who has intuitively discerned a hint in
+science's results and, led by it, has unconsciously set up the relativity
+hypothesis outside science's boundary. And Michelson's result, as well as the
+dependence of the electron mass upon the velocity in the $\beta$-rays, is
+undeniably weighty circumstantial evidence for its correctness.
+
+Thus: it is possible that the hypothesis really is well founded \emph{without}
+its therefore needing to be a \emph{scientific} hypothesis.
+
+\bigskip
+
+Should it really be the case that we have here an unscientific, illogical
+hypothesis with a probability of being nevertheless true and valid for certain
+phenomena of nature, then the relativists commit the error of attempting the
+impossible: to press the hypothesis within science's frame, while the
+opponents for their part make themselves guilty of the error of declaring the
+hypothesis false. And confusion arises, with incessant misunderstandings and
+idle strife, when the parties do not perceive this and concede to each other
+that the hypothesis is illogical, and respectively that it may nevertheless be
+true.
+
+% --- p. 17 ---
+But it is hardly to be expected that this intimation, from a third party, of a
+possibility of relieving the tension and settling the strife between the two
+parties by such a consideration will find understanding with either of them.
+Perhaps the possibility will be disputed by the objection that it is
+meaningless to speak of logical consequences of an illogical hypothesis.
+Science cannot operate with such a thing at all.
+
+This objection would however be premature, for just as it is science's own
+results that have led to the hypothesis, so it will also be possible to test
+it and its consequences upon \emph{other} of science's results, and to seek
+further circumstantial evidence for its validity.
+
+And if new observations are successfully made which agree with it, this
+presumably indicates that the phenomena in question also belong to the border
+region between sensible nature and the insensible ether.
+
+\bigskip
+
+\emph{Outside} natural science too, for phenomena on the boundary between the
+subjective and the objective, the principle of relativity has validity. Thus
+it holds for the problem of the ``freedom'' of the will. Starting from the
+objective, one comes with logical necessity to determinism; but starting from
+the subjective, one comes just as unavoidably to indeterminism; in other
+words, the phenomenon of will is judged contradictorily by an objective and by
+a subjective consideration.
+
+Determinism is right, but indeterminism is right too. This man as such can
+concede; but the man of science is inconsistent if he --- as some do ---
+regards the problem as scientifically insoluble, for objective science does
+not build upon subjective experiences.
+
+The problem has \emph{two} solutions, but science can, by its presupposition,
+arrive only at the \emph{one}: determinism.
+
+In a similar way the principle of relativity holds for the relation between
+the scientific view of the world and the intuitive one (Bergson).
+
+In spite of real contradictions, both views may be correct.
+
+And the old strife about the religious problem can in part be explained in the
+same way.
+% The article ENDS here, foot of p. 17, with no signature, no dateline and no
+% place-name. Hansen's reply opens p. 18.
+
+\end{document}

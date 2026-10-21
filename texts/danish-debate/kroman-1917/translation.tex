@@ -1,0 +1,726 @@
+% ============================================================
+%  K. Kroman, "A Few Further Remarks on 'The Principle of Relativity'"
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), pp. 192-205.
+%
+%  ENGLISH TRANSLATION
+%  Status: COMPLETE. Translated from transcription.tex (the Danish diplomatic
+%  transcription, COMPLETE), never from the scan. Structure mirrors
+%  transcription.tex 1:1: same paragraphing, same page markers at the same
+%  joints, the five footnotes at the same anchors with the same marks and the
+%  same inconsistent placement about the stop.
+%
+%  Kroman's reply to the three articles that answered his 1915 attack --
+%  Holst's »Tidsproblemet«, Walsøe's »Omkring Videnskabens Grænse« and
+%  H. M. Hansen's »Relativitetsprincipet« -- and the close of the debate.
+%  The first two are translated in ../holst-tidsproblemet and
+%  ../walsoe-videnskabens-graense; Hansen's remains under the repo's embargo
+%  until 1 January 2027, so this reply can be read against two of its three
+%  targets only. See ../relativitetsprincipet/note.md.
+%
+%  RIGHTS: clear. Kroman died 26 July 1925; Danish copyright expired at the
+%  end of 1995.
+%
+% ------------------------------------------------------------
+%  TRANSLATION CONVENTIONS -- this article
+% ------------------------------------------------------------
+%  * Standing method: ../../../TRANSLATION-PLAYBOOK.md; the cluster's shared
+%    decisions are set out at length in
+%    ../relativitetsprincipet/translation.tex.
+%  * EMPHASIS. All 42 \emph{} runs carried over, including the one that sits
+%    INSIDE a compound on p. 195 -- Bevægelses\emph{ændrings}aarsag, rendered
+%    "a cause of \emph{change} of motion" so that the emphasis still falls on
+%    the same element -- and the two on p. 205 that enclose the italic
+%    variables A and B.
+%    NOTE: unlike the 1915 article, this one letterspaces NO proper names at
+%    all on pp. 192-193 or 200, and the compositor sets »Einstein'ske« there
+%    in ordinary roman. The English carries no \emph{} on those names either;
+%    that is not an oversight.
+%  * "Dr. H." is Kroman's abbreviation for Dr. H. M. Hansen throughout, "L."
+%    for Lorentz and "M." for Michelson. All kept as he sets them.
+%  * "Fænomenist" -> "phenomenist", the term Kroman is attacking, kept rather
+%    than modernised to "phenomenalist"; his own gloss follows in the text.
+%  * The GERMAN quotations (pp. 198, 202) stay in German, inside quotation
+%    marks and upright, as printed.
+%  * The old Danish id-est sign ɔ: (pp. 195, 202) -> "i.e." per the playbook.
+%  * PRINTER'S DEFECTS. p. 203's »sikkert!,« (exclamation mark and comma
+%    together) and p. 204's misplaced comma before "that" are reproducible and
+%    are reproduced. p. 200's spaced product »2 l a« against p. 201's »2la« is
+%    kept as printed in both places.
+%  * FOOTNOTE MARKS sit inconsistently about the full stop -- BEFORE it on
+%    pp. 193 and for the **) on p. 198, AFTER it for the *) on p. 198 and on
+%    p. 205. Reproduced in each place.
+%
+%  BUILD: pdflatex (libertinus + libertinust1math), like the Danish.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}
+\usepackage{amsmath}
+
+\usepackage{graphicx}    % for \reflectbox, below
+% The old Danish id-est sign »ɔ:« is rendered "i.e." in the English per the
+% playbook, so the declaration is not needed for the body; kept so the file
+% compiles unchanged if a later editor restores the sign in a quotation.
+\DeclareUnicodeCharacter{0254}{\reflectbox{c}}
+
+% FOOTNOTES. Marked *) on pp. 193, 198, 200, 205. p. 198 carries a second,
+% marked **); that one is given its mark inside a group at the site rather
+% than by resetting the counter, which keeps hyperref's anchors unique.
+\renewcommand{\thefootnote}{*)}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={A Few Further Remarks on The Principle of Relativity},
+  pdfauthor={K. Kroman},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{A Few Further Remarks}}
+\fancyhead[LO]{\textit{K. Kroman}}
+
+\setstretch{1.3}
+
+\title{\textbf{\textbf{A Few Further Remarks on}\\[2pt]``The Principle of Relativity''}}
+\author{K.\ Kroman}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~192--205\\[2pt]
+\small Translated from the Danish}
+
+\begin{document}
+\maketitle
+
+% --- p. 192 ---
+% SHARED PAGE. The upper two thirds of printed p. 192 belong to the previous
+% article, P. O. Pedersen, »Den elektriske Bues Elektronteori«. Kroman's
+% article begins about three fifths of the way down, with its own centred
+% title block, which \maketitle supplies. Nothing of Pedersen is translated.
+Fysisk Tidsskrift opens its 15th volume with no fewer than three treatises on
+the \emph{Einstein}ian principle of relativity. Since all three of them take
+up a position towards my article on the same subject in the 14th volume,
+pp.~1---30, I should like to be allowed to bring forward a few further remarks
+on the question.
+% *** DISCREPANCY IN transcription.tex, FOR THE EDITOR TO SETTLE ON THE IMAGE.
+% The Danish BODY sets »det \emph{Einstein}'ske Relativitetsprincip« -- one
+% letterspaced run -- while the comment immediately below it in the same file
+% says the opposite: "no letterspacing anywhere on p. 192 or p. 193 ...
+% It is transcribed WITHOUT \emph." The header's emphasis note ("42 runs, and
+% none at all on pp. 192-193 or 200") agrees with the COMMENT, not with the
+% body; the file's own run count of 42 agrees with the BODY.
+% This translation mirrors the BODY, transcription.tex being the source of
+% truth, so the run is carried here. If the image shows ordinary roman, drop
+% the \emph{} in BOTH files and the total falls to 41.
+
+With the author of the first treatise, Mr.\ Editor Helge Holst, I am, I
+believe, in agreement on each and every point. His introductory remark about
+the practical applicability of the Einsteinian formulae I can also readily
+subscribe to; indeed I have said the same thing myself at the top of p.\ 24 of
+my article.
+
+Nor am I, with the author of the second treatise, Mr.\ Engineer
+C.\ E.\ Walsøe, at bottom in disagreement so far as the Einstein problem is
+concerned. When he (at the foot of p.\ 15) finds that Einstein's doctrine has
+been condemned as a scientific hypothesis, I am completely satisfied. To
+calling it an unscientific hypothesis I have no objection.
+
+% --- p. 193 ---
+With the author of the third treatise, Dr.\ H.\ M.\ Hansen, I am on the other
+hand, epistemologically regarded, in great disagreement. Dr.\ H. appears as a
+warm defender of Einstein's doctrine, which he does not find very different
+from Lorentz's, and he holds that I have misunderstood the latter. I assume
+that this is chiefly to mean that I have not sufficiently distinguished
+between Lorentz's original and his later, more fully worked out hypothesis.
+But to this my article gave me no occasion whatever. Dr.\ H. overlooks that I
+expressly emphasised that I did not wish to write a theory of electricity, but
+merely to examine the Einsteinian hypothesis, particularly on its
+epistemological side. Neither did I wish to give an exposition of Lorentz's
+works, the less so as I am not decidedly certain that they give us precisely
+the right solution of the Michelson riddle\footnote{It really continues to be
+my hope that M.'s result will one day be explained by an alteration of the
+theory of light. Dr.\ H. finds (p.\ 18) that this prospect is barred by an
+utterance of Poincaré's. To me, however, it seems that this utterance --- at
+least in Dr.\ H.'s formulation --- is quite unwarranted. By what right could
+one demand that L.'s hypothesis should take account of other marvels than
+M.'s, before any others had yet shown themselves? If others of the same nature
+turn up, the same hypothesis will of course be able to explain them too, and
+if they are of a new nature, new hypotheses will presumably be required as
+well. But one should not, as is well known, sell the skin before one has shot
+the bear.}.
+% FOOTNOTE MARK POSITION: the printing sets »Gaade*).« -- the mark BEFORE the
+% full stop. Compare pp. 198 and 205, where it stands after it. Followed.
+
+Lorentz has presented both his hypotheses --- the latter no fewer than three
+times --- in the writings I have cited. He has there discussed the various
+experiments akin to Michelson's which Dr.\ H. also mentions. I can therefore
+hardly have overlooked that he had both an original and a more fully worked
+out hypothesis. But common to them both is the contraction, and I needed
+nothing else and nothing more for my examination of Einstein's train of
+thought. I have moreover also emphasised the community of formulae between
+Einstein and Lorentz, but at the same time stressed that in spite of this
+there is nevertheless a most essential difference between the two. In what
+follows I shall once more try to give grounds for holding that Lorentz's
+hypotheses are at all events possible assumptions, while Einstein's must in my
+view be stamped as impossible.
+
+Dr.\ H. calls Einstein's doctrine simpler and (in an earlier treatise) bolder
+than L.'s. That the simplicity must be of a rather
+% The foot of p. 193 carries the signature line »Fysisk Tidsskrift. XV« with
+% the sheet number »14«; p. 195 carries »14*«. Not transcribed.
+
+% --- p. 194 ---
+superficial kind seems, however, to appear sufficiently from the uncommonly
+artificial results concerning space and time in which it issues, and boldness
+is after all no unmixed scientific virtue. In Einstein it appears, as we shall
+see, chiefly as courage for exaggerations and vague determinations of
+concepts, courage to defy all reasonable probability, and indifference towards
+fundamental epistemological demands. I have, in my judgement, brought this
+last point to light in a number of places in my treatise. Dr.\ H. has sought
+to remove some of the difficulties pointed out; but it does not seem to me
+that he has really succeeded in doing so. I shall however not dwell further on
+these particulars, since I believe I can illuminate and justify my view still
+more clearly by following Einstein's train of thought critically through its
+development, and pointing out where its incorrectnesses come forward one by
+one and give occasion to the various contradictions and great improbabilities
+in which his doctrine issues.
+
+First, however, I must permit myself a couple of general remarks.
+
+Dr.\ H. defends various peculiarities in Einstein's exposition with the
+statement that Einstein is a phenomenist. That is however a little reassuring
+defence; for it is anything but fortunate for an investigator to be a
+phenomenist. By a phenomenist one understands an investigator who has formed
+the view that it is most scientific to keep to the phenomena, to that ``which
+shows itself'', and to let causes, forces and the like look after themselves.
+It is thus sensation that is hereby set in the high seat, while thought, as an
+unreliable counsellor, is put in the corner. But of course such an
+epistemology is just as impossible to carry through as it is false. Without
+the help of thought there could of course be neither calculation nor
+inference. A real denial of thought therefore becomes an impossibility for
+man, and every phenomenist therefore becomes of necessity an
+\emph{inconsistent} investigator, who lets thought play its part as usual the
+99 times, while suddenly the 100th time it is quite arbitrarily denied, so
+that one permits oneself, for example, to set up effects without stating or
+being able to state a trace of causes, and the like. Of this kind of step we
+shall meet a number in Einstein, and that such liberties are not fortunate for
+scientific character surely needs no demonstration.
+
+% --- p. 195 ---
+Let us then begin by looking a little more closely at the not very clear
+concept and the not very fortunate expression ``the principle of relativity'',
+and let us first ask: did Newton (and the older physics generally) have
+anything that could rightly and reasonably be called a principle of
+relativity? What, in general, is a principle?
+
+In most physical textbooks one finds various quite respectable propositions
+obstinately entitled principles: ``Archimedes' principle'', ``Doppler's
+principle'', and so on. This evidently arises solely from linguistic
+indifference and unfortunate inertia. By a principle is understood, more
+exactly speaking, a starting point, a fundamental proposition, i.e. a
+proposition which is laid at the foundation of the whole following structure
+of doctrine, a first proposition which is not derived from earlier ones, which
+has no proof before it, since one has found it self-evidently correct, and of
+whose validity no one has dared to doubt. Of such principles or fundamental
+propositions Newton, as is well known, set up three: the law of inertia, the
+law of force and the law of interaction. A ``fundamental proposition of
+relativity'', on the other hand, he did not set up. In the law of force, and
+already earlier, he defined a force not as a cause of motion, but as a cause
+of \emph{change} of motion, thus not by the aid of motion but by the aid of
+% EMPHASIS: the letterspaced run is »æ n d r i n g s« ONLY, standing inside
+% the compound »Bevægelses æ n d r i n g s aarsag«. The English keeps the
+% emphasis on the same element: "a cause of \emph{change} of motion".
+change of motion, that is, change of velocity, of direction, or of both. The
+logical consequence of this is, among other things, that if a body has a
+certain motion, and another like it has the same motion plus some uniform
+rectilinear velocity, the equations of force for both must of course become
+the same; for unaltered motion requires no force.
+
+Further, he maintains that a body can have motions of all kinds, relative as
+well as absolute, and that just as there is a difference between uniform
+rectilinear motion with the velocity 5 and uniform rectilinear motion with the
+velocity 10, just so must ``motion with the velocity 0'' be something by
+itself. This too every sober person is compelled to assume. No one can think
+anything by the expression motion without at the same time having to think,
+more or less distinctly, of a resting; and no one can think a motion as
+relative without at the same time having to think an absolute rest or motion.
+These ideas stand and fall with one another like the ideas up and down, and in
+every rational mechanics one handles these determinations quite securely and
+naturally.
+
+% --- p. 196 ---
+\emph{Widely different from this} is however the question: can we human beings
+always determine what motion a body has in a given real case? With absolute
+exactness we can of course never do it. With approximation, on the other hand,
+we can often determine its relative motion. In certain cases we shall also be
+able to determine that it has such and such an absolute motion. But if the
+motion is uniform and rectilinear, the case will --- so far as we yet know ---
+not be distinguished by any sensible mark from an unaltered motion in the same
+direction with another velocity or with none at all, and therefore it will, as
+Newton says, often be \emph{hard} to determine the true velocity.
+
+Now why may Newton have used so vague an expression? Why has he not said
+outright that in the face of unaltered motion a determination of velocity is
+simply and plainly impossible? Of course he was quite clear that here no help
+was to be expected from manifestations of inertia, as there is with changes of
+velocity or of direction. He had, it is true, the \emph{conjecture} that the
+centre of gravity of the solar system was absolutely at rest in space. But it
+was only a conjecture. He has also said that perhaps there was no such fixed
+point at all that we could lean upon. He has therefore, rather, presumably
+thought that matter, which had so lately revealed itself from a new side in
+the enigmatic gravitation, might perhaps also one fine day disclose
+\emph{certain} differences according as it was at rest or in uniform
+rectilinear motion, and that the physicists might learn to control these
+differences, so that a computation of velocity would thereby become possible.
+If Lorentz's hypothesis is correct, we have of course in \emph{the contraction}
+precisely something in the direction indicated.
+
+When later the wave theory of light had come to power, and the phenomenon of
+interference had been more closely understood, a number of physicists have
+surely thought that as soon as one merely obtained sufficient technical
+mastery of the interference experiments, one would thereby have a means of
+distinguishing between absolute rest and uniform rectilinear motion. Precisely
+this was of course Michelson's assumption.
+
+If one wishes to express oneself as exactly as possible, I therefore think
+that one must confine oneself to saying of Newton and the older physicists:
+
+1) They conceded that they were for the present unable \emph{experimentally}
+to distinguish between absolute rest and uniform rectilinear motion.
+% The spaced run »e k s p e r i-/m e n t e l t« is broken over a line turn in
+% the printing; it is one run, and is one run here.
+
+% --- p. 197 ---
+2) But they were by no means certain that this would remain impossible.
+
+3) Still less did they set up the impossibility of it as a principle, that is,
+as a proposition one \emph{was to} start from.
+
+4) And they have surely all been agreed with Newton that absolute rest and
+uniform rectilinear motion were something different in themselves, and not
+simply dependent upon which coordinate systems one used.
+
+But if this is how the matter stands, it becomes not merely misleading but
+quite incorrect to use expressions like ``a Newtonian principle of
+relativity''. Everything is then said far more clearly and sharply in the
+simple words that Newton built upon the law of inertia. ---
+
+More characteristic than to call Newton a relativist would surely be to call
+him an absolutist. In Einstein's doctrine, on the other hand, we have nothing
+less than an attempt to relativise not merely rest and motion, but even space
+and time as well.
+
+It is in particular Michelson's result that leads him into these endeavours.
+Michelson started from the assumption that light, independently of the light
+source's rest or motion, constantly had in the world-space and in air the
+constant velocity $c$, as he relied on the current theory of light generally.
+So did Lorentz and Einstein, and I can therefore frame the following remarks
+on the basis of the inviolability of this presupposition.
+
+Michelson now found by his experiment that light traversed the two paths $s$
+and $s_{1}$ in one and the same time.
+
+For human reason there is nothing else to remark upon this than that the two
+paths consequently \emph{must} have been equally long. This was also
+Michelson's first thought, in that he assumed that the earth's translation had
+been counteracted by the motion of the whole solar system. When this way out
+was found barred, Lorentz set up his contraction hypothesis. If we leave aside
+that he might of course also have assumed the shorter path to be lengthened,
+and if we hold fast to the complete correctness of the theory of light, there
+was, as has been said, no other way out, unless the phenomenon was to come
+under the purely irrational.
+
+Einstein has surely known this first contraction hypothesis of Lorentz's when
+in 1905 he came forward with his doctrine. This rests, he says at the
+beginning of his treatise, upon two presuppositions: the principle of
+relativity and the ``only apparently irreconcilable''
+
+% --- p. 198 ---
+presupposition of the aforementioned constant velocity of light. These two
+presuppositions are \emph{sufficient}, he adds. Of contraction he says not a
+word. On the other hand he declares it superfluous to assume an
+ether.\footnote{Lorentz, Einstein, Minkowski: Das Relativitätsprincip,
+pp.\ 27---28.}
+% FOOTNOTE MARK POSITION: printed »Æter.*)« -- mark AFTER the full stop, where
+% p. 193 sets it before. Both followed as printed.
+
+Concerning ``the principle of relativity'' he remarks that he has arrived at
+the conjecture that to the concept of absolute rest there corresponds, neither
+in the mechanical nor in the electrodynamic domain, any peculiarity of the
+phenomena. This conjecture he will now ``raise to a principle'' and call the
+principle of relativity.
+
+But it really will not do to raise conjectures to ``principles'' in this way
+without further ado. For the present we know only that in a few cases results
+corresponding to Michelson's have shown themselves. Einstein can therefore
+only be permitted to set up as a \emph{hypothesis} that his conjecture holds
+generally, and he can thereupon set himself the task of testing this
+hypothesis's possibility and its eventual scientific worth. But he thereby
+incurs quite other obligations than if he could at once raise his conjecture
+to a principle.
+
+His first scientific obligation would thus become that of giving the
+hypothesis up again on account of its impossibility. For it is impossible,
+since it stands fast that, when the correctness of the theory of light is
+presupposed, the contraction is the only conceivable way out. But if bodies
+are contracted by the motion, then there corresponds after all a definite
+peculiarity, namely uncontractedness, to real rest. That we cannot for the
+present measure the contraction \emph{directly} is, practically regarded,
+tiresome enough. Scientifically regarded, however, it is already sufficient
+that we can establish that it must take place, indeed even compute its
+magnitude in relation to any presupposed velocity.
+
+But with this, as we shall see, all real relativising of rest and motion, of
+space and time, is annihilated, and the many corresponding exaggerated
+expressions are to be rejected{\renewcommand{\thefootnote}{**)}\footnote{Dr.\ H.
+too uses these misleading expressions. Repeatedly it is said: rest and uniform
+rectilinear motion are one and the same, or physically one and the same; there
+is no sense in distinguishing between them. And yet he then distinguishes so
+vigorously between them that he maintains that the motion makes bodies
+contract, clocks go more slowly, people age more slowly; indeed he even adds
+(p.\ 22) that every observer can establish this.}}. Already here, then, it is
+seen that Einstein's hypothesis is an impossibility. What he could with
+scientific
+% THE ONLY PAGE IN THE ARTICLE WITH TWO FOOTNOTES, marked *) and **).
+% \thefootnote is fixed at *) in the preamble, so the second is given its mark
+% inside a group here rather than by resetting the counter, which keeps
+% hyperref's anchors unique. Printed »forkastelige**).« -- mark BEFORE the
+% full stop, the opposite of »Æter.*)« above.
+
+% --- p. 199 ---
+right have set up and sought to justify is something widely different from
+what he has stated. He could rightly have set up the hypothesis that there is
+a certain \emph{technical} equivalence between absolute rest and uniform
+rectilinear motion.
+
+Without noticing anything of the contradiction, Einstein however goes further.
+He thinks of two coordinate systems with mutually parallel axes and a common
+$X$-axis, the one $(O\,x\,y\,z)$ at rest, the other $(O'\,x'\,y'\,z')$ with
+the constant $X$-velocity $v$. In each there is an observer ($A$ and $B$)
+furnished with perfectly alike clocks and measuring rods and a consummate
+ability to use them. They both rely on the theory of light and on the constant
+velocity of light $c$. Dr.\ H. calls them physicists and assumes that they
+know Michelson's experiment. All this we can presuppose without misgiving.
+% MATHEMATICS: the printing sets the coordinate letters in italic with a thin
+% space between them and the parentheses in roman -- (O x y z), (O' x' y' z').
+% Reproduced with \, here as in the Danish.
+
+But Einstein then continues: they both assume that they are at rest.
+
+This seems a remarkably frivolous and dogmatic assumption to assign to them.
+Physicists so excellently equipped ought surely rather to have repeated
+Michelson's experiment critically, and in any case to have built upon the more
+reasonable presupposition that each of them had a uniform rectilinear motion
+with a certain unknown velocity (perhaps $= 0$ for one of them), which they
+would have either to keep as an unknown in their calculation or to try to
+determine as well as could be done, for example by the aid of a sky of fixed
+stars, or whatever else they had that was most serviceable.
+
+We may, however, suppose that Einstein has assigned them these arbitrary
+assumptions with a definite end in view, perhaps in order to show quite
+clearly that rest and uniform rectilinear motion are entirely alike, or the
+like; and of course he is at liberty in his thought-experiment to introduce
+whatever determinations he pleases, provided only he informs the reader what
+he is doing.
+
+But at the same time the reader is of course also at liberty to note what
+happens: at liberty to note that here Einstein introduced a contradiction into
+the situation, in that he gave $A$ a correct presupposition and $B$ a false
+one, in direct contradiction with what had been said about the two coordinate
+systems.
+
+$A$ thereupon regulates the clocks he has set up round about in the system $O$
+by the aid of light signals, so that they all get the same setting and a
+correct rate, 1 second while the light runs the path $c$. This now goes easily
+enough. But then $B$ is to do the same from his contradiction-laden
+presupposition.
+
+% --- p. 200 ---
+And here one must remember that Einstein has hitherto not said a word about
+contraction, as indeed he could hardly do, since he has on the contrary said
+that the phenomena were to behave alike under rest and under uniform
+rectilinear motion. We must therefore for the present reckon without any
+contraction. Einstein has of course possibly thought that it would present
+itself of its own accord as a consequence of his presuppositions.
+
+But suppose now, first, that the ``perfect'' clocks have also had a correct
+rate (1 second while the light really runs the path $c$) already from the
+manufacturer's hand, and that $B$ has relied on this as well as on the
+constant velocity of light. What will then happen?
+
+$B$ would then simply discover that if he sent a light signal the path $l$
+there and back perpendicular to the $X'$-axis, the light would not be
+$\dfrac{2l}{c}$ seconds on the way, but $\dfrac{2l}{c}\,a$
+seconds\footnote{Compare, concerning this and the following expressions, my
+earlier article.}; and if he sent the signal the path $l$ there and back along
+the $X'$-axis, it would take the time $\dfrac{2l}{c}\,a^{2}$. But from this
+$B$ would surely conclude: my system therefore cannot be at rest; it must have
+the uniform rectilinear velocity $v$.
+
+Assuming next that $B$ does not rely on his clocks' going correctly, but will
+set them himself, we get a somewhat altered result. Let him again begin
+perpendicular to the $X'$-axis and again use the measured path $l$. If he now
+arranges his clock to advance $\dfrac{2l}{c}$ second-marks while the light is
+on its way, his seconds will be $a$ times too large; for the light has in
+reality then run the path $2\,l\,a$. His clock thus comes to go $a$ times too
+% The printing sets this product with visible spaces, »2 l a«, where p. 201
+% sets the same quantity closed up as »2la«. Both reproduced as printed.
+slowly, of which however he for the present has no inkling. But if he then
+sends a signal along the $X'$-axis, he will to his surprise find that the
+regulated clock has now advanced $\dfrac{2l}{c}\,a$ ``seconds'' while the
+light was on its way. And if he has thought the matter over a little, he will
+surely also conclude from this that he not only has the aforementioned
+velocity $v$, but that he has moreover arranged his clock to go $a$ times too
+slowly.
+
+Thus must the results shape themselves when we reckon without contraction.
+
+% --- p. 201 ---
+But these results Einstein cannot use; for they stand in conflict with the
+Michelson result.
+
+\emph{Could} he introduce a real contraction, $B$'s self-deception could on
+the other hand succeed. If all $B$'s distances in the $X'$-direction became
+$a$ times as small, he would be able to arrange all his clocks to advance
+$\dfrac{2l}{c}$ second-marks while the light, on his presupposition, ran the
+path $2l$, but in reality the path $2la$. His clocks would thereby come to go
+$a$ times too slowly, and his incorrect presupposition would further entail
+that they got local time, or, in relation to the clock at $O'$, deficits of
+clock-reading proportional to their $X'$-distances from $O'$, without his
+noticing anything. All this is easily obtained by quite elementary
+calculation, and in the same way one easily obtains what $A$ and $B$ would on
+the whole be led to think about each other's computations, holding fast as
+they do to their mutually conflicting presuppositions.
+
+In this way, then, we should be able to arrive at ``the Einsteinian
+transformation formulae''.
+
+But Einstein himself cannot (legitimately) arrive at them. For he can neither
+\emph{tolerate} nor \emph{dispense with} nor \emph{introduce} the contraction.
+
+He cannot \emph{tolerate} the contraction; for it would annihilate his first
+presupposition, which stands in conflict with it, since that presupposition
+does not permit a difference between the phenomena under absolute rest and
+under uniform rectilinear motion.
+
+But even if Einstein could also \emph{tolerate} the contraction, he still
+cannot \emph{introduce} it. For where should he get it from? Since he has
+rejected the ether, he would be quite unable to find any cause for this
+alteration of the phenomena. The contraction would become a purely miraculous
+phenomenon; and surely one is not permitted in science to invent miracles in
+order to prop up an otherwise tottering or unworkable hypothesis?
+
+On the other hand we have just seen that the doctrine cannot at all
+\emph{dispense with} the contraction. It is quite necessary if $B$ is to be
+able in the long run to remain in his false assumption. And if this does not
+happen, Einstein will not merely come into conflict with Michelson; his train
+of thought will positively come to establish the opposite of what he set out
+to prove.
+
+% --- p. 202 ---
+There is therefore hardly anything else to be done than to give up the
+Einsteinian doctrine as \emph{impossible}.
+
+Perhaps one or another of his adherents will remark that if there is nothing
+more amiss than this, then the matter does not stand so badly for Einstein.
+For we need then merely restrict his relativity presupposition a little, let
+him keep the ether, and let him add the contraction; then all is in order.
+
+Quite so, certainly. But then it is simply no longer Einstein's doctrine; then
+it is Lorentz's that we have arrived at. And Lorentz's view is, as has been
+said, a possibility, but in return, as we shall see, a view very different
+indeed from Einstein's.
+
+The difficulty with the contraction Einstein has evidently not had clearly in
+view at all. When he comes to compute $B$'s \emph{moved} system, it goes quite
+easily for him, ``indem man das Prinzip der Konstanz der Lichtgeschwindigkeit
+im ruhenden Systeme anwendet.'' But that he has of course no right whatever to
+% The German quotation is set upright, inside guillemets like every other
+% quotation in the article -- NOT in italic. Followed.
+do. He thereby commits a circular inference and proves nothing at all, or at
+most that rest and motion are one and the same, provided one boldly
+presupposes that they are one and the same. The error hangs together with his
+``raising'' to a principle, without further ado, what is only a hypothesis. If
+light, according to his second presupposition, has a constant velocity in
+space and thus in the system at rest, then it is \emph{immediately regarded
+unthinkable} that it should also have a constant velocity, i.e. the same
+velocity in all directions, in a moved system. Anything of the kind first
+becomes thinkable if the moved system and all its contents have, on account of
+the motion, contracted according to certain definite laws. Such an alteration,
+however, Einstein cannot get introduced without having to give up his first
+presupposition and to assume the ether again. His two presuppositions are thus
+\emph{really} in contradiction with each other, and not merely apparently so,
+as he supposed.
+
+Einstein could with every scientific warrant have introduced his problem with
+the following question:
+
+Can one, without coming into contradiction with sound reason, assume 1) that
+the phenomena are always alike under absolute rest and uniform rectilinear
+motion, and 2) that light always has in space (and in air) the same constant
+velocity $c$?
+
+And to this the answer would then have to be: no! For if the phenomena are to
+be \emph{even merely apparently} alike under absolute rest
+
+% --- p. 203 ---
+and uniform rectilinear motion, then light must also in a uniformly
+rectilinearly \emph{moved} system apparently have the velocity $c$ in all
+directions. But this is unthinkable unless the system and all its contents are
+contracted during the motion according to certain laws (for example the
+Lorentzian ones). And if this is the case, then the phenomena are of course
+not alike under absolute rest and uniform rectilinear motion. If it should
+still be objected that the contraction cannot be reckoned to ``the
+phenomenal'', to that which ``shows itself'', then one forgets that it has of
+course shown itself precisely through the position of Michelson's interference
+fringes.
+
+But Einstein sees nothing of all this. He therefore keeps his presuppositions
+without suspecting anything of their contradiction. He raises his impossible
+hypothesis to a principle and takes the contraction along on his own free
+authority. If he can assume the theory of light without assuming an ether, it
+would of course also be unreasonable to make a fuss about such a trifle of a
+contraction; if one is a phenomenist, such things cause no stoppages. And thus
+he arrives at the result that he has really established that rest and uniform
+rectilinear motion are, both in the mechanical and in the electrodynamic
+domain, one and the same. For he has of course ``proved'' that $A$ and $B$
+both arrive at the same results concerning the phenomena, indeed concerning
+each other, although $A$ starts from a presupposition correct by the old
+belief and $B$ from one completely wrong by the old belief. Consequently it
+must after all be quite indifferent whether one presupposes oneself to be at
+rest or in uniform rectilinear motion, and one can thus simply say to
+Michelson: you need only presuppose that the earth stands still, and your
+result at once becomes explicable. If anyone says: yes, but the earth
+certainly does move!, you answer merely: rest and uniform rectilinear motion
+% PRINTER'S USAGE, transcribed as printed: »ganske sikkert!, svarer Du blot«
+% -- an exclamation mark followed by a comma. Reproduced.
+% Note also that this whole reported dialogue is set WITHOUT quotation marks,
+% where the same author quotes Einstein in guillemets elsewhere. Followed.
+are quite the same. There is no sense in distinguishing between them.
+
+This is really Einstein's explanation of Michelson.
+
+But if rest and uniform rectilinear motion are thus one and the same, then
+there is of course no sense either in calling $A$'s presupposition correct and
+$B$'s false. Then they are both correct, and the contradiction between them is
+something that will surely disappear with a more correct conception of the
+nature of space and time. And it is thus not correct either that $B$'s seconds
+are false. They are just as correct as $A$'s, although they are $a$ times as
+large. The truth is merely that there are many kinds of seconds in the world,
+although one can at the same time quite well say that a second is the time in
+which light with its constant velocity $c$ runs the path $c$.
+
+% --- p. 204 ---
+This is no real contradiction either; but space and time have hitherto been
+conceived so incorrectly that it looks like one. As soon as they are conceived
+in their right relation to each other, everything comes into the most
+beautiful order. ---
+
+Thus does Einstein's doctrine issue. The contradictions in it are pushed
+further and further out into the distance, as criminals were once sent to
+Botany Bay. In the end it is the fundamental determinations space and time
+themselves that suffer for it. Further than that one cannot go, unless one
+were to take one very last step and maintain that contradiction and
+non-contradiction are also at bottom one and the same.
+
+Let us next look a little at Lorentz's doctrine.
+
+One can, as has been indicated, quite well arrive at this doctrine by starting
+from Einstein's and gradually removing all its contradictions and
+exaggerations. Lorentz has however gone another way. Since he \emph{relied on
+the theory of light} and found it necessary to assume a resting ether, he
+explains Michelson's result to himself in the only way still possible, spoken
+of before: by conjecturing that the motion has brought with it a contraction
+of the apparatus in the direction of the translation. And as soon as the
+kindred experiments mentioned by Dr.\ H. had come in, he sought further to
+explain to himself the origin of the contraction in such a way that precisely
+the results obtained must come about. Thereby arose his more elaborated
+hypothesis, whose germs are however already indicated in the first. He puts
+forward his assumption with great reserve, constantly calls it merely a
+hypothesis, and states ,that one cannot yet know at all how generally the
+% PRINTER'S DEFECT, transcribed as printed: »udtaler ,at man endnu slet ikke
+% kan vide« -- the comma is set AFTER the word space, tight against »at«,
+% where the sense wants »udtaler, at«. There is no matching mark anywhere in
+% the sentence, so it is a misplaced comma and not an opening quotation mark.
+% Reproduced in the same position here.
+contraction in question will set in; about that only experience will gradually
+be able to instruct us. His investigation has merely shown that such a
+contraction \emph{would be able} to come about by the ways indicated without
+giving contradiction; but it has not shown that it \emph{must} come about.
+Neither does Lorentz set up any dogma about the velocity of light as the
+greatest in the world; he says quite simply that his hypothesis holds only for
+velocities smaller than that of light. He proceeds, in other words, constantly
+in a \emph{correctly scientific} manner.
+
+What now are the consequences of his assumptions?
+
+First and foremost this, that everywhere where the conjectured contraction of
+things on account of their motion really sets
+
+% --- p. 205 ---
+in --- and it is of course \emph{possible} that it will \emph{always} set in
+--- there it will go with us as it went with Michelson: if we work in the
+electrodynamic or optical domain in a uniformly rectilinearly moved system
+without taking into account that it possibly moves, we shall on account of the
+contraction apparently get the same results as we should have got if the
+system had been at rest.\footnote{In the face of questions where time also
+plays a part, this will however strictly speaking only occur provided that we
+either ourselves set our clocks to an apparently correct rate by the aid of
+light signals, or that the contraction itself will really bring it about that
+they get this rate, even if the system has previously been at rest and their
+rate then corresponded to rest. This question has hardly yet been
+sufficiently investigated.}
+
+Further, the transformation formulae between two such systems will of course,
+as purely mathematical consequences, get the same \emph{form} in Lorentz as in
+Einstein.
+
+But they will get a widely different \emph{significance}.
+
+Lorentz is not a relativist. He constantly says ``the Einsteinian principle of
+relativity'' when he speaks of it. He himself holds absolute rest and
+unaltered motion to be two different states, and the system at rest in
+relation to the ether is for him the really resting one, the ``distinguished''
+system which the relativists deny because we cannot for the present point it
+out \emph{experimentally}. If $A$'s system is such a one, then for Lorentz
+$A$'s time is the true time and $B$'s only an apparent or conditioned one, and
+the corresponding holds of course of their measurements. There is therefore in
+Lorentz no question of the \emph{contradiction} that \emph{both $A$ and $B$
+are right}. \emph{With him truth is only one}, even if we cannot always find
+out where it lies. We know in any case that at most only one of the two can be
+right. Lorentz thus denies neither thought's demands nor its results, and he
+constantly distinguishes clearly between rational truth and what is
+experimentally attainable. Space, time and simultaneity therefore preserve
+with him undisturbed their former character, and what in Einstein appeared as
+the artificial and the paradoxical, precisely because it was conceived as
+something absolute or solely valid, presents itself in Lorentz as the quite
+intelligible and natural, being clearly stamped as the expression of the
+\emph{composite} situation which arises partly from the contraction that plays
+its part and partly from the deliberate disregard of the system's possible or
+real motion.
+% In the two longest runs on p. 205 the italic capitals A and B stand INSIDE
+% the letterspaced run; they are set as mathematics within \emph, as in the
+% Danish. Kroman is here answering the sentence of his own 1915 article that
+% Høffding later cites, »Sandheden er ikke dobbelt. Sandheden er kun én«
+% (Relativitetsprincipet, p. 15) -- rendered there "Truth is not double.
+% Truth is only one."
+
+\begin{center}
+\rule{0.16\textwidth}{0.5pt}
+\end{center}
+% END OF THE ARTICLE. No signature, no dateline: the text simply stops after
+% the footnote, and a short centred tail-piece follows -- a broken rule of
+% graduated dashes, rendered as a plain short rule, as at the end of the 1915
+% article.
+
+\end{document}

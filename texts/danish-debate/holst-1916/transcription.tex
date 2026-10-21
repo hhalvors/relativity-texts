@@ -1,0 +1,765 @@
+% ============================================================
+%  QUOTATION MARKS (corrected 2026-09-30): Fysisk Tidsskrift prints guillemets
+%    pointing inward, »…« (checked at 250--600 dpi, scan PDF pp. 331, 333). They
+%    are coded \guillemotright…\guillemotleft (LaTeX's \guillemotleft is «);
+%    until 2026-09-30 they were coded the other way round and printed «…».
+%    Open question: in the body text the marks may be SINGLE guillemets ›…‹
+%    (the binarised scan does not settle it); the title on p. 331 is double.
+%  H. Holst, »Tidsproblemet«
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), pp. 1-13.
+%
+%  DIPLOMATIC TRANSCRIPTION (Danish)
+%  Status: COMPLETE. Printed pp. 1-13, all 13 pages, transcribed 2026-09-04
+%  from the scan described below. No gaps, no duplicates; braces and guillemets
+%  balanced (31/31); compiles with 0 errors and 0 missing characters.
+%  English translation not begun.
+%
+%  Helge Holst (1871-1944), physicist and popular-science writer, later
+%  H. A. Kramers's co-author on »Bohrs Atomteori« (1922). This is the third
+%  item in the Kroman relativity debate and the first reply to Kroman's 1915
+%  attack; ../relativitetsprincipet/note.md carries the whole seven-item table.
+%
+%  RIGHTS: clear. Holst died in 1944; Danish copyright (life+70) expired at the
+%  end of 2014. Free to transcribe and to publish.
+%
+% ------------------------------------------------------------
+%  THE WITNESS
+% ------------------------------------------------------------
+%  Google Books `Tr4ZAAAAIAAJ` -- Fysisk tidsskrift, VOLUMES 13-15 bound
+%  together, the University of California copy, digitised 17 January 2007,
+%  886 pages, full view. Kept as texts/kroman/scan-ft-13-15.pdf, untracked;
+%  the same file serves ../relativitetsprincipet and ../yderligere-bemaerkninger.
+%
+%  The Antiqua text layer is the primary witness for the words, tesseract the
+%  second, the page image the arbiter. Every one of the 13 pages was inspected
+%  as an image, at up to 1400 dpi where the reading was doubtful.
+%
+%  A CAUTION ABOUT THIS SCAN: its JBIG2 compression drops hairlines. The rules
+%  of the fractions on p. 8 are missing from the image and were confirmed real
+%  from the parallel »1/n« on p. 9. Any thin rule in this scan should be
+%  checked at a second resolution before it is called absent.
+%
+% ------------------------------------------------------------
+%  PAGE MAP -- VERIFIED 2026-09-04
+% ------------------------------------------------------------
+%      printed 1-13  =  PDF + 602   (PDF 603-615), uniform.
+%
+%  Measured with `pagemap.py --detect` and confirmed on content: PDF 603 opens
+%  »Tidsproblemet. / Af / Helge Holst.«, PDF 616 = printed 14 begins C. E.
+%  Walsøe's article. The numerals alone do NOT identify the article -- the file
+%  binds three volumes, each with its own pp. 1-13 -- so offsets 12, 330 and 602
+%  all fit. 330 is Kroman's 1915 article. See ../relativitetsprincipet.
+%
+% ------------------------------------------------------------
+%  CONVENTIONS -- SETTLED AGAINST THE IMAGES
+% ------------------------------------------------------------
+%  * Diplomatic. 1916 orthography exactly as printed; the pre-1948 aa kept,
+%    nouns capitalised, nothing modernised.
+%  * QUOTATION MARKS: guillemets »...«, \guillemotleft / \guillemotright.
+%    31 pairs, balanced -- Holst quotes far more than Kroman does.
+%  * EMPHASIS is LETTERSPACING, set \emph{}. Only 14 runs, and the compositor
+%    treats Holst differently from Kroman: PROPER NAMES ARE NOT SPACED here
+%    (Minkowski, Michelson, Maxwell all plain), the one exception being
+%    »Emil Cohn« on p. 7. No true italic anywhere in the body.
+%  * FOOTNOTES: one only, on p. 7, marked *). \thefootnote is fixed to *) in
+%    the preamble.
+%  * MATHEMATICS: inline throughout, no displays, therefore no equation
+%    numbers. Variables italic; \dfrac, one \tfrac, case fractions written as
+%    printed.
+%
+% ------------------------------------------------------------
+%  PRINTER'S DEFECTS -- transcribed AS PRINTED, logged at the site
+% ------------------------------------------------------------
+%    p.  5  a stray comma after »Aarsag.«
+%    p. 11  »Atomeeksplosionerne« -- a doubled e
+%  Also recorded at the site, as readings rather than defects:
+%    p.  2  roman A in »A-Klokkeslet«, where the running text sets it italic
+%    p.  6  »Sagen: men« -- a colon where the sense wants a comma
+%
+% ------------------------------------------------------------
+%  THE FIGURE ON p. 8
+% ------------------------------------------------------------
+%  »Fig. 1«, a line diagram of Fizeau's apparatus, is REDRAWN IN TIKZ at the
+%  site -- an editorial reconstruction, NOT a facsimile, made 2026-09-04 from
+%  the scan at 600 dpi. Source L and interference field S at the ends, a lens
+%  and a stop inside each, the water tube R between them as a U-channel with
+%  flow arrow v, and two dashed ray bundles. Drawn at 82 % of the measure, as
+%  the block is printed.
+%
+%  NOTE ON THE LETTERING: L, R, S and v in the block are NOT italic -- they are
+%  upright bold sans, though the running text sets the same letters italic.
+%  Verified at 600 dpi and followed as printed.
+%
+%  Regularised, and listed again above the drawing: the printed block is
+%  slightly asymmetric (the tube sits ~10 px left of the lens pair) and is
+%  drawn symmetric; the irregular dash runs are unified; a plate blot is
+%  omitted. Not determinable from the scan: whether the stops are slitted
+%  diaphragms or plain screens, and whether the tube necks are pipes.
+%  A reader who needs the figure as printed should go to the scan.
+%
+% ------------------------------------------------------------
+%  HOW IT ENDS
+% ------------------------------------------------------------
+%  The article stops in the TOP THIRD of p. 13 at »...staar udenfor og ser paa.«
+%  No signature and no dateline.
+%
+%  p. 13 IS A SHARED PAGE. C. E. Walsøe's »Omkring Videnskabens Grænse« begins
+%  on the rest of it -- title block, byline, eight lines of body and two
+%  footnotes -- which is why p. 14 already carries Walsøe's running head. Only
+%  Holst's text is transcribed here; Walsøe's share of the page belongs to
+%  ../walsoe-videnskabens-graense, where the article is catalogued as pp. 13-17.
+%  (It was catalogued as pp. 14-17 until 2026-09-04, from the running heads.)
+%
+% ------------------------------------------------------------
+%  BUILD
+% ------------------------------------------------------------
+%  pdflatex path (libertinus + libertinust1math), so the Makefile's default
+%  pattern rule builds it. Sandbox compile-test per TRANSCRIPTION-PLAYBOOK.md §5
+%  gives 0 errors and 0 missing characters, plus ONE overfull hbox (13.3 pt, in
+%  the paragraph spanning pp. 6-7). That box is an artefact of the sandbox
+%  recipe, which strips [danish]{babel} and so has no Danish hyphenation
+%  patterns; confirm it is absent in the real build before treating it as real.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}   % Greek in text, typed directly
+\usepackage{amsmath}     % this debate has real formulas; see CONVENTIONS
+\usepackage{tikz}        % for the redrawn Fizeau diagram, printed p. 8
+\usetikzlibrary{arrows.meta}
+
+% FOOTNOTES. The printing marks them *) and carries at most one per page, so a
+% fixed mark is correct; the counter still increments but is never shown.
+\renewcommand{\thefootnote}{*)}
+\usepackage[danish]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={Tidsproblemet},
+  pdfauthor={Helge Holst},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Tidsproblemet}}
+\fancyhead[LO]{\textit{H. Holst}}
+
+\setstretch{1.3}
+
+\title{\textbf{\guillemotright Tidsproblemet\guillemotleft}}
+\author{H.\ Holst}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~1--13}
+
+% ---- original-page markers (paginate.py) ----
+\usepackage{marginnote}
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\newcommand{\apage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\maketitle
+
+% --- p. 1 ---
+\opage{1} % The title block (»Tidsproblemet.« / Af / Helge Holst.) stands in the preamble
+% via \maketitle and is not repeated here. The first printed page also carries
+% the signature line »Fysisk Tidsskrift. XV.« with the folio 1 at the foot, and
+% p. 3 carries the signature »1*«; both are printer's furniture, not text, and
+% are omitted, as the running heads are (verso »Helge Holst:«, recto
+% »Tidsproblemet.«).
+I sin Artikel \guillemotright Relativitetsprincipet\guillemotleft{} S.~1---30 i
+forrige Aargang af \guillemotright Fysisk Tidsskrift\guillemotleft{} fælder
+Hr.~Professor Kroman en ubetinget Fordømmelsesdom over Einsteins saakaldte
+Relativitetsteori, hvilken han betegner som \guillemotright en afgjort
+selvmodsigende og derfor umulig Anskuelse\guillemotleft. Antagelig vil mange
+Fysikere, som i og for sig slutter sig til denne Dom, dog være tilbøjelige til
+at benytte det Einstein'ske Formelsystem ud fra den Betragtning, at det kan
+være et tilnærmet Udtryk for noget rigtigt og muligvis føre til nye Opdagelser,
+selv om det er udledet ud fra en urigtig Opfattelse. Om den Fare, der er ved at
+arbejde med Formler, hvis egentlige Betydning ikke forstaas, kan opvejes af de
+Fordele, Formlerne frembyder, kan vel kun kendes af Frugterne; men utvivlsomt
+formindskes Faren derved, at man kan tage sin Tilflugt til den Lorentz'ske
+Fortolkning af Fænomenerne. Synes denne end lidet tilfredsstillende, kan den
+dog være en god Nødhjælp, saa længe de Modsigelser, som har foranlediget
+Fremkomsten af Einsteins Teori ikke paa anden Maade er bragt ud af Verden.
+
+Hvorledes Tidsskriftets Læsere nu end ser paa disse Ting, tror jeg, at det
+Angreb, der fra Einstein'sk Side er gjort paa vore Tidsbegreber, kan gøre det
+ønskeligt, at Tidsproblemet tages op til nærmere Betragtning under Henblik paa
+Einsteins Teori. I det følgende skal der gøres et Forsøg i denne Retning. Det
+kan ikke undgaas, at der herved gentages et og andet, som allerede er sagt i
+Prof.\ Kromans Artikel; men denne overflødiggør dog næppe en Fremstilling,
+hvorved der mere direkte tages Sigte paa at belyse vore Tidsbegreber.
+
+% --- p. 2 ---
+\opage{2} % The two letterspaced runs below are the article's programme; the numerals
+% 1) and 2) that introduce them are NOT spaced.
+Under Tidsproblemets Omraade henhører to væsentlig forskellige Arter af Opgaver
+nemlig 1)~\emph{Ordning af Tidspunkter i Tidsfølge} og 2)~\emph{Maaling af
+Tidslængder i Tidsenheder}; de vil her i Hovedsagen blive behandlet hver for
+sig.
+
+Hvad Ordningen af Tidspunkter angaar, da gælder det om at bestemme et betragtet
+Tidspunkt som fortidigt, samtidigt eller eftertidigt i Forhold til et eller
+flere andre. Man er herved i Almindelighed gaaet ud fra, at før, nu og efter
+var \guillemotright Kvaliteter i vor Bevidsthed\guillemotleft, Grundbegreber i
+vor Verdensopfattelse, fundamentale Opfatteformer, eller hvad man nu vil kalde
+det, og at det hverken var paakrævet eller muligt at forklare deres Betydning
+eller at definere dem ved noget endnu fundamentalere.
+
+Efter Relativitetsteoriens Fremkomst fremhæves det imidlertid som Einsteins
+Fortjeneste, at han har indset Nødvendigheden af at give en bestemt Definition
+af Samtidighed mellem Begivenheder paa forskellige Steder i Rummet og tillige
+gjort den mærkelige Opdagelse, at det var umuligt at gøre en saadan Definition
+eentydig. Sandheden turde dog snarere være den, at det Samtidighedsbegreb, der
+følger af vor Bevidstheds Natur, i Virkeligheden tidligere uden Definition
+indgik paa rette Maade i Fysikernes Tankerækker, medens Einsteins Definition
+har skabt Forvirring, fordi den har bevirket, at Begrænsninger i vore fysiske
+Midler til Samtidighedsbestemmelse er blevet ophøjet til noget grundvæsentligt
+for vor Erkendelse. Men da der er vakt Tvivl i denne Sag, kan det være nyttigt
+at gøre sig helt klart, hvad der er det virkelige Indhold af det hidtil uden
+nærmere Forklaring anvendte Samtidighedsbegreb (for Begivenheder paa
+forskellige Steder), og dette er i Grunden ikke vanskeligt.
+
+% The place-letters A and B are ITALIC throughout, but the compound
+% »A-Klokkeslet« just below sets its A in ROMAN; verified at 900 dpi against
+% the plainly italic A of »til A og ankommer« two lines under it. Set as
+% printed.
+Lad os tænke os to Steder $A$ og $B$ --- der kan være i Bevægelse eller i Hvile
+i Forhold til hinanden. Fra $A$ udsendes paa et Tidspunkt, som vi kan give
+Betegnelsen $t_{1}$, et Bud til $B$, hvor det indtræffer til et foreløbig
+ukendt Tidspunkt med Betegnelsen $t$ (i A-Klokkeslet). Budet sendes fra $B$
+straks tilbage til $A$ og ankommer dertil paa Tidspunktet $t_{2}$. Vi vil da
+foreløbig fastslaa, at $t$ ligger mellem $t_{1}$ og $t_{2}$. Jo kortere dette
+Tidsmellemrum er, des større er den Gennemsnitshastighed, hvormed Budet har
+tilbagelagt Fremvejen og Tilbagevejen, saafremt disse er rette Linjer. Egentlig
+skulde der herved tages visse Forbehold (for en svingende Bevægelse af $B$);
+men de taber deres Betydning, naar Tidsmellemrummet $t_{1}\,t_{2}$ bliver
+tilstrække\-%
+% --- p. 3 ---
+\opage{3}lig lille. Tænker vi os nu, at Budets Hastighed vokser i det uendelige, idet
+Mellemrummet $t_{1}\,t_{2}$ aftager mod Nul, eller med andre Ord, at de to
+Begivenheder, Budets Udsendelse og dets Tilbagevenden, nærmer sig i det
+uendelige til Samtidighed, vil Tidspunktet $t$ for Budets Ankomst til $B$ ogsaa
+nærme sig i det uendelige til Samtidighed med saavel $t_{1}$ som $t_{2}$.
+
+Man kan give det her udviklede følgende mere definitionsmæssige Udtryk:
+Samtidige er to Begivenheder paa Stederne $A$ og $B$, naar en Budsendelse,
+\emph{hvor hurtige Bud der end anvendes}, kan ordnes paa en saadan Maade, at et
+Bud fra $A$ indtræffer i $B$ og atter afgaar derfra samtidig med
+\guillemotright $B$-Begivenheden\guillemotleft, medens Tidspunktet for
+\guillemotright $A$-Begivenheden\guillemotleft{} ligger mellem Tidspunkterne
+for Budets Afgang fra $A$ og dets Tilbagekomst.
+
+Man kunde spørge, om der ved denne Definition af Samtidighed paa to Steder
+opnaas fuld Gensidighed, d.~v.~s., om en Begivenhed paa $B$, der er fundet at
+være samtidig med en Begivenhed paa $A$ ved Budsendelse fra sidstnævnte Sted,
+ogsaa vilde findes samtidig med den, hvis Budsendelsen udgik fra $B$; da den
+ene af Budets Vandringer jo netop udgik fra $B$ i det Øjeblik,
+$B$-Begivenheden fandt Sted, kan dette dog ikke være tvivlsomt. --- Vi kan
+ogsaa tidssammenknytte Begivenheder paa tre eller flere Steder i Rummet ved at
+lade Budet lægge Vejen fra $A$ tilbage til $A$ om ad dem alle.
+
+Man kunde indvende, at vi ikke er i Stand til at sende noget Bud med uendelig
+stor Hastighed eller blot med saa stor Hastighed, at Tidsrummet $t_{1}\,t_{2}$
+altid bliver af forsvindende Størrelse i Forhold til vore sædvanlige Tidsmaal:
+vort hurtigste Bud, Lysstraalen, er jo Aar om at tilbagelægge Vejen mellem
+Jorden og den nærmeste Fiksstjerne. Denne Indvending træffer dog slet ikke
+Sagens Kerne. Hvad der her er Tale om, er aldeles ikke, hvor nøjagtigt vi kan
+udføre Samtidighedsbestemmelse med de Midler, vi har til Raadighed, men
+derimod, hvad der ligger i Begrebet Samtidighed. Med Hensyn til dette har der
+ikke tidligere været nogen Uenighed mellem Fysikere og andre Mennesker. Naar en
+Mand for at bestemme Tidspunktet for en Begivenhed ser paa et Ur og fastslaar,
+at den skete paa det eller det Klokkeslet efter Urets Angivelse, d.~v.~s., at
+den indtraf samtidig med Viserens Passage over et bestemt Mærke paa Skiven, saa
+gaar han herved bevidst eller ubevidst ud fra, at Lysstraaler, Nervestrømme
+o.~a. har været saa hurtige Bud, Vejene, de skulde
+% --- p. 4 ---
+\opage{4} tilbagelægge, saa korte og derfor hele Tiden for Budsendelsen saa ringe, at
+Afvigelsen fra den ideale, ved uendelig hurtige Bud bestemte Samtidighed er
+betydningsløs for hans Formaal; (ogsaa Einstein maa vel, naar han uden
+forudgaaende Definition taler om Samtidighed mellem Urviserstillinger ved $A$
+og Begivenheder i \guillemotright $A$'s umiddelbare
+Omgivelser\guillemotleft, gaa ud fra samme Forudsætning). Og naar Fysikeren
+sammenholdt Tidspunkter under Forhold, hvor Tiden for Budsendelsen ikke kunde
+betragtes som forsvindende, tog han denne Tid med i Beregning saa godt og saa
+nøjagtigt, som det var muligt og nødvendigt for Formaalet, og gik herved ud fra
+et med Definitionen S.~3 stemmende Samtidighedsbegreb.
+
+% The only inline case fraction with a built-up numerator on the page; set
+% \tfrac, as the printing sets it small and on the line of text.
+Den af Einstein i 1905 opstillede Definition paa Samtidighed mellem Tidspunkter
+paa forskellige Steder uden relativ Bevægelse stod i og for sig heller ikke i
+principiel Strid med den førnævnte Definition, idet denne vilde give samme
+Resultat $t = \tfrac{1}{2}(t_{1} + t_{2})$, saafremt den af Einstein gjorte
+Forudsætning, at Lyset var lige lang Tid om Frem- og Tilbagevejen, var rigtig.
+Men da hans Dogme om Lyshastighedens Konstans førte til Resultater, der stod i
+Strid med det almindelige Samtidighedsbegreb, maatte dette som andre
+genstridige Begreber vige for Dogmet, og saa proklameredes --- af Minkowski
+o.~a. --- \guillemotright en fuldstændig Revolution af vore Forestillinger om
+Rum og Tid\guillemotleft{} som et epokedannende Resultat af den nøjagtige
+fysiske Maaling og den eksakte matematiske Tænkning.
+
+Det var umiddelbart indlysende, at en Hastighed større end Lysets vilde være
+skæbnesvanger for den hele Tankebygning, specielt for dens
+Samtidighedsparadokser. Det føltes vel nok, at den Omstændighed, at
+Lyshastigheden er den største hidtil kendte Hastighed, var et altfor svagt Værn
+for en Teori, der gik løs paa vore Grundbegreber. Man mente imidlertid at kunne
+gaa et Skridt videre og erklære Lyshastigheden for den største fysisk mulige
+Hastighed; til Støtte herfor anføres det, at et bevæget Legemes Energi bliver
+uendelig ved en Hastighed som Lysets; men selv om dette kunde anses for bevist,
+udelukkes det dog ikke derved, at en Forplantningshastighed (Gravitationens?)
+kunde overgaa Lysets. Virkelig Betydning for vor Tidsopfattelse har dette
+Spørgsmaal dog ikke; thi selv om Lyshastigheden indtager en Særstilling i
+fysisk Henseende, indtager den ikke en Særstilling for Tanken. Man kunde sige,
+at vi meget vel kender en langt større Hastighed, nemlig den, hvormed
+% --- p. 5 ---
+\opage{5} Tanken formaar at flyve til Mælkevejens yderste Grænser i et forsvindende
+Øjeblik. Da en og anden kunde være betænkelig ved saaledes at sammenstille en
+sjælelig og en fysisk Hastighed, vil det dog maaske være bedre at holde sig til
+den Udtryksmaade, at vi kan tænke os Hastigheder tusind, hundredtusind og et
+hvilket som helst Antal Gange saa store som Lysets, og at vi er berettigede til
+at betragte Einsteins Teori som alt andet i Verden i Belysning af et saadant
+Tankeeksperiment.
+
+% PRINTER'S DEFECT, p. 5: a stray comma stands after the full stop of
+% »fysiske Aarsag.« -- »Aarsag. , Hvis to Ure er« -- verified at 700 dpi.
+% Transcribed as printed.
+Denne Tankeprøve er imidlertid ikke den eneste, der kan anvendes. Vi kan ogsaa
+tage vort Udgangspunkt i den Samtidighedsbestemmelse ved medførte Ure, som
+spiller saa stor en Rolle her paa Jorden. Principielt er den ganske uafhængig
+af Lyshastigheden, og den har til eneste Forudsætning, at enhver Forandring i
+Forløbet af en eller anden Proces, f.~Eks. en Forandring i et Urs Gang, maa
+have sin bestemte og tilstrækkelige fysiske Aarsag. , Hvis to Ure er absolut
+ens byggede, og de paa et bestemt Sted til at begynde med stilles ens, vil de,
+underkastede de samme fysiske Betingelser, stadig følges ad. Denne
+Overensstemmelse vil ikke ophøre, fordi det ene Ur flyttes til et andet Sted,
+forsaavidt det ikke derved udsættes for andre fysiske Paavirkninger (d.~v.~s.
+Paavirkninger fra den materielle Omverden) end dem, det var underkastet paa
+Udgangsstedet. Hvis vi nu lod det ene af de to ved $A$ samstemte Ure følge med
+Budet til $B$ under den tidligere omtalte Budsendelsesmetode, vilde Budet ---
+under den nævnte Forudsætning --- saa at sige transportere Stedet $A$'s
+Tidsangivelser med sig og gøre det muligt ved $B$ at stille Ure derefter; som
+det indses ved at gaa til Grænsen (den uendelig store Hastighed), vilde man
+derved skaffe samtidige Tidspunkter (efter den tidligere Definition) samme
+Betegnelse ved $A$ og $B$; der bliver med andre Ord ingen Uoverensstemmelse
+mellem de to Metoder til Samtidighedsbestemmelse.
+
+% Case fractions: the printing sets a superior 1, a solidus and an inferior
+% 1000, all in roman. Set as in ../relativitetsprincipet.
+I Radium har vi maaske et idealt Medføringsur, da dets Degradation synes
+uafhængig af alle ydre Paavirkninger; er dette virkelig Tilfældet, skulde to
+Stykker Radium, af hvilke det ene forblev paa Stedet $A$, medens det andet fra
+$A$ gik paa Rejse ud i Verden, stadig følges ad i Degradation, saaledes at naar
+der paa et vist Tidspunkt efter Adskillelsen var eksploderet
+$^{1}\!/_{1000}$ af det enes Atomer, vilde der samtidig være eksploderet
+$^{1}\!/_{1000}$ af det andets. Hvorledes det nu end forholder sig hermed, kan
+vi i alt Fald tænke os Ure, der var fuld\-%
+% --- p. 6 ---
+\opage{6}stændig uafhængige af, beskyttede mod eller kompenserede for al Paavirkning af
+Ændringer i Temperatur, Tryk, Gravitation, magnetiske og elektriske Felter
+eller andre fysiske Forhold i det Punkt af Rummet, hvor Uret i Øjeblikket
+befandt sig. Foruden disse af Tilstandene i de passerede Punkter afhængige
+Paavirkninger kunde der tænkes en fysisk Paavirkning, som skyldtes selve
+Bevægelsen af Uret gennem et Medium, Æteren. En saadan \guillemotright
+Ætervind\guillemotleft{} af ukendt Størrelse og Retning vilde indføre et
+hypotetisk Element i vore Samtidighedsbestemmelser; men selv om vi ikke kunde
+komme ud over den herved fremkaldte Usikkerhed, vilde dette ikke tvinge os til
+at ændre vor almindelige Tids- og Rumopfattelse. Men hvis man som Einstein ikke
+antager nogen saadan Ætervind eller en tilsvarende fysisk Paavirkning, vilde en
+Ændring af Urets Gang blot ved Bevægelsen, som Prof.\ Kroman fremhæver, være
+\guillemotright et aarsagsløst Fænomen\guillemotleft{} --- en fysisk Virkning
+uden fysisk Aarsag. Det forekommer mig, at dette er ganske afgørende for det
+Spørgsmaal, om de reelle Ændringer i Ures Synkronisme (eller Tvillingers
+Ligealdrethed!), som af Einsteins Tilhængere antages at resultere af det ene
+Urs (den ene Persons) Rejse i Rummet, er akceptabel fra et fysisk Standpunkt.
+Ligesaa lidt som Urenes Gang kan Maalestokkenes Længde forandres ved
+Bevægelsen; men naar man ved at føre en i Frankrig med den rette Normalmeter
+sammenlignet Maalestok \guillemotright om Bord\guillemotleft{} i andre bevægede
+Systemer $B$, $C$ . . . gør det muligt i disse at fremstille rette Metre,
+% The suspension above is printed as three widely spaced full stops, not as an
+% ellipsis sort; set as printed.
+bliver Einsteins sindrige Metode til Sammenligning af Maalestokke (Afsætning af
+Mærker under Forbifarten paa formentlig samtidige Tidspunkter) overflødig. Naar
+der tillige overføres et Ur, bortfalder ogsaa Striden om Tidspunkterne, idet
+nemlig det overførte Urs saa vel som den overførte Maalestoks Angivelser maa
+være afgørende, og Uoverensstemmelserne med dem ligefrem viser, at der er noget
+forkert i de Maalinger, der giver afvigende Resultater, eller rettere i de
+Einstein'ske Forudsætninger, hvorpaa de hviler.
+
+% »for Sagen: men« -- a COLON, not a semicolon. Checked at 1400 dpi against
+% the certain semicolon of »Tidsmaal;« on p. 11, which shows a tail; this mark
+% has two round dots and none. Set as printed.
+Hverken Overføringen af eller de Einstein'ske Eksperimenter med Ure og
+Maalestokke kan udføres i Praksis under Forhold, hvor Resultaterne kan naa en
+saadan Nøjagtighed, at de er af Betydning for Sagen: men Sammenstillingen af
+Tankeeksperimenterne med den uendelig hurtige Budsendelse og Uroverføringen paa
+den ene Side, de Einstein'ske Transaktioner paa den anden Side kan bidrage til
+at belyse den nye Teoris Forhold til den naturlige Tidsopfattelse. Den
+% --- p. 7 ---
+\opage{7} forekommer mig ikke at betegne en \emph{Revolution}, men en
+\emph{Destruktion} af denne. Rokker vi ved den, saa rokker vi ved selve det
+Grundlag, paa hvilket vi skulde opbygge Fysikkens Verdensbillede; vi føres ud i
+en Tilstand, hvor der vel kan skabes et matematisk System, men hvor den
+naturlige Kontrol svigter, saa at Absurditeter faar frit Spil, naar de blot
+passer ind i Systemet.
+
+Vi opfatter Tilværelsen i Rummets og Tidens Form. For Tidens Vedkommende vil
+dette sige, at vi søger at indordne alle Begivenheder i den hele Verden i en
+fortløbende Række af Grupper, hvis Begivenheder er samtidige indbyrdes, men
+fortidige eller eftertidige i Forhold til andre Grupper. Fysikken har
+imidlertid --- for de materielle Fænomener --- ikke blot denne rent historiske
+Opgave; den skal tillige finde Love, der er almene, d.~v.~s. uafhængige af
+Tidspunktet\footnote{\guillemotright Forskellen mellem én Begivenhed og en
+anden, bør ikke bero alene paa en Forskel i Tid\guillemotleft, siger Maxwell i
+\guillemotright Matter and Motion\guillemotleft.} og af Stedet (som saadanne),
+og ved hvilke man kan udlede Begivenhederne i enhver Gruppe af dem i en hvilken
+som helst i Forhold til denne fortidig Gruppe.
+
+Der var nu imidlertid (gennem Michelsons Eksperiment) blevet paavist en
+tilsyneladende uforklarlig Skævhed i det Verdensbillede, Fysikerne havde
+udformet, idet Jorden kunde synes at være stillestaaende med Hensyn til
+Æteren, altsaa enten selv at staa stille eller at slæbe hele Verdensæteren med
+sig i alle sine Bevægelser. For at komme over denne Vanskelighed greb Einstein
+til den Udvej at indføre en Mangfoldighed af Verdensbilleder (saa mange som der
+i hele Verden findes af Systemer af Partikler med forskellige
+Translationsbevægelser) hvert belastet med sin individuelle Skævhed. Idet denne
+Skævhed var af ganske samme Art i de forskellige Verdensbilleder, som alle
+erklæredes for lige gode, fik man \emph{Ensartethed} eller Symmetri som
+Surrogat for den opgivne \emph{Enhed}; og lod de enkelte Verdensbilleder sig
+end ikke forlige indbyrdes, var det dog muligt at omsætte det ene til det andet
+ved simple Formler; altsaa atter et Surrogat: \emph{Omsættelighed} for
+\emph{Overensstemmelse}. I Betragtning af, at Einstein saaledes har opgivet den
+Monisme, som hidtil altid har været tilstræbt i Opfattelsen af den materielle
+Verden, og er gaaet over til en ejendommelig Art af \guillemotright
+Polyisme\guillemotleft, lyder det næsten som en blodig Ironi, naar \emph{Emil
+Cohn} i sit lille Skrift \guillemotright Physikalisches über Raum und
+Zeit\guillemotleft{} paastaar, at der ved Einsteins
+% --- p. 8 ---
+\opage{8} Teori er kommet større Enhed i vort Verdensbillede (\guillemotright . . . unser
+Weltbild wird einheitlicher\guillemotleft). Filosofisk set er hans Lære
+forkastelig, fordi den destruerer vor Verdensopfattelse og sætter mange
+indbyrdes uforligelige --- men ved simple Formler forbundne --- Sandheder i
+Stedet for én. Fysisk set bliver den tillige forkastelig, fordi den, hvor man
+søger fysiske Aarsager, i Stedet byder matematiske Transformationer. Vi kan
+sige, at Opgivelsen af det historiske Krav om alle Begivenheders Inordning i en
+almengyldig Tidsfølge medfører Opgivelsen af det fysiske Krav om
+Tilvejebringelse af Aarsagssammenhæng inden for den materielle Verden.
+
+Til Illustrering af denne Side af Sagen skal her betragtes det ogsaa af Prof.\
+Kroman fremdragne Tilfælde angaaende Hastigheden i strømmende Vand.
+
+% ================================================================
+% FIGURE, printed p. 8.  EDITORIAL REDRAWING IN TikZ -- NOT A FACSIMILE.
+% Drawn 2026-09-04 from the page image at 600 dpi (PDF 610), by measuring the
+% printed strokes pixel by pixel and then regularising them; no part of the
+% original line block is reproduced photographically.
+%
+% Fizeau's apparatus, schematically: the light source L at the far left, the
+% interference field S at the far right, a lens and a stop inside each, and
+% between them the water tube R, entered from above at the left and leaving
+% above at the right.  One ray bundle runs through the tube, one below it
+% through the air; both are dashed and both carry a single arrowhead midway.
+%
+% UNITS.  One TikZ unit = one pixel of the 600 dpi scan, set to 0.006 cm.
+% The origin is the optical axis at the centre of the block; y is upwards.
+% The printed block spans 2033 px of a 2469 px measure, i.e. 82 percent; drawn
+% here 12.4 cm wide against a 14.9 cm measure, i.e. the same proportion.
+%
+% MEASURED FROM THE SCAN (600 dpi px from the centre C = scan x 1885, and from
+% the optical axis y = scan 2318, y upwards; left and right values given where
+% they differ, the drawing taking their mean):
+%   lens centres     -716.5 / +717      lens 53 px wide, 352 px high
+%   stops            -648   / +651      one thick vertical, broken at the rays
+%   tube end walls   -539   / +520.5    -> drawn at +-530
+%   tube inner walls -500.5 / +483.5    -> drawn at +-492 (neck 38 px wide)
+%   ray convergence  -995   / +923      -> drawn at +-959; L and S abut it
+%   rays             y = +107 and -107; they bend at the OUTER face of each
+%                    lens, +-743, which is how the block draws them
+%   tube top wall    y = +169   bottom wall y = +52   neck top y = +232
+%   R at (-33,+214)  v at (+113,+80)   flow arrow (-81,+81) to (+39,+81)
+%   ray arrowheads   x = +291 / +301   -> both drawn at +296
+%
+% REGULARISED:
+%   * The block is not quite symmetric -- the tube sits about 10 px left of
+%     the lens pair and the right-hand convergence is 72 px shorter than the
+%     left.  Everything here is drawn symmetric about the axis.
+%   * Dash lengths in the printing are irregular (on-runs 17-29 px, gaps
+%     10-20 px); set to a uniform on 3.4pt off 3pt.
+%   * The water arrows are of unequal length in the printing (the outlet
+%     arrow sits about 13 px lower than the inlet arrow is tall); drawn equal.
+%   * Stroke weights measured 10-12 px for the tube and stops, 6-8 px for the
+%     rays; set to 1.7pt, 2pt and 1.1pt.
+%   * A small isolated blot at scan (1725, 2190), 22 px above the upper ray
+%     and touching nothing, is a plate defect and is not reproduced.
+%
+% COULD NOT BE DETERMINED: whether the stops are meant to be diaphragms with
+% a slit or simply screens -- they are drawn as one thick vertical stroke with
+% a break at each ray, and the break may be nothing more than the engraver
+% keeping the rays legible where they cross.  The breaks are reproduced as
+% measured.  Nor can the tube's necks be told from the scan to be pipes rather
+% than open ends; they are drawn as the block draws them, as bare walls.
+%
+% LETTERING.  L, R, S and v are set in the block in an UPRIGHT BOLD SANS face,
+% not in the italic the running text uses for the same letters; the block's
+% usage is followed here, so they are NOT set as math italic.  Cap height
+% measures 67 px = 11.4 pt, hence \Large.  The caption »Fig. 1.« is centred
+% below and set at the text size; it is the article's only figure and its only
+% numbered one, and the text refers to it as »I Fig. 1«.
+% ================================================================
+\begin{center}
+\begin{tikzpicture}[x=0.006cm,y=0.006cm,
+    apparatus/.style={line width=1.7pt},
+    stopline/.style={line width=2pt},
+    ray/.style={line width=1.1pt,dash pattern=on 3.4pt off 3pt},
+    head/.style={line width=1.1pt,-{Stealth[length=6pt,width=5pt]}},
+    water/.style={line width=1.4pt,-{Stealth[length=7pt,width=8pt]}},
+    letter/.style={font=\Large\sffamily\bfseries}]
+
+  % --- the water tube R: a channel open at both ends ---
+  \draw[apparatus] (-492,232) -- (-492,169) -- (492,169) -- (492,232);
+  \draw[apparatus] (-530,232) -- (-530, 52) -- (530, 52) -- (530,232);
+
+  % --- water in at the left neck, out at the right ---
+  \draw[water] (-511,306) -- (-511,222);
+  \draw[water] ( 511,222) -- ( 511,306);
+
+  % --- the two lenses, pointed at top and bottom as the block draws them ---
+  \draw[apparatus] (-717,-174) .. controls (-752,-58) and (-752,58) .. (-717,174)
+                               .. controls (-682, 58) and (-682,-58) .. cycle;
+  \draw[apparatus] ( 717,-174) .. controls ( 682,-58) and ( 682,58) .. ( 717,174)
+                               .. controls ( 752, 58) and ( 752,-58) .. cycle;
+
+  % --- the two stops, broken where the rays cross ---
+  \draw[stopline] (-650, 231) -- (-650, 124);
+  \draw[stopline] (-650,  90) -- (-650, -90);
+  \draw[stopline] (-650,-124) -- (-650,-231);
+  \draw[stopline] ( 650, 231) -- ( 650, 124);
+  \draw[stopline] ( 650,  90) -- ( 650, -90);
+  \draw[stopline] ( 650,-124) -- ( 650,-231);
+
+  % --- the two ray bundles: through the tube, and below it through the air ---
+  \draw[ray] (-959,0) -- (-743, 107) -- (743, 107) -- (959,0);
+  \draw[ray] (-959,0) -- (-743,-107) -- (743,-107) -- (959,0);
+  \draw[head] (255, 107) -- (296, 107);
+  \draw[head] (255,-107) -- (296,-107);
+
+  % --- direction of flow ---
+  \draw[head,line width=1.2pt] (-81,81) -- (39,81);
+
+  % --- lettering ---
+  \node[letter,anchor=east] at (-959,  0) {L};
+  \node[letter,anchor=west] at ( 959,  0) {S};
+  \node[letter]             at ( -33,214) {R};
+  \node[letter]             at ( 113, 80) {v};
+
+  % --- the printed caption ---
+  \node[anchor=north,inner sep=2pt] at (0,-253) {Fig.~1.};
+\end{tikzpicture}
+\end{center}
+
+% MATHEMATICS. The fraction RULES do not survive the JBIG2 compression of this
+% 1-bit 600 ppi scan in the inline fractions on this page: numerator and
+% denominator stand clear, the thin rule between them does not. That the
+% printing does set them is established from 1/n on p. 9, where the rule IS
+% visible, and from the display on p. 24 of ../relativitetsprincipet in the
+% same scan. Set \dfrac, as the sibling article does. Variables italic, as
+% printed.
+I Fig.~1 er Fizeau's Forsøg antydet i simplificeret Form. Fra Lyskilden $L$
+sendes et Bundt Lysstraaler gennem Luften, et andet gennem det vandfyldte Rør
+$R$ til $S$, hvor der dannes Interferensstriber, og disse forskydes, naar
+Vandet bringes til at strømme gennem Røret med Hastigheden $v$ i Pilens
+Retning. Som bekendt finder man en Forskydning, der svarer til, at Lysets
+Hastighed i Rørstrækningen ved Strømningen forandres fra $\dfrac{c}{n}$ til
+$h = \dfrac{c}{n} + \dfrac{n^{2}-1}{n^{2}}\,v$ i Forhold til Rørvæggen og
+altsaa til $h' = \dfrac{c}{n} - \dfrac{v}{n^{2}}$ i Forhold til Vandmassen.
+Der opstaar da det Spørgsmaal, hvorfor Lyset faar netop denne Hastighed i
+Stedet for f.~Eks. at bevare uforandret Hastighed enten i Forhold til Vandet
+eller til Rørvæggen.
+
+Fysikeren mener med dette Spørgsmaal, at han ønsker nærmere Rede paa Sagen. Han
+vil have Klarhed over, hvori de fysiske Processer, der foregaar i Røret, naar
+Vandet strømmer, adskiller sig fra dem, der foregaar, naar det er i Hvile. Han
+vil dernæst søge enten
+% --- p. 9 ---
+\opage{9} at bringe en tidligere kendt mere almen Regel i Anvendelse paa det foreliggende
+Tilfælde eller at opstille en ny plausibel Teori, som kan anvendes baade paa
+dette Tilfælde og under andre Forhold. Men allerede at trænge ind i
+Processernes Natur eller blot at faa Øjet aabnet for visse Muligheder i denne
+Henseende er et virkeligt Fremskridt paa Fysikerens Arbejdsvej. Man kunde
+f.~Eks. gøre den ganske grove Antagelse, at Lyset passerer vekselvis gennem
+Stoffets Atomer (eller fortættede Ætersfærer om dem) med en vis Hastighed
+$c_{1}$ og gennem fri Rum mellem dem med Hastighed $c$. Ved Strømningen føres
+Atomerne af Sted med Hastigheden $v$, og det kunde saa formodes, at Lyset
+bevarede sin Hastighed saa vel i de tomme Rum som inde i Atomerne (i Forhold
+til disse); ved et vist Forhold mellem \guillemotright
+Atomdiametrene\guillemotleft{} og \guillemotright Frivejene\guillemotleft{}
+vilde man faa det Resultat, Forsøget giver. Men det kunde ogsaa tænkes, at
+selve Forplantningshastigheden inde i Atomerne var forandret til $c'_{1}$,
+fordi Lyset traf Atomerne med en anden (relativ) Hastighed. Eller man kunde
+antage, at Lyset kan slippe gennem Atomernes Mellemrum, men at dets Hastighed
+under Hvile ved Indvirkning af Atomernes \guillemotright
+Kraftfelter\guillemotleft{} nedsættes til $\dfrac{1}{n}$ af Hastigheden i det
+frie Rum; Atomernes Bevægelse (i Forhold til Æteren?) skulde saa ændre denne
+Paavirkning, hvorved Lyset kan faa en anden Hastighed saa vel i Forhold til
+Rørvæggen som i Forhold til Vandet. Eller det kunde være, at den Hastighed,
+hvormed Fronten af en Bølge skred frem, ikke ændredes ved Vandets Bevægelse,
+men at Elektronerne i Vandmassen indvirkede saaledes paa Lysbevægelsens Fase,
+at \guillemotright Fasens Hastighed\guillemotleft, som jo er bestemmende for
+Interferensen, forandredes; $h$ og $h'$ skulde da betegne Fasens Hastighed.
+(Hvilken af disse eller andre mulige Antagelser der er den rette, spiller ingen
+Rolle i denne Sammenhæng.)
+
+Den Einstein'ske Behandling af Spørgsmaalet er imidlertid af ganske anden Art.
+Ved Anvendelsen af hans Transformationsformler finder man, at et Væsen, der
+følger med i Vandets Translation, ved eventuelle Maalinger skulde komme til det
+Resultat, at Lysbevægelsen inde i Vandet i Forhold til dette ikke har
+Hastigheden $\dfrac{c}{n} - \dfrac{v}{n^{2}}$ men derimod Hastigheden
+$\dfrac{c}{n}$, ganske som vi finder det, naar Vandet staar stille for os. Selv
+bortset fra, at dette er ubegribeligt, kan det ikke
+% --- p. 10 ---
+\opage{10} betragtes som en Forklaring. Hvad \emph{jeg} trænger til, er at faa
+Sammenhæng i \emph{mit} Verdensbillede; kan jeg ikke faa det, er det kun en
+daarlig Trøst, at en anden kalder ret, hvad jeg kalder vrangt, navnlig naar jeg
+tillige ved, at han finder vrangt, hvad jeg finder ret, saa at jeg ikke vilde
+vinde noget ved at gaa over til hans Syn paa Tingene.
+
+Man kunde hertil sige, at om Einsteins Teori end ikke giver nogen egentlig
+Forklaring af Sagen, saa kunde man dog i det betragtede Tilfælde ved at gaa den
+omvendte Vej, d.~v.~s. ved at gaa ud fra den simple Antagelse, at for en
+medbevæget Iagttager er Lyshastigheden i Vandet altid $\dfrac{c}{n}$, og
+benytte Einsteins Transformationsformler udregne et rigtigt Udtryk for den
+Medføringskoefficient, der fremtræder for ikke medbevægede Iagttagere. Dette er
+vel sandt nok; men det er ikke Spørgsmaalet om den Nytte, Einsteins
+Formelsystem eventuelt kan gøre, der skal drøftes her. Der kunde dog særlig i
+Anledning af Prof.\ Kromans Bemærkning S.~24 være Grund til for dette specielle
+Tilfælde at fremhæve, at Medføringskoefficienten $\dfrac{n^{2}-1}{n^{2}}$ ogsaa
+kan udledes uden Hjælp af de Einstein'ske Formler, f.~Eks. idet man opstiller
+Betingelsen for, at Lys, der ledes frem gennem en Strækning af stillestaaende
+Vand og tilbage gennem en Luftstrækning, og Lys, der gennemløber samme Vej i
+modsat Retning, ikke faar nogen paaviselig interferensgivende Vejforskel ved
+Forsøgsapparatets Bevægelse gennem Æteren (med Jorden); da nu Einsteins Formler
+netop er konstrueret saaledes, at \guillemotright
+Ætervindens\guillemotleft{} Indflydelse ved dem skal forsvinde af
+Beregningerne ligesom af Forsøgene, var det vel egentlig paa Forhaand givet, at
+de i det betragtede Tilfælde vilde give samme Resultat, som man kan faa ved
+direkte at opskrive Betingelserne for, at Ætervinden ikke faar nogen
+Indflydelse.
+
+Idet vi nu gaar over til den anden Del af Tidsproblemets Omraade, nemlig
+Maaling af Tidslængder, bør vi lægge Mærke til, at der ikke i, hvad der i det
+foregaaende er sagt om Samtidighedsbestemmelse, noget Steds er gjort Brug af
+Begrebet jævn Bevægelse. Om Urene (S.~5) forudsattes det blot, at de, naar de
+var ganske ens og var udsatte for ganske samme fysiske Paavirkninger, stadig
+vilde følges ad; om de gaar jævnt, er en helt anden Sag. Dette uanset kan man
+ved Urene sammenligne Tidslængder paa forskellige \emph{Steder}, idet to
+Tidslængder, der ligger mellem to Sæt to og to
+% --- p. 11 ---
+\opage{11} samtidige Tidspunkter for Begivenheder paa to Steder, sættes lige lange. Men vi
+kan i Følge Sagens Natur ikke faa noget sikkert Kriterium paa, at to
+Tidslængder, der forløber til forskellige \emph{Tider}, er lige lange. Man kan
+kun sammenligne saadanne Tidslængder ved at \guillemotright
+samtidighedskonferere\guillemotleft{} dem med en Tidsmaaler, der gaar jævnt;
+men at dette er Tilfældet, maa atter konstateres ved Sammenligning med en anden
+Tidsmaaler o.~s.~fr.
+
+% PRINTER'S DEFECT, p. 11: »Atomeeksplosionerne« -- a doubled e, for
+% »Atomeksplosionerne«. The word breaks »Atomeeks-/plosionerne«; the six
+% letters A-t-o-m-e-e are unambiguous at 1400 dpi. Transcribed as printed.
+Man kunde komme ud over denne Vanskelighed ved at holde sig til en Tidsmaaler,
+om hvilken man paa Grundlag af sit hele Kendskab til den fysiske Verden maa
+antage, at dens Gang ikke forandrer sig i Tidernes Løb. Den omdrejende Jord er
+ikke en saadan Tidsmaaler, da vi kan se Aarsager til, at dens Omløbstid vil
+aftage. Snarere vilde man vel anerkende en Tidsmaaling, der baseredes paa
+Lysbevægelsen, idet man som uforanderligt Tidsmaal tog den Tid, Lyset bruger om
+at gennemløbe en bestemt Længde --- f.~Eks. en Længde lig Diameteren af en
+Elektron (idet vi ser bort fra Antagelsen om dennes Foranderlighed eller tænker
+os de nærmere Omstændigheder fastslaaede). Tilsyneladende kunde man helt slippe
+for at blande Længder ind i Sagen, idet man f.~Eks. benyttede Radium som
+Tidsmaaler og satte den Tid, i hvilken $^{1}\!/_{1000}$ af et Stykke Radiums
+Atomer eksploderede, som Tidsmaal; men da Atomeeksplosionerne kun er Klokkeslag
+for en i Stoffets Indre i Rum og Tid forløbende Proces, undgaar man ikke herved
+at faa med Længder at gøre. Spørgsmaalene om konstant Tidsmaal, konstant
+Længdemaal og konstant Hastighed staar i nøje indbyrdes Sammenhæng.
+
+Selv om der i Naturen kan findes Længder, Tidsrum og Hastigheder, der ikke kan
+antages at ændres i Tidens Løb ved nogen af de os bekendte fysiske Processer,
+kan vi dog ikke udelukke den Mulighed, at de ændres af en eller anden os ukendt
+universel Aarsag og paa en saadan Maade, at vi slet ikke kan kontrollere det.
+(De Lorentz'ske Kontraktioner ved en Ætervind, hvis Hastighed og Retning er os
+ubekendt, afgiver jo netop et Eksempel paa ukontrollerbare Ændringer.) Lad os
+antage, at hele Verden eller i alt Fald den Del af den, vi kender, var
+undergivet en fortsat Indskrumpningsproces, hvorved alle Længder formindskedes
+i samme Forhold, saa at f.~Eks. baade Elektronernes Dimensioner og Afstandene
+mellem dem efter et vist Antal Millioner Aar var gaaet ned til
+$^{1}\!/_{10}$, saa vilde det for det første være umuligt at konstatere dette
+ved Længde\-%
+% --- p. 12 ---
+\opage{12}maalinger med Maalestokke, der jo selv var formindskede i samme Forhold. Men
+selv om alle Hastigheder var forblevet uforandrede, saa at alle Processer nu
+(paa Grund af de kortere Afstande) forløb 10 Gange saa hurtigt, kunde
+Sammenskrumpningen heller ikke konstateres ved Tidsmaalinger, da ogsaa
+Tidsmaalet (f.~Eks. den Tid, Lyset bruger om at gennemløbe en Elektrondiameter)
+var blevet 10 Gange saa lille, hvorfor man vilde finde Varigheden af alle
+Processer udtrykt ved samme Tal som tidligere. Da alle Processer i Hjernen og
+Nerverne forløb med tidobbelt Hastighed, maatte man vel antage, at det samme
+vilde gælde om hele vort Forestillingsløb, og at vor Tidssans, d.~v.~s. vor
+umiddelbare Opfattelse af Tidslængder vilde undergaa en saadan Forandring, at
+\guillemotright Indskrumpningen\guillemotleft{} overhovedet ikke gjorde sig
+bemærket i vor Bevidsthed. Men selv om vi tænker os, at vor Tidssans forblev
+upaavirket af Forandringerne, saaledes at vi mærkede, at alle Processer foregik
+med en langt større Fart end tidligere, kunde vi dog ikke afgøre, om dette
+beroede paa, at Verden var skrumpet ind, eller paa, at Verdensmaskineriet
+virkelig var løbet løbsk --- eller endelig blot paa en sjælelig Forandring i
+vor Tidsopfattelse. Ligesom en Forøgelse af alle Hastigheder vilde komme ud paa
+ét med en Indskrumpning af alle Længder, vilde en gradvis Sagtnen af
+Verdensmaskineriet virke ganske som en Udvidelse af alle Længder, og ingen af
+disse fire Fænomener vilde kunne paavises ved fysiske Maalinger. Ved samtidig
+Indskrumpning af alle Længder og Formindskelse af alle Hastigheder i samme
+Forhold, vilde Varigheden af alle Processer forblive uforandret, saa at vi selv
+med en intakt Tidssans ikke vilde mærke nogen Forandring.
+
+Der er aabenbart i alt dette rigeligt af \guillemotright
+Relativitet\guillemotleft, og de anførte Betragtninger kan vel endogsaa gøre
+det tvivlsomt, om der kan forbindes nogen Mening med Begreber som den absolutte
+Størrelse af en Længde, et Tidsrum og en Hastighed. De synes beheftede med en
+lignende Ubestemthed som Begrebet absolut Hvile i et tomt og uendeligt Rum. Med
+Samtidighedsbegrebet er Forholdet et helt andet. For at forbinde en bestemt
+Mening med, at to Begivenheder paa forskellige Steder af Rummet er samtidige,
+behøver vi ikke at tillægge visse Længder, Tidsrum eller Hastigheder en absolut
+Størrelse; det er tilstrækkeligt, at vi kan tænke os Ændringer af dem
+(S.~2---3). Man kunde indvende, at vi vel kan tænke os en Hastighed 1000,
+10\,000 el.\ fl.\ Gange saa stor som f.~Eks. Lysets, men
+% --- p. 13 ---
+\opage{13} at vor Tanke dog aldrig kan naa til en uendelig Hastighed og derfor heller ikke
+til \guillemotright absolut\guillemotleft{} Samtidighed; skønt dette paa en
+Maade er rigtigt nok, er det dog en Sofisme, ikke stort bedre end den berømte
+om Akilles og Skildpadden. Det vil ogsaa ses, at Begreberne \guillemotright
+absolut Samtidighed\guillemotleft{} og \guillemotright absolut
+Størrelse\guillemotleft, som de er brugt her, slet ikke har noget analogt; thi
+i det første Udtryk betyder \guillemotright absolut\guillemotleft{}
+\guillemotright fuldstændig nøjagtig\guillemotleft{} i det andet
+\guillemotright uden Relation til noget andet af samme Art\guillemotleft.
+
+Den Relativitet, der er uadskillelig fra vore Tidsbegreber, kommer ikke som den
+Einstein'ske i Strid med vor hidtidige Tidsopfattelse. Den fører os ikke ind i
+en mystisk Verden, hvor Rummet har 4 Dimensioner. Den hindrer os ikke i at
+forblive i det gode gamle tredimensionale Verdensrum, hvor der kan lægges 3 og
+kun 3 paa hinanden vinkelrette Planer gennem et Punkt, hvor samtidige
+Begivenheder er samtidige, hvor enhver fysisk Forandring har sin fysiske
+Aarsag, og hvor to Jernbanetog, der løber hver til sin Side med en Hastighed af
+100 km i Timen, fjerner sig fra hinanden med nøjagtig den dobbelte Hastighed,
+hvad enten vi er Passagerer paa det ene eller det andet Tog eller staar
+udenfor og ser paa.
+% The article ends here, in the middle of printed p. 13; the rest of the page
+% is given to the opening of the next item, C. E. Walsøe, »Omkring
+% Videnskabens Grænse«, which is no part of this text.
+
+\end{document}

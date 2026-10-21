@@ -1,0 +1,278 @@
+% ============================================================
+%  QUOTATION MARKS (corrected 2026-09-30): Fysisk Tidsskrift prints guillemets
+%    pointing inward, »…« (checked at 250--600 dpi, scan PDF pp. 331, 333). They
+%    are coded \guillemotright…\guillemotleft (LaTeX's \guillemotleft is «);
+%    until 2026-09-30 they were coded the other way round and printed «…».
+%    Open question: in the body text the marks may be SINGLE guillemets ›…‹
+%    (the binarised scan does not settle it); the title on p. 331 is double.
+%  Helge Holst, »Relativitetsprincipet«
+%  Fysisk Tidsskrift, 15. Aargang (1916-17), pp. 165-168.
+%
+%  DIPLOMATIC TRANSCRIPTION (Danish)
+%  Status: COMPLETE. Printed pp. 165-168, all 4 pages, transcribed 2026-09-04.
+%  No gaps, no duplicates; braces and guillemets balanced; compiles with
+%  0 errors, 0 missing characters, 0 overfull boxes. Translation not begun.
+%
+%  Holst's SECOND contribution to the Kroman relativity debate -- the sixth of
+%  its seven items, and short, three pages. Found in the scan 2026-09-04 and
+%  recorded in no bibliography consulted. Not to be confused with his
+%  »Tidsproblemet« at pp. 1-13 of the same volume, which is
+%  ../holst-tidsproblemet. See ../relativitetsprincipet/note.md.
+%
+%  RIGHTS: clear. Helge Holst died in 1944; Danish copyright (life+70) expired
+%  at the end of 2014. Free to transcribe and to publish.
+%
+% ------------------------------------------------------------
+%  THE WITNESS
+% ------------------------------------------------------------
+%  Google Books `Tr4ZAAAAIAAJ` -- Fysisk tidsskrift, VOLUMES 13-15, the
+%  University of California copy, digitised 17 January 2007. Kept as
+%  texts/kroman/scan-ft-13-15.pdf, untracked; shared with the siblings.
+%
+%  CAUTION: this scan's JBIG2 compression drops hairlines -- the fraction rules
+%  on ../holst-tidsproblemet's p. 8 are simply absent from the image and had to
+%  be confirmed from a parallel on the next page. Check any thin rule at a
+%  second resolution before concluding it is not there.
+%
+% ------------------------------------------------------------
+%  PAGE MAP -- VERIFIED 2026-09-04
+% ------------------------------------------------------------
+%      printed 165-168  =  PDF + 618   (PDF 783-786).
+%
+%  The offset is NOT the 602 of the front of this volume, nor the 622 of
+%  p. 192: unpaginated advertisement leaves are bound in, so vol. 15's offset
+%  grows across the volume. Confirmed here on content -- PDF 784 carries the
+%  numeral 166, PDF 785 the running head »Relativitetsprincipet.«, PDF 787 the
+%  head »Fysisk Tidsskrift« at p. 169.
+%
+%  CORRECTED from pp. 166-168, which is what the running heads suggest. The
+%  article begins in the LOWER HALF of p. 165, under the running head of the
+%  article it follows (»Astrospektroskopien og nogle af dens nyere Resultater.
+%  II«), with its own title block »Relativitetsprincipet. / Af / Helge Holst.«
+%  This is the third article in the debate to do it -- the same thing put
+%  ../walsoe-videnskabens-graense at pp. 13-17 rather than 14-17, and Kroman's
+%  1917 reply begins partway down p. 192. In this journal, ALWAYS read the page
+%  before the apparent first page. It ends a third of the way down p. 168;
+%  »Fysik i Skolen« follows.
+%
+% ------------------------------------------------------------
+%  CONVENTIONS
+% ------------------------------------------------------------
+%  * Diplomatic. 1917 orthography exactly as printed; the pre-1948 aa kept,
+%    nouns capitalised, nothing modernised.
+%  * QUOTATION MARKS: guillemets »...«, 2 pairs, balanced.
+%  * EMPHASIS is LETTERSPACING, set \emph{}, only 8 runs (p. 165 x1, p. 166 x5,
+%    p. 167 x2, p. 168 none). PROPER NAMES ARE NEVER SPACED -- Lorentz,
+%    Einstein, Michelson all plain -- which is how the compositor sets Holst in
+%    »Tidsproblemet« too, and the opposite of how he sets Kroman. No true italic.
+%  * FOOTNOTES: exactly one, on p. 166, marked *). The fixed
+%    \renewcommand{\thefootnote}{*)} in the preamble is therefore correct here.
+%  * MATHEMATICS: one inline $c$ on p. 165. No displays, no fractions, no
+%    equation numbers -- so the scan's hairline problem does not arise.
+%  * TITLE SPELLING: the title prints »Relativitetsprincipet« with one p, while
+%    the body writes »Relativitetsprincippet« with two. Both kept as printed.
+%
+% ------------------------------------------------------------
+%  PRINTER'S DEFECTS -- transcribed AS PRINTED, logged at the site
+% ------------------------------------------------------------
+%    p. 166  the comma pair round »idet de følger Synkroniseringsreglerne« is
+%            not set
+%    p. 167  »men at Understregningen« where the sense wants »af«
+%  Plate specks, logged as readings rather than defects: »Hånsen« p. 165 and
+%  »ęr« p. 167 -- offset ink, not lost or wrong sorts.
+%
+% ------------------------------------------------------------
+%  BUILD
+% ------------------------------------------------------------
+%  pdflatex path. Sandbox compile-test per TRANSCRIPTION-PLAYBOOK.md §5.
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{libertinust1math}
+\usepackage{textalpha}   % Greek in text, typed directly
+\usepackage{amsmath}     % this debate has real formulas; see CONVENTIONS
+\usepackage{tikz}        % for the redrawn Fizeau diagram, printed p. 8
+\usetikzlibrary{arrows.meta}
+
+% FOOTNOTES -- NOT YET ESTABLISHED for this article. The fixed *) below is
+% inherited from ../holst-tidsproblemet, where it is correct. It is WRONG
+% wherever a page carries two notes (as Walsøe's pp. 13 and 15 do), and it will
+% SILENTLY override an \ifcase form placed after it -- that bug cost an hour on
+% ../walsoe-videnskabens-graense. Check the pages and replace this line if need be.
+\renewcommand{\thefootnote}{*)}
+\usepackage[danish]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{setspace}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={Relativitetsprincipet (Holst 1917)},
+  pdfauthor={Helge Holst},
+  hidelinks
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Relativitetsprincipet}}
+\fancyhead[LO]{\textit{Helge Holst}}
+
+\setstretch{1.3}
+
+\title{\textbf{\guillemotright Relativitetsprincipet\guillemotleft}}
+\author{H.\ Holst}
+\date{\textit{Fysisk Tidsskrift} 15 (1916--17), pp.~165--168}
+
+% ---- original-page markers (paginate.py) ----
+\usepackage{marginnote}
+\newcommand{\opage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\newcommand{\apage}[1]{\marginnote{\footnotesize\textit{[#1]}}}
+\begin{document}
+\maketitle
+
+% --- p. 165 ---
+\opage{165} % The article BEGINS ON p. 165, in the lower half of the page, under the
+% running head of the preceding article (»Astrospektroskopien og nogle af dens
+% nyere Resultater. II«), which ends in the upper half. Title block as printed:
+%     Relativitetsprincipet.  /  Af  /  Helge Holst.
+% supplied by \maketitle in the preamble and not repeated here.
+% NOTE THE SPELLING: the display title and both running heads read
+% »Relativitetsprincipet« with ONE p; the first sentence of the body reads
+% »Relativitetsprincippet« with TWO. Both are set as printed.
+I Anledning af Dr.~H.~M. Hansen's Artikel om Relativitetsprincippet i
+% »Hansen« carries a detached accent-shaped ink speck above the a
+% (»Hånsen«). Plate dirt, not a sort: read Hansen.
+1.~Hefte af denne Aargang vilde jeg gerne bede om Plads for endnu nogle faa
+Bemærkninger, i det Haab, at disse kan bidrage til yderligere at klare
+Forholdet mellem de forskellige Standpunkter til Einstein's Lære.
+
+For saa vidt man blot anvender den Einstein'ske \emph{Fremgangs\-%
+maade} rent fænomenologisk som et Middel til at eliminere tilsyneladende
+% the letterspaced run breaks across the printed line: »F r e m g a n g s-«
+% / »m a a d e«. Held together with \-%.
+Modsigelser (f.~Eks. dem, der blotlagdes gennem det Michelson'ske Forsøg),
+kan herimod ikke rejses erkendelsesteoretiske Indvendinger. Man kan
+naturligvis vedtage den Regel, at hver enkelt af flere Iagttagere i
+forskellige Systemer, der bevæger sig i Forhold til hinanden, lader som om
+Lyset i hans System altid har den konstante Hastighed $c$ i alle Retninger
+(og at han derfor synkroniserer sine Ure ved Lyssignaler paa den af Einstein
+angivne Maade), samt at man gaar over fra det ene af Systemerne til det andet
+ved de Einstein'ske Transformationsformler. Man har endvidere Ret til at
+opstille den Hypotese, at de Resultater, man finder under Anvendelse af disse
+Regler, paa alle Omraader vil stemme med Forsøgsresul\-%
+% --- p. 166 ---
+\opage{166}taterne. Viser det sig nu, at man ikke blot opnaar saadan Overensstemmelse
+ved de Fænomener, for hvilke Fremgangsmaaden er udviklet, men ogsaa for helt
+andre Fænomener, ja at man kan forudsige nye Forsøgsresultater, som derefter
+virkelig findes, da har Hypotesen hævdet sig som en frugtbar Ledehypotese, og
+det er forstaaeligt, at de, der har arbejdet med den, bliver tilbøjelige til
+at stole paa dens Rigtighed og anse den som Udtryk for fundamentale
+Ejendommeligheder ved Verden. Den Omstændighed, at de forskellige Iagttagere
+idet de følger Synkroniseringsreglerne kommer i Uoverensstemmelse ved
+% PRINTER'S DEFECT, as printed: the parenthetical »idet de følger
+% Synkroniseringsreglerne« is unpunctuated -- no comma after »Iagttagere«
+% and none after »Synkroniseringsreglerne«. Verified at 400 dpi; the line
+% ends flush at »Iagttagere« with no clipped mark.
+Samtidighedsbestemmelser, og at Hypotesen medfører, at der ikke kan findes
+noget \emph{Kriterium} paa, hvem der har Ret, gør det i og for sig ikke
+erkendelsesteoretisk uantageligt, at Hypotesen om Fremgangsmaadens
+Almenanvendelighed er rigtig. Lorentz har jo ved sin
+Hypotese\footnote{Baade her og i den tidligere Artikel menes ved Lorentz'
+Hypotese eller Fortolkning ikke blot den oprindelige Kontraktionshypotese,
+men denne i Forening med dens senere Tilføjelser.} vist, at det (i alt Fald
+tilsyneladende) er \emph{mu\-%
+ligt} at give en med den naturlige Rum- og Tidsopfattelse fuldstændig
+% letterspaced run broken across the printed line: »m u -« / »l i g t«.
+forenelig fysisk Forklaring af Sagen.
+
+Men saaledes som Einstein's Lære er fremsat af sin Ophavsmand og almindelig
+fremføres, er den ikke blot Beskrivelse af en Fremgangsmaade og Opstilling af
+en Hypotese (eller et Dogme) om dennes Almenanvendelighed. Den har foruden en
+fænomenologisk Side ogsaa en erkendelsesteoretisk, idet det udtrykkeligt
+hævdes eller stiltiende forudsættes, at Reglerne for Samtidighedsbestemmelser
+er mere end rent konventionelle, at Lyshastigheden ikke blot \emph{sættes},
+men \emph{er} konstant og ens i Forhold til Afsender og Modtager, selv om
+disse bevæger sig i Forhold til hinanden, at man ikke kan forbinde nogen
+\emph{Mening} med at tale om absolut Samtidighed, og at en fysisk Forklaring
+af de omtalte Modsigelser bliver overflødig, naar man revolutionerer sin
+Rum- og Tidsopfattelse.
+
+Mod denne Side af Sagen er det, at der har rejst sig Protester. Jeg for mit
+Vedkommende har søgt at paavise, at vor Tanke virkelig faar \guillemotright et
+Sted, hvor den kan staa\guillemotleft, og hvorfra den kan betragte
+Einstein's Lære udefra, naar blot man hævder dens Ret til at forøge
+Hastigheder ud over alle Grænser. Hvis vi opgav denne Ret for Tanken, fordi
+der (muligvis) er en bestemt fysisk Grænse for opnaaelige Hastigheder, saa
+maatte vi f.~Eks. ligesaa vel opgive Tankens Ret til
+% --- p. 167 ---
+\opage{167} at forlænge rette Linjer ud over alle Grænser, saafremt en eller anden vel
+begrundet fysisk Teori havde ført til, at vort Verdenssystem var indesluttet
+i en fuldstændig uigennemtrængelig Skal. Heldigvis for Fysikken gør dens
+uundværlige Hjælper Matematikken sig ikke nogen fysiske Skrupler af denne
+Art; det er en af dens umistelige Rettigheder at lade Tanken gaa ud over det
+fysisk opnaaelige. Men naar Tanken ikke lader sig standse af fysiske
+Skranker, kan vi, som det er udviklet i min Artikel, forbinde en bestemt
+Mening med (og give en Definition af), at to Begivenheder er virkelig
+samtidige, selv om Verdensmekanismen skulde være saaledes indrettet, at vi
+ikke kan finde noget Kriterium derpaa.
+% »Kriterium« is NOT letterspaced here, though it is on p. 166.
+
+Dr.~H. erkender (S.~28, L.~13 f.~n.), at denne Opfattelse af
+Samtidighedsbegrebet (hvilken ikke blot falder sammen med den af Lorentz
+antydede, men med alle Menneskers stiltiende Forudsætninger --- indtil Aar
+1905) kan fastholdes; men at Understregningen af Ordet \emph{kan} samt af
+% PRINTER'S DEFECT, as printed: »men at Understregningen ... samt af andre
+% Ytringer ... synes det at fremgaa«. The sense wants »men af«. Verified at
+% 400 dpi: the sort is a t.
+andre Ytringer i Artiklen, synes det at fremgaa, at han mener, det ikke er
+nødvendigt for Tanken at fastholde den. Heri er jeg uenig med ham. Den nævnte
+Opfattelse kan og maa fastholdes som den, der fremgaar af vore naturlige
+Rum- og Tidsbegreber og af vor Tænknings Grundlove. Det er, mener jeg, en
+% an ink speck sits under the e of this »er«, giving the look of an ogonek.
+% Plate dirt; read »er«.
+Illusion, at vi kan komme bort herfra, og det er derfor ogsaa en Illusion, at
+Einstein's Lære giver noget som helst Bidrag til \emph{Forklaringen} af de
+Michelson'ske Vanskeligheder; den giver blot simple Regler for, hvorledes man
+ved Indføring af visse Faktorer kan eliminere de Uoverensstemmelser, som
+f.~Eks. opstaar mellem Fysikere, der paa Jorden og paa Mars udfører M.'s
+Forsøg.
+
+En anden Sag er det, at naar man anvender Einstein's Fremgangsmaade rent
+fænomenologisk, saa gaar hele Spørgsmaalet om Opfattelsen af
+% a speck above the g of »Spørgsmaalet« here reads as an acute. Plate dirt.
+Samtidighedsbegrebet ud af Diskussionen, og det kan siges at være uden
+Interesse for den arbejdende Fysiker, forsaavidt som han foreløbig kan skyde
+Sagen til Side.
+
+Utvivlsomt har Dr.~H.'s fyldige og lærerige Redegørelser for Einstein's Lære
+været til megen Gavn, og der er Grund til at være ham taknemlig for den
+Liberalitet, hvormed han i Tidsskriftet har givet Plads for Indlæg, der gaar
+imod hans Synspunkter. Naar han i sin sidste Artikel saa stærkt betoner det
+fænomenologiske, aabner han tillige en god Udvej til Udjævning af
+Modsætningerne og Udsigt til, at alle Fysikere med Glæde kan følge en
+frugtbar Anvendelse af Ein\-%
+% --- p. 168 ---
+\opage{168}stein's Metode. Dette muliggøres i des højere Grad, jo fuldstændigere det
+lykkes at rense Udtryksmaader og Betragtninger for erkendelsesteoretiske
+Elementer, der bringer Tanken til at reagere.
+
+Man maa imidlertid haabe, at de Fysikere, der arbejder med Einstein's
+Fremgangsmaader, ikke maa være saa fordybede i Arbejdet --- hvor smukke og
+store Resultater det end maatte give --- at de helt taber Interessen for
+fysiske Forklaringer af Vanskelighederne eller sætter sig saa fast i Troen
+paa den Einstein'ske Hypotese, at de paa Forhaand afviser Forklaringsforsøg,
+der i sin videre Udformning (i Modsætning til Lorentz') maatte føre til, at
+de Einstein'ske Transformationsligninger kun kan give tilnærmelsesvis rigtige
+Resultater.
+% The article ENDS HERE, about a third of the way down p. 168. No signature
+% and no dateline. The rest of p. 168 begins a new item under a new sectional
+% head: »Fysik i Skolen.« / »Loven om Aktion og Reaktion i Skolen.« /
+% »Af V. A. C. Jensen.«, which runs on to p. 169 and beyond.
+
+\end{document}
