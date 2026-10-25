@@ -47,6 +47,8 @@ The repo is organized by **topic**, not by author (Hans, 2026-10-20):
 One paper per session after the two pilots. Papers still in copyright (Møller 1949)
 are listed in the catalog with `status: in-copyright` and a link to an online
 copy, and are never transcribed or translated here.
+The archive's tentative cutoff is 1970: papers published before then (Hans,
+2026-10-22).
 
 The second topic, `danish-debate` ("The Danish relativity debate, 1912–1917":
 Hansen, Kroman, Holst, Walsøe), is **mirrored from ~/danish-texts**, where those

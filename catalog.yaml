@@ -1,7 +1,8 @@
 # Relativity Texts — Catalog
 #
 # Transcriptions and English translations of early papers on relativity theory,
-# arranged by TOPIC, not by author (Hans, 2026-10-20). One record per paper,
+# arranged by TOPIC, not by author (Hans, 2026-10-20). Tentative cutoff: papers
+# published before 1970 (Hans, 2026-10-22). One record per paper,
 # listed under its topic in the order the page shows them (chronological).
 #
 # This file drives the /relativity/ page of hanshalvorson.com: it is symlinked as
@@ -417,5 +418,281 @@ topics:
             url: "https://books.google.com/books?id=Tr4ZAAAAIAAJ"
           - label: "Danish Texts"
             url: "https://hanshalvorson.com/dansk/#kroman-yderligere-bemaerkninger"
+        publish: true
+        phase: 1
+
+  # Added 2026-10-22 (Hans): Petzoldt, all phase 2. All US public domain
+  # (published before 1931); Petzoldt died 1929. Die Stellung (1921): the library
+  # catalog of Masaryk University gives Dresden: Sibyllen-Verlag; Wikisource gives
+  # Leipzig: Barth, which published the 2nd ed. (1923). Unresolved.
+  - id: positivism
+    title: "Relativistic positivism, 1912–1921"
+    note: >
+      Joseph Petzoldt, a follower of Mach and Avenarius, called his philosophy
+      »relativistic positivism« and read the theory of relativity as its
+      confirmation in physics: nothing is absolute.
+    papers:
+
+      - id: petzoldt-1912a
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Das Weltproblem vom Standpunkte des relativistischen Positivismus aus"
+        year: "1912"
+        source: "2nd, enlarged ed. Leipzig: B. G. Teubner, 1912"
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/dasweltproblem0000jose"
+          - label: "3rd ed., 1921 (HathiTrust)"
+            url: "https://hdl.handle.net/2027/njp.32101065913178"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1912b
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Die Relativitätstheorie im erkenntnistheoretischen Zusammenhange des relativistischen Positivismus"
+        year: "1912"
+        source: "Verhandlungen der Deutschen Physikalischen Gesellschaft 14 (1912): 1055–1064"
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/verhandlungen-der-deutschen-physikalischen-gesellschaft-vol-14/page/n1079"
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Die_Relativit%C3%A4tstheorie_im_erkenntnistheoretischen_Zusammenhange_des_relativistischen_Positivismus"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1914
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Die Relativitätstheorie der Physik"
+        year: "1914"
+        source: "Zeitschrift für positivistische Philosophie 2 (1914): 1–56"
+        status: to-do
+        links:
+          - label: "Scan (HathiTrust)"
+            url: "https://hdl.handle.net/2027/uc1.b3111792"
+          - label: "Wikisource"
+            url: "https://de.wikisource.org/wiki/Die_Relativit%C3%A4tstheorie_der_Physik"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1918
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Verbietet die Relativitätstheorie Raum und Zeit als etwas Wirkliches zu denken?"
+        year: "1918"
+        source: "Verhandlungen der Deutschen Physikalischen Gesellschaft 20 (1918): 189–201"
+        note: >
+          A reply to Sommerfeld's claim that the theory of relativity forbids us to
+          think of space and time as something real. Answered by Max Jakob in the
+          same journal, 21 (1919): 159.
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/verhandlungen-der-deutschen-physikalischen-gesellschaft-vol-20/page/n199"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1919
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Die Unmöglichkeit mechanischer Modelle zur Veranschaulichung der Relativitätstheorie"
+        year: "1919"
+        source: "Verhandlungen der Deutschen Physikalischen Gesellschaft 21 (1919): 495–500"
+        note: >
+          Answered by Max Jakob in the same issue, pp. 501–503.
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/verhandlungen-der-deutschen-physikalischen-gesellschaft-vol-21/page/n509"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1921a
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Mechanistische Naturauffassung und Relativitätstheorie"
+        year: "1921"
+        source: "Annalen der Philosophie 2 (1921): 447–462"
+        status: to-do
+        links:
+          - label: "Journal (Springer)"
+            url: "https://doi.org/10.1007/BF02903492"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/annalenderphilos02vaihuoft/page/n458"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1921b
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Die Stellung der Relativitätstheorie in der geistigen Entwicklung der Menschheit"
+        year: "1921"
+        source: "Dresden: Sibyllen-Verlag, 1921"
+        status: to-do
+        links:
+          - label: "Deutsche Nationalbibliothek"
+            url: "https://nbn-resolving.org/urn:nbn:de:101:1-201705143831"
+        publish: true
+        phase: 2
+
+      - id: petzoldt-1921c
+        author: "Joseph Petzoldt"
+        dates: "1862–1929"
+        title: "Das Verhältnis der Machschen Gedankenwelt zur Relativitätstheorie"
+        year: "1921"
+        source: "Appendix to Ernst Mach, Die Mechanik in ihrer Entwickelung historisch-kritisch dargestellt, 8th ed. (Leipzig: F. A. Brockhaus, 1921): 490–517"
+        status: to-do
+        links:
+          - label: "Scan (Google Books)"
+            url: "https://books.google.com/books?id=nQFLAQAAMAAJ"
+        publish: true
+        phase: 2
+
+  # Added 2026-10-22 (Hans): all listed as phase 2; which to edit is undecided.
+  # All four are US public domain (published before 1931); the English
+  # translations of Reichenbach (1965) and Schlick (1979) are in copyright.
+  - id: a-priori
+    title: "Relativity and the a priori, 1917–1922"
+    note: >
+      Schlick's Raum und Zeit in der gegenwärtigen Physik (1917) gave the first
+      philosophical account of the general theory. Reichenbach (1920) and Cassirer (1921) asked what the theory of relativity
+      leaves of the Kantian a priori. Schlick answered Cassirer's book in
+      Kant-Studien (1921) with an empiricist reading of the new physics against
+      Cassirer's critical one, and Reichenbach surveyed the state of the
+      philosophical discussion in Logos (1922).
+    papers:
+
+      # Added 2026-10-22 (Hans). 2nd ed. 1919, 3rd 1920, 4th 1922; English
+      # translation by Henry L. Brose, Oxford 1920 (US public domain).
+      - id: schlick-1917
+        author: "Moritz Schlick"
+        dates: "1882–1936"
+        title: "Raum und Zeit in der gegenwärtigen Physik"
+        year: "1917"
+        source: "Berlin: Julius Springer, 1917; first printed in Die Naturwissenschaften 5 (1917): 161–167, 177–186"
+        status: to-do
+        links:
+          - label: "Publisher (Springer)"
+            url: "https://doi.org/10.1007/978-3-662-41063-9"
+          - label: "Journal, part 1 (Springer)"
+            url: "https://doi.org/10.1007/BF02448293"
+          - label: "Journal, part 2 (Springer)"
+            url: "https://doi.org/10.1007/BF02448303"
+          - label: "3rd ed., 1920 (Internet Archive)"
+            url: "https://archive.org/details/raumundzeitinde00schlgoog"
+          - label: "English translation, 1920 (Internet Archive)"
+            url: "https://archive.org/details/spacetimeinconte00schluoft"
+        publish: true
+        phase: 2
+
+      - id: reichenbach-1920
+        author: "Hans Reichenbach"
+        dates: "1891–1953"
+        title: "Relativitätstheorie und Erkenntnis apriori"
+        year: "1920"
+        source: "Berlin: Julius Springer, 1920"
+        status: to-do
+        links:
+          - label: "Publisher (Springer)"
+            url: "https://doi.org/10.1007/978-3-642-50774-8"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/relativittstheo00reicgoog"
+          - label: "Project Gutenberg"
+            url: "https://www.gutenberg.org/ebooks/57240"
+        publish: true
+        phase: 2
+
+      - id: cassirer-1921
+        author: "Ernst Cassirer"
+        dates: "1874–1945"
+        title: "Zur Einsteinschen Relativitätstheorie. Erkenntnistheoretische Betrachtungen"
+        year: "1921"
+        source: "Berlin: Bruno Cassirer, 1921"
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/zureinsteinschen0000erns"
+          - label: "English translation, 1923 (Internet Archive)"
+            url: "https://archive.org/details/substanceandfunc00cassuoft/page/n366"
+        publish: true
+        phase: 2
+
+      - id: schlick-1921
+        author: "Moritz Schlick"
+        dates: "1882–1936"
+        title: "Kritizistische oder empiristische Deutung der neuen Physik?"
+        year: "1921"
+        source: "Kant-Studien 26 (1921): 96–111"
+        status: to-do
+        links:
+          - label: "Journal (De Gruyter)"
+            url: "https://doi.org/10.1515/kant.1921.26.1-2.96"
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/kant-studien_1921_26/page/n105"
+        publish: true
+        phase: 2
+
+      - id: reichenbach-1922
+        author: "Hans Reichenbach"
+        dates: "1891–1953"
+        title: "Der gegenwärtige Stand der Relativitätsdiskussion. Eine kritische Untersuchung"
+        year: "1922"
+        source: "Logos 10 (1921–22): 316–378"
+        status: to-do
+        links:
+          - label: "Scan (Internet Archive)"
+            url: "https://archive.org/details/logoszeitschrift1921/page/n321"
+        publish: true
+        phase: 2
+
+  # Added 2026-10-22 (Hans). All three in copyright: listed with a link to the
+  # journal, never transcribed here (Rietdijk d. 2020, Putnam d. 2016, Stein d. 2024).
+  - id: reality-of-the-future
+    title: "Relativity and the reality of the future"
+    papers:
+
+      - id: rietdijk-1966
+        author: "C. W. Rietdijk"
+        dates: "1927–2020"
+        title: "A rigorous proof of determinism derived from the special theory of relativity"
+        year: "1966"
+        source: "Philosophy of Science 33 (1966): 341–344"
+        status: in-copyright
+        links:
+          - label: "Journal (Cambridge)"
+            url: "https://doi.org/10.1086/288106"
+        publish: true
+        phase: 1
+
+      - id: putnam-1967
+        author: "Hilary Putnam"
+        dates: "1926–2016"
+        title: "Time and physical geometry"
+        year: "1967"
+        source: "Journal of Philosophy 64 (1967): 240–247"
+        note: >
+          Argues from the relativity of simultaneity that future events are as
+          real as present ones, and that special relativity therefore settles the
+          question of the reality of the future.
+        status: in-copyright
+        links:
+          - label: "Journal (JSTOR)"
+            url: "https://doi.org/10.2307/2024493"
+        publish: true
+        phase: 1
+
+      - id: stein-1968
+        author: "Howard Stein"
+        dates: "1929–2024"
+        title: "On Einstein–Minkowski space–time"
+        year: "1968"
+        source: "Journal of Philosophy 65 (1968): 5–23"
+        status: in-copyright
+        links:
+          - label: "Journal (JSTOR)"
+            url: "https://doi.org/10.2307/2024512"
         publish: true
         phase: 1
